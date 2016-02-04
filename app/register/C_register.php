@@ -10,6 +10,8 @@ class C_register
 	var $prenom;
 	var $nom;
 	var $city;
+	var $birthday;
+	var $passH;
 	function __construct()
 	{
 		$this->login = $_POST["login"];
@@ -18,11 +20,15 @@ class C_register
 		$this->prenom = $_POST["prenom"];
 		$this->nom = $_POST["nom"];
 		$this->city = $_POST["city"];
+		$this->birthday = $_POST["birthday"];
+	$this->passH = hash("ripemd160","si tu aimes la wac tape dans tes mains" . $this->pass);
+
 	}
 	function ExisteUser()
 	{
+
 		$registerSQL = new registerSQL;
-		return $regi = $registerSQL->registerAllReadyExiste($this->login,$this->pass,$this->mail);
+		return $regi = $registerSQL->registerAllReadyExiste($this->login,$this->passH,$this->mail);
 	}
 	function register()
 	{
@@ -30,16 +36,14 @@ class C_register
 		if ($this->ExisteUser() == NULL) 
 		{
 			$registerSQL = new registerSQL;
-			$registerSQL->register($this->login,$this->pass,$this->mail,$this->prenom,$this->nom,$this->city);
+			$registerSQL->register($this->login,$this->passH,$this->mail,$this->prenom,$this->nom,$this->city,$this->birthday);
 		}
 		else
 		{
-			echo"USER";
+			echo "USER";//Ajax
 			return false;
 		}
-
 	}
-
 }
 
 $C_register = new C_register;

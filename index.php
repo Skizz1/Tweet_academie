@@ -22,9 +22,13 @@
 		<link rel="stylesheet" type="text/css" href="public/css/style.css">
 		<meta charset="UTF-8">
 		<script type="text/javascript" src="public/java/JQuery.js"></script>	
-		<script type="text/javascript" src="public/java/java.js"></script>	
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="public/java/java.js"></script>	
+<!-- DATAPICKER -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
 	</head>
 	<body>
 		<div id="slide1">
@@ -61,13 +65,13 @@
 										<label></label>
 										<hr>
 									</div>
-									<form accept-charset="UTF-8" role="form" method="post" action="profil.php">
+									<form accept-charset="UTF-8" role="form" id="loginIndex" method="post" action="profil.php">
 										<fieldset>
 											<div class="login_champ">
 												<input class="login_control" placeholder="Pseudonyme" name="username" type="text">
 											</div>
 											<div class="login_champ">
-												<input class="login_control" placeholder="Password" name="password" type="password" value="">
+												<input id="singInPass"class="login_control pass_Control" placeholder="Password" name="password" type="password" value="">
 											</div>
 											<input class="btn btn-lg btn-success btn-block" type="submit" value="Connexion">
 										</fieldset>
@@ -159,7 +163,7 @@
 					<div class="form-group">
 						<label for="anniv">Anniverssaire</label>
 						<div class="input-group">
-							<input type="text" class="form-control text-center" id="inputAniv" name="anniv" placeholder="Anniverssaire" required>
+							<input type="text" class="form-control text-center datepicker" id="inputAniv"  name="anniv" placeholder="Anniverssaire" required>
 							<span id="" class="input-group-addon info"><span id="" class="glyphicon glyphicon-user"></span></span>
 						</div>
 					</div>
@@ -171,3 +175,5 @@
 		</div>
 	</body>
 	</html>
+</body>
+</html>

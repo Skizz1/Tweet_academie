@@ -21,8 +21,24 @@ $(document).ready(function()
 	var Vprenom;
 	var VNom;
 	var VCity;
-	
+	var birthday;	
+
+	$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
+
 	$('#registerSubmit').prop('disabled', true);
+
+	function direHome()
+	{
+		$.ajax
+		({
+			url:"app/home/V_home",
+			success:function(e)
+			{
+				$("body").html(e)
+			}	
+		})
+	}
+
 
 	$(document).on('keyup', '#formRegister input', function()
 	{
@@ -49,6 +65,7 @@ $(document).ready(function()
 			city = $("#inputCity").val();
 			regexCity = /^[a-zA-Z]+$/.test(city);
 
+			birthday = $("#inputAniv").val();
 	//==============
 	//Login
 	//==============
@@ -154,6 +171,7 @@ $(document).ready(function()
 		$("#firstRegister").addClass('glyphicon glyphicon-remove');
 		Vprenom = false;
 	}
+
 	//==============
 	// 		Nom
 	//==============
@@ -211,18 +229,39 @@ $(document).ready(function()
 	$(document).on('click', '#registerSubmit', function(event)
 	{
 		event.preventDefault();
-		$.post("app/register/C_register.php",{login:login,pass:pass,mail:mail1,prenom:prenom,nom:nom,city:city},function(data)
+		$.post("app/register/C_register.php",{login:login,pass:pass,mail:mail1,prenom:prenom,nom:nom,city:city,birthday:birthday},function(data)
 		{
 			if (data == "true")
 			{
+				console.log(data);
 				$("#registerInfo").append("Votre compte a bien été crée FELICITATION");
+				// direHome();
+
 			}  
 			if (data == "USER")
 			{
 				$("#registerInfo").append("Le nom de compte ou le mail existe deja");
 			}  
+			console.log(data);
 		});
 	});
 
+	function signIn()
+	{
+		login = $(".login_control").val();
+		var passO = $("#singInPass").val();
+		$(document).on('click', '#loginIndex', function(event)
+		{
+			event.preventDefault();
+			$.post("app/singin/C_singIn.php",{login:login,pass:$("#singInPass").val()},function(data)
+			{
+				console.log(data);
+			})
+		})
+	}
+	signIn();
+
 });//READY
+
+
 

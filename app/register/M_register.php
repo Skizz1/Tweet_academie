@@ -14,13 +14,14 @@ class registerSQL
 		return $data;	
 	}
 
-	function register($login,$pass,$mail,$prenom,$nom,$city)
+	function register($login,$pass,$mail,$prenom,$nom,$city,$birthday)
 	{	
+
 		$connexion = \App\Model\Database::get()->prepare("INSERT INTO tp_users
-			(mail,login,password,first_name,last_name,city,register)
-			VALUE ( '".$mail."',  '".$login."', '".$pass."', '".$prenom."', '".$nom."','".$city."', NOW()  )");
+			(mail,login,password,first_name,last_name,city,birthday,register)
+			VALUE ( '".$mail."',  '".$login."', '".$pass."', '".$prenom."', '".$nom."','".$city."','".$birthday."', NOW()  )");
 		$connexion->execute();
-		echo "true";
+		echo "true";//Ajax
 	}
 }
 
