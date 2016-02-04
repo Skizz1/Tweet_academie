@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("M_singIn.php");
 class CsingIn
 {
@@ -10,7 +11,6 @@ class CsingIn
 		$this->login = $_POST["login"];
 		$this->pass = $_POST["pass"];
 		$this->passH = hash("ripemd160","si tu aimes la wac tape dans tes mains" . $this->pass);
-
 	}
 
 	function singIn()
@@ -19,6 +19,7 @@ class CsingIn
 		$user = $userExiste -> User($this->login,$this->passH);
 		if ($user != NULL)
 		{
+			$_SESSION["login"] = $this->login;
 			echo "true"; //AJAX;
 		}
 		else
