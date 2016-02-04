@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 class sessionInit
 {
 	var $session;
@@ -11,11 +12,13 @@ class sessionInit
 	{
 		if (empty($this->session))
 		{
+
 		}
 		else
 		{
-			echo $_SESSION["login"]; 
-			require("connected.php");
+			$_SESSION["login"]; 
+			$_SESSION["id"]; 
+			include("connected.php");
 		}
 	}
 }

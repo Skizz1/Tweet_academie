@@ -257,6 +257,7 @@ $(document).ready(function()
 			$.post("app/singin/C_singIn.php",{login:$(".login_control").val(),pass:$("#singInPass").val()},function(data)
 			{
 
+				
 				if (data == "true") 
 				{
 					$("#registerInfo").html("CONNEXION");

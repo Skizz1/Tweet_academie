@@ -34,7 +34,7 @@
 										<label></label>
 										<hr>
 									</div>
-									<form accept-charset="UTF-8" role="form" id="loginIndex" method="post" action="profil.php">
+									<form accept-charset="UTF-8" role="form" id="loginIndex" method="post" action="#">
 										<fieldset>
 											<div class="login_champ">
 												<input class="login_control" placeholder="Pseudonyme" name="username" type="text">
@@ -42,7 +42,7 @@
 											<div class="login_champ">
 												<input id="singInPass"class="login_control pass_Control" placeholder="Password" name="password" type="password" value="">
 											</div>
-											<input class="btn btn-lg btn-success btn-block" type="submit" value="Connexion">
+											<input id"buttonConect" class="btn btn-lg btn-success btn-block" type="submit" value="Connexion">
 										</fieldset>
 									</form>
 								</div>
