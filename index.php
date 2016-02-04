@@ -1,19 +1,3 @@
-<!-- A laisser avant les balises html -->
-<!-- <?php 
-
-// if (session_start() == PHP_SESSION_NONE) {
-// 	session_start();
-//}
-
-	?> -->
-
-	<!-- Placer le code la ou je veux afficher le message alert -->
-<!-- <?php //if (Session::getInstance()->hasFlashes()): ?>
-	<?php //foreach(Session::getInstance()->getFlashes() as $type => $message): ?> -->
-	<!-- mettre div avec message alert -->
-<!-- <?php //endforeach; ?>
-	<?php //endif; ?> -->
-
 	<!DOCTYPE html>
 	<html>
 	<head>
@@ -161,7 +145,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="anniv">Anniverssaire</label>
+						<label for="anniv">Anniversaire</label>
 						<div class="input-group">
 							<input type="text" class="form-control text-center datepicker" id="inputAniv"  name="anniv" placeholder="Anniverssaire" required>
 							<span id="" class="input-group-addon info"><span id="" class="glyphicon glyphicon-user"></span></span>

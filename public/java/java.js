@@ -27,8 +27,9 @@ $(document).ready(function()
 
 	$('#registerSubmit').prop('disabled', true);
 
-	function direHome()
+	function redirectHome()
 	{
+		console.log("home")
 		$.ajax
 		({
 			url:"app/home/V_home",
@@ -253,8 +254,20 @@ $(document).ready(function()
 		$(document).on('click', '#loginIndex', function(event)
 		{
 			event.preventDefault();
-			$.post("app/singin/C_singIn.php",{login:login,pass:$("#singInPass").val()},function(data)
+			$.post("app/singin/C_singIn.php",{login:$(".login_control").val(),pass:$("#singInPass").val()},function(data)
 			{
+
+				if (data == "true") 
+				{
+					$("#registerInfo").html("CONNEXION");
+					redirectHome();
+
+				};
+				if (data == "false") 
+				{
+
+					$("#registerInfo").html("MAUVAIS PASSWORD");
+				};
 				console.log(data);
 			})
 		})

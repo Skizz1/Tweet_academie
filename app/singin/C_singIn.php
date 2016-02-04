@@ -9,12 +9,22 @@ class CsingIn
 	{
 		$this->login = $_POST["login"];
 		$this->pass = $_POST["pass"];
+		$this->passH = hash("ripemd160","si tu aimes la wac tape dans tes mains" . $this->pass);
+
 	}
 
 	function singIn()
 	{
 		$userExiste = new userExiste;
-		$userExiste -> User($this->login,$this->pass);
+		$user = $userExiste -> User($this->login,$this->passH);
+		if ($user != NULL)
+		{
+			echo "true"; //AJAX;
+		}
+		else
+		{
+			echo "false"; //AJAX;
+		}
 	}
 }
 
