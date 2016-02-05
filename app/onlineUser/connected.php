@@ -13,8 +13,8 @@
             </form>
             <li><button type="button" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
             <!-- TIME LINE -->
-            <li id="AjaxTimeLine"><a href="app/onlineUser/V_timeLine.php">Time line </a></li>
-            <li id="AjaxTimeLine"><a href="app/onlineUser/V_timeLine.php"><?php echo $_SESSION["login"].$_SESSION["id"] ?> </a></li>
+            <li id="AjaxTimeLine"><a href="app/timeLine/V_timeLine.php">Time line </a></li>
+            <li id=""><a href="app/onlineUser/V_timeLine.php"><?php echo $_SESSION["login"].$_SESSION["id"] ?> </a></li>
 
             <li id="AjaxTimeLine"><a href="app/follow/V_follow.php">LISTE FOLLOW</a></li>
 

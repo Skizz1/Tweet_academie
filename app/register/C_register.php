@@ -1,7 +1,5 @@
 <?php
 include("M_register.php");
-
-
 class C_register
 {
 	var $login;
@@ -45,7 +43,6 @@ class C_register
 		}
 	}
 }
-
 $C_register = new C_register;
 $C_register-> ExisteUser();
 $C_register-> register();

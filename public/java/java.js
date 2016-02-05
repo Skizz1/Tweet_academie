@@ -256,17 +256,13 @@ $(document).ready(function()
 			event.preventDefault();
 			$.post("app/singin/C_singIn.php",{login:$(".login_control").val(),pass:$("#singInPass").val()},function(data)
 			{
-
-				
 				if (data == "true") 
 				{
 					$("#registerInfo").html("CONNEXION");
 					redirectHome();
-
 				};
 				if (data == "false") 
 				{
-
 					$("#registerInfo").html("MAUVAIS PASSWORD");
 				};
 				console.log(data);
