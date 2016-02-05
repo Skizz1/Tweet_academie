@@ -12,6 +12,7 @@ class C_register
 	var $city;
 	var $birthday;
 	var $passH;
+
 	function __construct()
 	{
 		$this->login = $_POST["login"];

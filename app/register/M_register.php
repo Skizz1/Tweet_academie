@@ -1,5 +1,5 @@
 <?php
-include('../database.php');
+include('../Database.php');
 
 error_reporting(E_ALL & E_NOTICE);
 ini_set('display_errors', 'on');
