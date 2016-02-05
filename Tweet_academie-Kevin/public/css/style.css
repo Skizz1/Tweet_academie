@@ -1,0 +1,73 @@
+ --------------------------------------------------------------------  PARALLAX  -------------------------------------------------------------------------------- */
+
+#slide1 { background-image: url('../../images/bg.jpg'); background-position: fixed; background-size: cover; height: 980px; }
+#slide2 { background-image: url() cover no-repeat fixed;  }
+#slide3 { background-image: url() cover no-repeat fixed;  }
+.slide_inside { margin: 0 auto; width: 980px; }
+#logo { max-width: 250px; max-height: 250px; margin-top: 100px; margin-left: 8%; }
+.titre { position: relative; bottom: 130px; left: 400px; font-size: 72px; color: #2AAAE0; }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#formRegister
+{
+width: 301px;
+margin: auto;
+	
+}
+
+/*Register CSS*/
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(212, 63, 58);
+}
+#registerInfo
+{
+    color: red;
+    background: black;
+    width: 200px;
+    height: 200px;
+}
+
+/* ---------------------------------------------------------------------- ACCUEIL ---------------------------------------------------------------------------------- */
+
+.accueil { width: 100%; height: 600px; }
+.container1 { width: 90%; }
+.container1 { margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0; }
+.left { position: fixed; display: inline-block; float: left; width: 22.5%; height: 900px; margin-top: 31px; }
+.right { display: inline-block; background-color: orange; float: right; width: 75%; height: 1600px; }
+.avatar { display: inline-block; margin-left: 35.5%; margin-top: 5px; }
+.avatar img { position: relative; top: 60px; z-index: 1; border-radius: 10px; max-width: 150px; max-height: 150px; border: 4px white solid; 
+    box-shadow: 2px 3px 1px #666666; }
+.infos { bottom: 90px; z-index: 2; display: inline-block; width: 80%; height: 250px; background-color: #f2f2f2; margin-left: 10%; border-radius: 0px 0px 6px 6px; 
+    border-bottom: 3px solid #53A9EB; }
+.actualite { bottom: 90px; z-index: 2; display: inline-block; width: 80%; height: 380px; background-color: #f2f2f2; margin-left: 10%; border-radius: 0px 0px 6px 6px; 
+    border-bottom: 3px solid #53A9EB; margin-top: 50px; }
+.actu { display: inline-block; border-bottom: 1.5px #cccccc solid; width: 85%; margin-left: 5%; font-size: 18px; }
+.login { display: inline-block; width: 100%; margin-top: 80px; font-size: 18px; text-align: center; margin-bottom: 40px; }
+.follow { display: inline-block; background-color: green; margin-left: 15%; }
+.abos { display: inline-block; width: 100%; background-color: red; }
+.bouton {  }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
