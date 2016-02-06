@@ -3,11 +3,11 @@ namespace App\Model;
 
 class Database
 {
-    private static $socket = 'destef_1';
+    private static $socket = 'root';
     private static $db;
     private static $dbuser = 'root';
     private static $dbname = 'common-database';
-    private static $dbpass = '';
+    private static $dbpass = 'wac';
     private static $host = 'localhost';
 
     private function __construct()

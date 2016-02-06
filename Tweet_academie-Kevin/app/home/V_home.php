@@ -44,26 +44,72 @@ $_SESSION["login"] = "root";
 	<div class="container1">
 		<div class="accueil">
 			<div class="left">
-				<div class="avatar">
-					<img src="../../images/index.png" />
-				</div>
 				<div class="infos">
-					<span class="login">Loïc De Stefano</span>
-					<div class="abos">
-						<button class="btn follow">Abonnements</button>
-						<button class="btn follow">Abonnés</button>
-					</div>
-					<div class="bouton">
-						<button class="btn btn-primary">Photos</button>
-						<button class="btn btn-primary">Photos</button>
-					</div>
+					<div class="twitter-widget">
+						<div class="header cf">
+			<!-- Afficher la photo de profil du membre connecté -->
+							<img class="avatar" src="../../images/index.png" alt="Profil">
+			<!-- Afficher le login du membre connecté -->
+							<h2>Loïc De Stefano</h2>
+						</div>
+						<div class="stats cf">
+							<a href="#" class="stat">
+			<!-- Afficher nombre de tweets du membre connecté -->
+								<strong>1,250</strong>
+								tweets
+							</a>
+							<a href="#" class="stat">
+			<!-- Afficher nombre de follow du membre connecté -->
+								<strong>60</strong>
+								following
+							</a>
+							<a href="#" class="stat">
+			<!-- Afficher nombre de followers du membre connecté -->
+								<strong>117</strong>
+								followers
+							</a>
+						</div>
+						<ul class="menu cf">
+							<li><a href="#" class="ico-compose">Compose</a></li>
+							<li><a href="#" class="ico-mentions">Mentions</a></li>
+							<li><a href="#" class="ico-profile">Profile</a></li>
+							<li><a href="#" class="ico-settings">Settings</a></li>
+						</ul>
+					</div> 
 				</div>
 				<div class="actualite">
-					<div class="actu">Actualités récentes</div>
+		<!-- Afficher les actualités récentes des gens Follows par le membre connecté -->
+					<div class="infos">
+					<div class="twitter-widget1">
+						<div class="stats cf actu">
+							<span>Actualités récentes</span>
+						</div>
+		<!-- Afficher le nom prenom et texte du tweet avec max 30 caractères et des "..." après -->
+						<span></span>
+					</div> 
+				</div>
 				</div>
 			</div>
 			<div class="right">
-
+				<div class="tweet">
+		<!-- Afficher la photo de profil du membre qui a posté le tweet -->
+					<img class="avatar-tweet" src="../../images/index.png" />
+					<div class="contenu">
+		<!-- Afficher son login/prénom nom -->
+						<h4>Loïc De Stefano</h4><span class="compte-admin">✔</span>
+		<!-- Afficher l'heure a laquelle à été poster le tweet -->
+						<p>10h</p>
+		<!-- Afficher le @ du membre qui a posté le tweet -->
+						<h5>@loicdsfn</h5>
+		<!-- Afficher le contenu du tweet ainsi que le @ d'un/des membres notifiés et du/des # mentionnés -->
+						<span class="content">Tweet d'expo pour visuel d'implementation du php de <a href="#">@sauvan_k</a> ;) <a href="">#CSSdeOUFFFF</a></span>
+		<!-- Afficher image ou vidéo si jamais il y en a -->
+						<img class="contenu-img" src="../../images/image-slider-2.jpg" />
+						<span class="glyphicon glyphicon-heart heart"></span>
+						<span class="glyphicon glyphicon-retweet retweet"></span>
+						<span class="glyphicon glyphicon-share-alt share-alt"></span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
