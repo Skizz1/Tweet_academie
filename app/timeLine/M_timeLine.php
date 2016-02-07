@@ -1,8 +1,4 @@
 <?php
-session_start();
-
-
-include('../database.php');
 class timeLine
 {
 	var $id;

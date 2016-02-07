@@ -271,6 +271,11 @@ $(document).ready(function()
 	}
 	signIn();
 
+	function infoTweet()
+	{
+		
+	}
+
 });//READY
 
 

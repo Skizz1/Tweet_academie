@@ -20,7 +20,6 @@ class C_register
 		$this->city = $_POST["city"];
 		$this->birthday = $_POST["birthday"];
 	$this->passH = hash("ripemd160","si tu aimes la wac tape dans tes mains" . $this->pass);
-
 	}
 	function ExisteUser()
 	{
