@@ -32,14 +32,13 @@ $(document).ready(function()
 		console.log("home")
 		$.ajax
 		({
-			url:"app/home/V_home",
+			url:"app/home/V_home.php",
 			success:function(e)
 			{
 				$("body").html(e)
 			}	
 		})
 	}
-
 
 	$(document).on('keyup', '#formRegister input', function()
 	{
@@ -276,17 +275,31 @@ else
 
 	function Rsearch()
 	{
-		$(document).on("click","#Ajax-search",function(event)
+		$(document).on("keyup","#Ajax-valSearch",function(event)
 		{
 			event.preventDefault()
 			search = $("#Ajax-valSearch").val();
 			$.post("app/search/V_search.php",{search:search},function(data)
 			{
-			$("#Ajax-Rsearch").html(data)
+				$("#Ajax-Rsearch").html(data)
 			})
 		})
 	}
 	Rsearch()
+
+	function ReadFollow()
+	{
+		$(document).on("click","#Ajax-ReadFollow",function(event)
+		{
+			event.preventDefault()
+			alert("coco")
+			$.post("app/search/V_search.php",{search:search},function(data)
+			{
+				$("#Ajax-Rsearch").html(data)
+			})
+		})
+	}
+	ReadFollow()
 });//READY
 
 

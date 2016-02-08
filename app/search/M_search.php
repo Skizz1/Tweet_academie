@@ -8,6 +8,7 @@ class M_search
 			WHERE login LIKE '".$login."%' ");
 		$connexion->execute();	
 		$data = $connexion->fetchAll();
+	
 		return $data;
 	}
 	function tags($tags)

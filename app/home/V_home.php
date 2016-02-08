@@ -50,17 +50,19 @@ require_once("../timeLine/M_timeLine.php");
 								<?php
 								foreach ($Mefollower  as $key => $value)
 								{
-									echo "<strong>"+$value->nbrFollow+"</strong>";
+									echo "<strong>".$value->nbrFollow."</strong>";
 								}
 								?>
 								follower
 							</a>
-							<a href="#" class="stat">
+								<!-- =================================================== -->
+								<!-- ========================= ID AJOUTé ================ -->
+							<a href="#" id="Ajax-ReadFollow" class="stat">
 								<!-- Afficher nombre de followers du membre connecté -->
 								<?php
-								foreach ($Mefollow  as $key => $value)
+								foreach ($CountMefollow  as $key => $value)
 								{
-									echo "<strong>"+$value->nbrFollow+"</strong>";
+									echo "<strong>".$value->nbrFollow."</strong>";
 								}
 								?>
 								follow
