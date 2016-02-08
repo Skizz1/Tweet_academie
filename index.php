@@ -7,7 +7,6 @@ include('app/tweets/M_tweets.php');
 
 $test = new TweetsModel();
 $test->remove(3);
-
 ?>
     <div class="container">
         <h1>Yolo</h1>

@@ -1,8 +1,6 @@
 <?php
 
-
-require('app/model/M_Model.php');
-
+require('app/M_Model.php');
 
 class ProfileModel extends Model
 {
@@ -10,5 +8,4 @@ class ProfileModel extends Model
     {
         $this->table = 'tp_users';
     }
-
 }

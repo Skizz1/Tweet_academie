@@ -6,6 +6,9 @@ require('app/Database.php');
 
 class Model
 {
+    /**
+     * @var $table table courrante
+     */
     protected $table;
 
     /**
