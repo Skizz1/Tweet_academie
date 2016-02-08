@@ -39,6 +39,21 @@ $(document).ready(function()
 			}	
 		})
 	}
+	function logOut()
+	{
+		$(document).on("click","#logOut",function()
+		{
+			$.ajax({
+				url : 'app/onlineUser/C_disconect.php',
+				success:function(data)
+				{
+					 window.location.replace("index.php")
+				}
+				
+			})
+		})
+	}
+	logOut()
 
 	$(document).on('keyup', '#formRegister input', function()
 	{
@@ -285,6 +300,7 @@ else
 			})
 		})
 	}
+
 	Rsearch()
 
 	function ReadFollow()
@@ -292,15 +308,34 @@ else
 		$(document).on("click","#Ajax-ReadFollow",function(event)
 		{
 			event.preventDefault()
-			alert("coco")
-			$.post("app/search/V_search.php",{search:search},function(data)
-			{
-				$("#Ajax-Rsearch").html(data)
+			$.ajax({
+				url : 'app/follow/V_follow.php',
+				success:function(data)
+				{
+					$("#Ajax-Rsearch").html(data)
+				}
+				
 			})
 		})
 	}
+
 	ReadFollow()
+	function ReadFollower()
+	{
+		$(document).on("click","#Ajax-ReadFollower",function(event)
+		{
+			event.preventDefault()
+			$.ajax({
+				url : 'app/follow/V_follower.php',
+				success:function(data)
+				{
+					$("#Ajax-Rsearch").html(data)
+				}
+				
+			})
+		})
+	}
+
+	ReadFollower()
+
 });//READY
-
-
-

@@ -18,7 +18,9 @@ require_once("../timeLine/M_timeLine.php");
 					<input type="submit" id="Ajax-search" class="btn btn-primary"><span class="glyphicon glyphicon-search"/></span>
 				</form>
 
-				<li><button type="button" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
+				<!-- ======================== -->
+				<!-- ID RAJOUTE logOut -->
+				<li><button type="button" id="logOut" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
 				<!-- TIME LINE -->
 				<li id="AjaxTimeLine"><a href="app/onlineUser/V_timeLine.php">Time line </a></li>
 				<li id="AjaxTimeLine"><a href="app/onlineUser/V_timeLine.php"><?php echo $_SESSION["login"] ?> </a></li>
@@ -45,7 +47,10 @@ require_once("../timeLine/M_timeLine.php");
 								<strong>1,250</strong>
 								tweets
 							</a>
-							<a href="#" class="stat cf">
+							<!-- =================================================== -->
+							<!-- ========================= ID AJOUTé ================ -->
+							<a href="#" id="Ajax-ReadFollower" class="stat cf">
+
 								<!-- Afficher nombre de follow du membre connecté -->
 								<?php
 								foreach ($Mefollower  as $key => $value)
@@ -55,8 +60,8 @@ require_once("../timeLine/M_timeLine.php");
 								?>
 								follower
 							</a>
-								<!-- =================================================== -->
-								<!-- ========================= ID AJOUTé ================ -->
+							<!-- =================================================== -->
+							<!-- ========================= ID AJOUTé ================ -->
 							<a href="#" id="Ajax-ReadFollow" class="stat">
 								<!-- Afficher nombre de followers du membre connecté -->
 								<?php
