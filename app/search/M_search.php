@@ -2,11 +2,10 @@
 include('../database.php');
 class M_search
 {
-
 	function user($login)
 	{
 		$connexion = \App\Model\Database::get()->prepare("SELECT * from tp_users
-			WHERE login = '".$login."' ");
+			WHERE login LIKE '".$login."%' ");
 		$connexion->execute();	
 		$data = $connexion->fetchAll();
 		return $data;
@@ -19,11 +18,5 @@ class M_search
 		$data = $connexion->fetchAll();
 		return $data;
 	}
-
-
 }
-
-
-
-
 ?>

@@ -5,7 +5,7 @@ class Csearch
 	var $search;
 	function __construct()
 	{
-		// $this->search = $_POST["search"];
+		$this->search = $_POST["search"];
 	}
 	function search($info)
 	{ 
@@ -16,19 +16,15 @@ class Csearch
 		// Recherche par nom user
 		if ($type != "#") 
 		{	
-			echo $info;
-
 			return $M_search->user($info);
 		}
 		else
-		{
-			echo $info;
-			
+		{		
 			return $M_search->tags($info);	
 		}
 	}
 }
 $Csearch = new Csearch;
-$test = $Csearch->search("#gros");
-var_dump($test);
+$search = $Csearch->search($_POST["search"]);
+
 ?>

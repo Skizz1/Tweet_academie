@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
-	var login;
-	var regexLogin;
+	var login,
+	regexLogin;
 	var pass;
 	var pass1;
 	var pass2;
@@ -67,115 +67,117 @@ $(document).ready(function()
 			regexCity = /^[a-zA-Z]+$/.test(city);
 
 			birthday = $("#inputAniv").val();
-	//==============
-	//Login
-	//==============
-	if (regexLogin) 
-	{
-		$("#LoginRegister").removeClass();
-		$("#LoginRegister").addClass('input-group-addon success');
-		$("#imageLogin").removeClass();
-		$("#imageLogin").addClass('glyphicon glyphicon-ok');
-		Vlogin = true;
-	}
-	else
-	{
-		$("#LoginRegister").removeClass();
-		$("#LoginRegister").addClass('input-group-addon danger');
-		$("#imageLogin").addClass('glyphicon glyphicon-remove');
-		Vlogin = false;
-	}
-	//==============
-	//PASSWORD
-	//==============
-	if (regexPass === true && pass1 == pass2 ) 
-	{
-		$("#imagePass").removeClass();
-		$("#imagePass").addClass('glyphicon glyphicon-ok');
 
-		$("#imagePass2").removeClass();
-		$("#imagePass2").addClass('glyphicon glyphicon-ok');
+/*
+*login
+*/
+if (regexLogin) 
+{
+	$("#LoginRegister").removeClass();
+	$("#LoginRegister").addClass('input-group-addon success');
+	$("#imageLogin").removeClass();
+	$("#imageLogin").addClass('glyphicon glyphicon-ok');
+	Vlogin = true;
+}
+else
+{
+	$("#LoginRegister").removeClass();
+	$("#LoginRegister").addClass('input-group-addon danger');
+	$("#imageLogin").addClass('glyphicon glyphicon-remove');
+	Vlogin = false;
+}
+/*
+* PASSWORD
+*/
+if (regexPass === true && pass1 == pass2 ) 
+{
+	$("#imagePass").removeClass();
+	$("#imagePass").addClass('glyphicon glyphicon-ok');
 
-		$("#PassRegister").removeClass();
-		$("#PassRegister").addClass('input-group-addon success');
+	$("#imagePass2").removeClass();
+	$("#imagePass2").addClass('glyphicon glyphicon-ok');
 
-		$("#PassRegister2").removeClass();
-		$("#PassRegister2").addClass('input-group-addon success');
+	$("#PassRegister").removeClass();
+	$("#PassRegister").addClass('input-group-addon success');
 
-		$("#registerInfo").html("<p>"+""+"</p>");
+	$("#PassRegister2").removeClass();
+	$("#PassRegister2").addClass('input-group-addon success');
 
-		Vpass = true;
-	}
-	else
-	{
-		$("#imagePass").removeClass();
-		$("#imagePass").addClass('glyphicon glyphicon-remove');
+	$("#registerInfo").html("<p>"+""+"</p>");
 
-		$("#imagePass2").removeClass();
-		$("#imagePass2").addClass('glyphicon glyphicon-remove');
+	Vpass = true;
+}
+else
+{
+	$("#imagePass").removeClass();
+	$("#imagePass").addClass('glyphicon glyphicon-remove');
 
-		$("#PassRegister").removeClass();
-		$("#PassRegister").addClass('input-group-addon danger');
+	$("#imagePass2").removeClass();
+	$("#imagePass2").addClass('glyphicon glyphicon-remove');
 
-		$("#PassRegister2").removeClass();
-		$("#PassRegister2").addClass('input-group-addon danger');
+	$("#PassRegister").removeClass();
+	$("#PassRegister").addClass('input-group-addon danger');
 
-		$("#registerInfo").html("<p>"+"Seulement des lettre et des chiffre 8 caracter minimum, les mot de passe doive etre identique"+"</p>")
-		Vpass = false;
-	}
-	//==============
-	//EMAIL
-	//==============
-	if (regexmail === true && mail1 == mail2 ) 
-	{
+	$("#PassRegister2").removeClass();
+	$("#PassRegister2").addClass('input-group-addon danger');
 
-		$("#imageMail1").removeClass();
-		$("#imageMail2").removeClass();
+	$("#registerInfo").html("<p>"+"Seulement des lettre et des chiffre 8 caracter minimum, les mot de passe doive etre identique"+"</p>")
+	Vpass = false;
+}
 
-		$("#imageMail1").addClass('glyphicon glyphicon-ok');
-		$("#imageMail2").addClass('glyphicon glyphicon-ok');
+/*
+*EMAIL
+*/
+if (regexmail === true && mail1 == mail2 ) 
+{
 
-		$("#MailRegister2").removeClass();
-		$("#MailRegister2").addClass('input-group-addon success');
+	$("#imageMail1").removeClass();
+	$("#imageMail2").removeClass();
 
-		$("#MailRegister1").removeClass();
-		$("#MailRegister1").addClass('input-group-addon success');
-		Vmail = true;
-	}
-	else
-	{
-		$("#MailRegister1").removeClass();
-		$("#MailRegister1").addClass('input-group-addon danger');
+	$("#imageMail1").addClass('glyphicon glyphicon-ok');
+	$("#imageMail2").addClass('glyphicon glyphicon-ok');
 
-		$("#MailRegister2").removeClass();
-		$("#MailRegister2").addClass('input-group-addon danger');
+	$("#MailRegister2").removeClass();
+	$("#MailRegister2").addClass('input-group-addon success');
 
-		$("#imageMail1").addClass('glyphicon glyphicon-remove');
-		$("#imageMail2").addClass('glyphicon glyphicon-remove');
-		Vmail = false;
-	}
-	//=====================
-	// 		PRENOM
-	//=====================
-	if (regexPrenom === true) 
-	{
-		$("#imgPrenom").removeClass();
-		$("#imgPrenom").addClass('input-group-addon success');
-		$("#firstRegister").removeClass();
-		$("#firstRegister").addClass('glyphicon glyphicon-ok');
-		Vprenom = true;
-	}
-	else
-	{
-		$("#imgPrenom").removeClass();
-		$("#imgPrenom").addClass('input-group-addon danger');
-		$("#firstRegister").addClass('glyphicon glyphicon-remove');
-		Vprenom = false;
-	}
+	$("#MailRegister1").removeClass();
+	$("#MailRegister1").addClass('input-group-addon success');
+	Vmail = true;
+}
+else
+{
+	$("#MailRegister1").removeClass();
+	$("#MailRegister1").addClass('input-group-addon danger');
 
-	//==============
-	// 		Nom
-	//==============
+	$("#MailRegister2").removeClass();
+	$("#MailRegister2").addClass('input-group-addon danger');
+
+	$("#imageMail1").addClass('glyphicon glyphicon-remove');
+	$("#imageMail2").addClass('glyphicon glyphicon-remove');
+	Vmail = false;
+}
+
+/*
+* PRENOM
+*/
+if (regexPrenom === true) 
+{
+	$("#imgPrenom").removeClass();
+	$("#imgPrenom").addClass('input-group-addon success');
+	$("#firstRegister").removeClass();
+	$("#firstRegister").addClass('glyphicon glyphicon-ok');
+	Vprenom = true;
+}
+else
+{
+	$("#imgPrenom").removeClass();
+	$("#imgPrenom").addClass('input-group-addon danger');
+	$("#firstRegister").addClass('glyphicon glyphicon-remove');
+	Vprenom = false;
+}
+	/*
+	* NOM
+	*/
 	if (regexNom === true) 
 	{
 		$("#imgNom").removeClass();
@@ -191,9 +193,9 @@ $(document).ready(function()
 		$("#lastRegister").addClass('glyphicon glyphicon-remove');
 		VNom = false;
 	}
-	//============
-	// 	CITY
-	//============
+	/*
+	* CITY
+	*/
 	if (regexCity === true) 
 	{
 		$("#imgCity").removeClass();
@@ -209,9 +211,9 @@ $(document).ready(function()
 		$("#cityRegister").addClass('glyphicon glyphicon-remove');
 		VCity = false;
 	}
-	//=======================
-	// VERIFICATION DES CHAMP
-	//=======================
+	/**
+	* VERIFICATION DES CHAMP
+	*/
 	if (Vmail === true && Vlogin === true && Vpass === true && Vprenom === true
 		&& VNom === true && VCity === true)
 	{
@@ -224,9 +226,9 @@ $(document).ready(function()
 
   });//fin gestion erreur register .php
 
-	//====================================
-	// AJAX ENVOIE FORMULAIRE INSCRIPTION
-	//====================================
+	/*
+	* AJAX ENVOIE FORMULAIRE INSCRIPTION
+	*/
 	$(document).on('click', '#registerSubmit', function(event)
 	{
 		event.preventDefault();
@@ -269,13 +271,22 @@ $(document).ready(function()
 			})
 		})
 	}
+
 	signIn();
 
-	function infoTweet()
+	function Rsearch()
 	{
-		
+		$(document).on("click","#Ajax-search",function(event)
+		{
+			event.preventDefault()
+			search = $("#Ajax-valSearch").val();
+			$.post("app/search/V_search.php",{search:search},function(data)
+			{
+			$("#Ajax-Rsearch").html(data)
+			})
+		})
 	}
-
+	Rsearch()
 });//READY
 
 

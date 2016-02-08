@@ -1,7 +1,7 @@
 <?php
-include("../onlineUser/sessionInit.php");
-include("../follow/M_follow.php");
-include("../timeLine/M_timeLine.php");
+require_once("../onlineUser/sessionInit.php");
+require_once("../follow/M_follow.php");
+require_once("../timeLine/M_timeLine.php");
 ?>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -10,12 +10,14 @@ include("../timeLine/M_timeLine.php");
 				<a class="navbar-brand" href="index.php">Twitter</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<form class="navbar-form navbar-left" role="search">
+
+				<form class="navbar-form navbar-left" method="POST" action="app/search/V_search.php">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Rechercher">
+						<input type="text" class="form-control" id="Ajax-valSearch" name="search" placeholder="Rechercher">
 					</div>
-					<button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+					<input type="submit" id="Ajax-search" class="btn btn-primary"><span class="glyphicon glyphicon-search"/></span>
 				</form>
+
 				<li><button type="button" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button></li>
 				<!-- TIME LINE -->
 				<li id="AjaxTimeLine"><a href="app/onlineUser/V_timeLine.php">Time line </a></li>
@@ -33,7 +35,7 @@ include("../timeLine/M_timeLine.php");
 					<div class="twitter-widget">
 						<div class="header cf">
 							<!-- Afficher la photo de profil du membre connecté -->
-							<img class="avatar" src="../../images/index.png" alt="Profil">
+							<img class="avatar" src="public/css/images/index.png" alt="Profil">
 							<!-- Afficher le login du membre connecté -->
 							<h2><?php echo $_SESSION["login"] ?></h2>
 						</div>
@@ -43,7 +45,7 @@ include("../timeLine/M_timeLine.php");
 								<strong>1,250</strong>
 								tweets
 							</a>
-							<a href="#" class="stat">
+							<a href="#" class="stat cf">
 								<!-- Afficher nombre de follow du membre connecté -->
 								<?php
 								foreach ($Mefollower  as $key => $value)
@@ -51,6 +53,7 @@ include("../timeLine/M_timeLine.php");
 									echo "<strong>"+$value->nbrFollow+"</strong>";
 								}
 								?>
+								follower
 							</a>
 							<a href="#" class="stat">
 								<!-- Afficher nombre de followers du membre connecté -->
@@ -60,6 +63,7 @@ include("../timeLine/M_timeLine.php");
 									echo "<strong>"+$value->nbrFollow+"</strong>";
 								}
 								?>
+								follow
 							</a>
 						</div>
 						<ul class="menu cf">
@@ -78,14 +82,12 @@ include("../timeLine/M_timeLine.php");
 								<span>Actualités récentes</span>
 							</div>
 							<?php
-
 							foreach ($timeLine as $key => $value)
 							{
 								echo $value->login."<br/>";
 								echo "A publie ".$value->content."<br/>";
 								echo "le ".$value->created."<br/>";
 							}
-
 							?>
 							<!-- Afficher le nom prenom et texte du tweet avec max 30 caractères et des "..." après -->
 							<span ></span>
@@ -94,9 +96,9 @@ include("../timeLine/M_timeLine.php");
 				</div>
 			</div>
 			<div class="right">
-				<div class="tweet">
+				<div class="tweet" id="Ajax-Rsearch">
 					<!-- Afficher la photo de profil du membre qui a posté le tweet -->
-					<img class="avatar-tweet" src="../../images/index.png" />
+					<img class="avatar-tweet" src="public/css/images/index.png" />
 					<div class="contenu">
 						<!-- Afficher son login/prénom nom -->
 						<h4>Loïc De Stefano</h4><span class="compte-admin">✔</span>
@@ -107,7 +109,7 @@ include("../timeLine/M_timeLine.php");
 						<!-- Afficher le contenu du tweet ainsi que le @ d'un/des membres notifiés et du/des # mentionnés -->
 						<span class="content">Tweet d'expo pour visuel d'implementation du php de <a href="#">@sauvan_k</a> ;) <a href="">#CSSdeOUFFFF</a></span>
 						<!-- Afficher image ou vidéo si jamais il y en a -->
-						<img class="contenu-img" src="../../images/image-slider-2.jpg" />
+						<img class="contenu-img" src="public/css/images/image-slider-2.jpg" />
 						<span class="glyphicon glyphicon-heart heart"></span>
 						<span class="glyphicon glyphicon-retweet retweet"></span>
 						<span class="glyphicon glyphicon-share-alt share-alt"></span>
