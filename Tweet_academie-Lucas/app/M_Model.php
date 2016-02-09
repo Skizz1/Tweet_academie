@@ -1,15 +1,18 @@
 <?php
 use App\Model\Database;
 
-require('app/Database.php');
-
-
 class Model
 {
     /**
      * @var $table table courrante
      */
     protected $table;
+
+    public function __construct()
+    {
+        $this->userId = $_SESSION["id"];
+    }
+
 
     /**
      * Retourne une information

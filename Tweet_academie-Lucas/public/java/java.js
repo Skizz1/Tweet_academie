@@ -32,14 +32,28 @@ $(document).ready(function()
 		console.log("home")
 		$.ajax
 		({
-			url:"app/home/V_home",
+			url:"app/home/V_home.php",
 			success:function(e)
 			{
 				$("body").html(e)
 			}	
 		})
 	}
-
+	function logOut()
+	{
+		$(document).on("click","#logOut",function()
+		{
+			$.ajax({
+				url : 'app/onlineUser/C_disconect.php',
+				success:function(data)
+				{
+					 window.location.replace("index.php")
+				}
+				
+			})
+		})
+	}
+	logOut()
 
 	$(document).on('keyup', '#formRegister input', function()
 	{
@@ -276,18 +290,52 @@ else
 
 	function Rsearch()
 	{
-		$(document).on("click","#Ajax-search",function(event)
+		$(document).on("keyup","#Ajax-valSearch",function(event)
 		{
 			event.preventDefault()
 			search = $("#Ajax-valSearch").val();
 			$.post("app/search/V_search.php",{search:search},function(data)
 			{
-			$("#Ajax-Rsearch").html(data)
+				$("#Ajax-Rsearch").html(data)
 			})
 		})
 	}
+
 	Rsearch()
+
+	function ReadFollow()
+	{
+		$(document).on("click","#Ajax-ReadFollow",function(event)
+		{
+			event.preventDefault()
+			$.ajax({
+				url : 'app/follow/V_follow.php',
+				success:function(data)
+				{
+					$("#Ajax-Rsearch").html(data)
+				}
+				
+			})
+		})
+	}
+
+	ReadFollow()
+	function ReadFollower()
+	{
+		$(document).on("click","#Ajax-ReadFollower",function(event)
+		{
+			event.preventDefault()
+			$.ajax({
+				url : 'app/follow/V_follower.php',
+				success:function(data)
+				{
+					$("#Ajax-Rsearch").html(data)
+				}
+				
+			})
+		})
+	}
+
+	ReadFollower()
+
 });//READY
-
-
-

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 05, 2016 at 09:03 AM
+-- Generation Time: Feb 08, 2016 at 07:58 PM
 -- Server version: 10.0.22-MariaDB
 -- PHP Version: 5.6.1
 
@@ -44,17 +44,17 @@ CREATE TABLE IF NOT EXISTS `tp_follow` (
   `follow_id` int(11) unsigned NOT NULL,
   `follower_id` int(11) unsigned NOT NULL,
   `date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tp_follow`
 --
 
 INSERT INTO `tp_follow` (`id`, `follow_id`, `follower_id`, `date`) VALUES
-(1, 1, 2, '2016-02-05 00:00:00'),
-(2, 14, 2, '2016-02-05 00:00:00'),
-(3, 2, 1, '0000-00-00 00:00:00'),
-(4, 2, 15, '2016-02-19 00:00:00');
+(10, 1, 2, '0000-00-00 00:00:00'),
+(11, 14, 2, '0000-00-00 00:00:00'),
+(12, 2, 14, '0000-00-00 00:00:00'),
+(13, 14, 2, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,31 @@ CREATE TABLE IF NOT EXISTS `tp_messages` (
   `expediteur_del` tinyint(1) unsigned NOT NULL,
   `view` tinyint(1) unsigned NOT NULL,
   `date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tp_messages`
+--
+
+INSERT INTO `tp_messages` (`id`, `content`, `destinataire_id`, `expediteur_id`, `destinataire_del`, `expediteur_del`, `view`, `date`) VALUES
+(1, 'yoplair', 1, 2, 0, 0, 0, '2016-02-11 00:00:00'),
+(2, 'ttt', 3, 2, 0, 0, 0, '2016-02-05 00:00:00'),
+(3, '3dfsfdsf', 3, 1, 0, 0, 0, '2016-02-24 00:00:00'),
+(4, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(5, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(6, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(7, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(8, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(9, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
+(10, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:16:50'),
+(11, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:22:34'),
+(12, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:56:11'),
+(13, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:30:39'),
+(14, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:15'),
+(15, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:16'),
+(16, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:16'),
+(17, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:26'),
+(18, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:35:51');
 
 -- --------------------------------------------------------
 
@@ -129,9 +153,9 @@ CREATE TABLE IF NOT EXISTS `tp_tweets` (
 --
 
 INSERT INTO `tp_tweets` (`id`, `content`, `user_id`, `created`) VALUES
-(1, 'blablabla', 1, '2016-02-03'),
-(2, 'je suis laure', 14, '2016-02-03'),
-(3, 'JE SUIS NUMERO 2', 2, '2016-02-10');
+(1, '#noob blablabla', 1, '2016-02-03'),
+(2, 'je suis #gros laure', 14, '2016-02-03'),
+(3, 'JE SUIS #stubi  NUMERO 2', 2, '2016-02-10');
 
 -- --------------------------------------------------------
 
@@ -158,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `tp_users` (
   `sexe` enum('m','f') NOT NULL,
   `cover` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tp_users`
@@ -166,9 +190,12 @@ CREATE TABLE IF NOT EXISTS `tp_users` (
 
 INSERT INTO `tp_users` (`id`, `login`, `mail`, `password`, `token`, `first_name`, `last_name`, `theme`, `city`, `country`, `connect`, `active`, `birthday`, `register`, `last_connection`, `sexe`, `cover`, `avatar`) VALUES
 (1, 'root', 'root@root.fr', 'bebc21dc09d37290a4a10df56550dbaa6beb7aec', '', 'root', 'root', 0, 'lyon', 'france', 0, 0, '2016-02-10', '2016-02-05 00:00:00', '0000-00-00 00:00:00', 'f', '', ''),
-(2, 'rootroot', 'aaAZ@live.fr', 'bebc21dc09d37290a4a10df56550dbaa6beb7aec', '', 'zzzz', 'vxcvxvcvsdfzzzzza', 0, 'lyoncvcxvcv', '', 0, 0, '2016-02-16', '2016-02-04 13:52:29', '0000-00-00 00:00:00', 'm', '', ''),
+(2, 'rootroot', 'aaAZ@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'zzzz', 'vxcvxvcvsdfzzzzza', 0, 'lyoncvcxvcv', '', 0, 0, '2016-02-16', '2016-02-04 13:52:29', '0000-00-00 00:00:00', 'm', '', ''),
 (14, 'laure', 'aaa@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'laure', 'dupont', 0, 'lyon', '', 0, 0, '0000-00-00', '2016-02-04 19:10:34', '0000-00-00 00:00:00', 'm', '', ''),
-(15, 'test', 'ggg@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'ee', 'zz', 0, 'dfdf', '', 0, 0, '2016-02-19', '2016-02-04 19:32:34', '0000-00-00 00:00:00', 'm', '', '');
+(15, 'test', 'ggg@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'ee', 'zz', 0, 'dfdf', '', 0, 0, '2016-02-19', '2016-02-04 19:32:34', '0000-00-00 00:00:00', 'm', '', ''),
+(16, 'testtest', 'ccvxcv@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'fsfsdf', 'xfsdf', 0, 'fsdfsdf', '', 0, 0, '0000-00-00', '2016-02-06 15:09:53', '0000-00-00 00:00:00', 'm', '', ''),
+(17, 'seb', 'aaaaaaaaaaaaaaaaaaaaaaa@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'sb', 'seb', 0, 'lton', '', 0, 0, '1900-02-24', '2016-02-08 11:08:10', '0000-00-00 00:00:00', 'm', '', ''),
+(18, 'laura', 'aaaakfsdf@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'temrtoieptyrio', 'izeroizerzm', 0, 'smdfoidsf', '', 0, 0, '0000-00-00', '2016-02-08 13:45:53', '0000-00-00 00:00:00', 'm', '', '');
 
 -- --------------------------------------------------------
 
@@ -268,12 +295,12 @@ ALTER TABLE `tp_favoris`
 -- AUTO_INCREMENT for table `tp_follow`
 --
 ALTER TABLE `tp_follow`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tp_messages`
 --
 ALTER TABLE `tp_messages`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tp_pictures`
 --
@@ -298,7 +325,7 @@ ALTER TABLE `tp_tweets`
 -- AUTO_INCREMENT for table `tp_users`
 --
 ALTER TABLE `tp_users`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tp_user_preference`
 --
