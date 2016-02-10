@@ -114,11 +114,11 @@ body { overflow: hidden; }
 .test2 { z-index: 1; background-color: #557377; position: relative; width: 55%; height: 450px; display: inline-block; bottom: 630px; 
   float: right; margin-right: 5%; border-radius: 15px; box-shadow: 2px 2px 16px rgba(0, 0, 0, .58); }
 .titre-tweet { z-index: 1; display: inline-block; font-size: 62px; color: #279cbf; text-shadow: -2px -2px 2px #ffffff; 
-  font-family: 'bellotalight'; position: relative; left: 448px; margin-left: 70px; }
+  font-family: 'bellotalight'; position: relative; left: 29%; margin-left: 5%; }
 .contour { display: inline-block; font-size: 58.5px; color: white; text-shadow: 2px 2px 2px #ffffff; font-family: 'bellotalight'; 
   font-weight: bold; }
 
-/* ---------------------------------------------------------- FORMULAIRE INSCRIPTION ------------------------------------------------------------ */
+/* ---------------------------------------------------------- FORMULAIRE INSCRIPTION ---------------------------------------------------------- */
 
 #formRegister { width: 90%; margin-right: 5%; margin-left: 5%; }
 /*Register CSS*/
@@ -145,4 +145,21 @@ body { overflow: hidden; }
 .radio { color: white; }
 .addon { position: relative; top: 7px; color: white; background-color: #39B3D7; padding: 7px 12px; border-radius: 3px; }
 
-/* ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- AUTHENTIFICATION ------------------------------------------------------------------- */
+
+.none2 { margin-top: 38px; }
+.user-row { text-align: center; border-bottom: 1px white dashed; margin-bottom: 25px; }
+.user-row { color: white; }
+.login { width: 60%; margin-left: 20%; }
+.login_champ { width: 100%; }
+.login_champ hr { margin: 0px 0px 15px 0px; padding: 0px; }
+.login_control { width: 80%; margin-left: 10%; margin-bottom: 10px; }
+#singInPass { margin-bottom: 25px; }
+#gratuit { width: 100%; margin-left: 30%; }
+.nouveau { display: inline-block; width: 100%; width: 100%; text-align: center; font-size: 42px; color: white; margin-top: 65px;
+  margin-bottom: 45px; }
+.p1, .p2, .p3 { display: inline-block; width: 100%; font-size: 22px; text-align: center; color: white; }
+.inscript { display: inline-block; width: 30%; margin-left: 35%; padding: 6px 12px; border-radius: 4px; margin-top: 50px; }
+.connect { display: inline-block; width: 60%; margin-left: 0px; padding: 6px 12px; border-radius: 4px; margin-top: 15px; }
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
