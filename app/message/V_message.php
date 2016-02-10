@@ -1,12 +1,9 @@
 <?php
-require("C_message.php");
-foreach ($readMsg as $key => $value)
- {
-	echo $value->content;
-	echo $value->login;
-}
+echo $dest = $_GET["idUser"];
 
-
-
-
+echo'
+<form method="POST" action="C_message.php?idUser='.$dest.'">
+<textarea name="content" ></textarea>
+	<input type="submit">
+</form>';
 ?>

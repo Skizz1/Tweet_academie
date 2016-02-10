@@ -338,4 +338,37 @@ else
 
 	ReadFollower()
 
+
+$(".none2").hide();
+    $(".inscript-infos").hide();
+    function connex()
+    {
+        $(document).on("click","#Ajax-connexion",function(){
+            $(".compte-infos").hide();
+            $(".none2").show();
+            $("#formRegister").hide();
+            $(".inscript-infos").show();
+        })
+
+        $(document).on("click", "#inscription", function() {
+            $(".compte-infos").show();
+            $(".none2").hide();
+            $("#formRegister").show();
+            $(".inscript-infos").hide();
+        })
+    }
+    connex()
+
+/////////////// REDIGE UN TWEET ////////////////////////////
+
+function writeTweet()
+{
+$(document).on("click","#Ajax-tweet",function(){
+
+
+})
+
+
+}
+
 });//READY

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tweet@cademie</title>
+    <title>Meetic</title>
     <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <meta charset="UTF-8">
