@@ -1,6 +1,6 @@
 <?php
 use App\Model\Database;
-
+require_once("database.php");
 class Model
 {
     /**
