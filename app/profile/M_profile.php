@@ -8,4 +8,5 @@ class ProfileModel extends Model
         parent::__construct();
         $this->table = 'tp_users';
     }
+
 }

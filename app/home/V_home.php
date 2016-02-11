@@ -20,9 +20,6 @@ require_once("../tweets/M_tweets.php");
                     <input type="submit" id="Ajax-search" class="btn btn-primary"><span class="glyphicon glyphicon-search"/></span>
                 </form>
                 <li>
-                    <!-- ================================================================ -->
-                    <!-- RAJOUT MAIL -->
-                    <!-- ================================================================ -->
                     <a href="app/message/V_boxMail.php">MAIL</a>
                     <button type="button" id="logOut" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button>
                 </li>
@@ -36,92 +33,93 @@ require_once("../tweets/M_tweets.php");
                     <div class="twitter-widget">
                         <div class="header cf">
                             <!-- Afficher la photo de profil du membre connecté -->
-                            <img class="avatar" src="public/css/images/index.png" alt="Profil">
-                            <!-- Afficher le login du membre connecté -->
-                            <h2><?php echo $_SESSION["login"] ?></h2>
-                        </div>
-                        <div class="stats cf">
-                            <a href="#" class="stat">
-                                <!-- Afficher nombre de tweets du membre connecté -->
-                                <?php foreach ($tweetCount as $value)
-                                {
-                                    echo "<strong>" . $value->tweets . "</strong>";
-                                }
-                                ?>
-                                tweets
-                            </a>
-                            <a href="#" id="Ajax-ReadFollower" class="stat cf">
 
-                                <!-- Afficher nombre de follow du membre connecté -->
-                                <?php
-                                foreach ($Mefollower as $value)
-                                {
-                                    echo "<strong>" . $value->nbrFollow . "</strong>";
-                                }
-                                ?>
-                                follower
-                            </a>
-                            <a href="#" id="Ajax-ReadFollow" class="stat">
-                                <!-- Afficher nombre de followers du membre connecté -->
-                                <?php
-                                foreach ($CountMefollow as $value)
-                                {
-                                    echo "<strong>" . $value->nbrFollow . "</strong>";
-                                }
-                                ?>
-                                follow
-                            </a>
-                        </div>
-                        <ul class="menu cf">
-                            <!-- AJOUT ID Ajax-Tweet ///////////////////////////////////-->
-                            <li><a href="#" id="Ajax-tweet" class="ico-compose">Compose</a></li>
-                            <li><a href="#" class="ico-mentions">Mentions</a></li>
-                            <li><a href="app/profile/V_profile.php" class="ico-profile">Profil</a></li>
-                            <li><a href="app/profile/V_settings.php" class="ico-settings">Settings</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="actualite">
-                    <!-- Afficher les actualités récentes des gens Follows par le membre connecté -->
-                    <div class="infos">
-                        <div class="twitter-widget1">
-                            <div class="stats cf actu">
-                                <span>Actualités récentes</span>
-                            </div>
-                            <?php
-                            foreach ($timeLine as $key => $value)
+
+                            <?php 
+                            require("../profile/V_picture.php");
+                         // echo'
+                         // <img class="avatar" src="public/css/images/users/'.$_SESSION["id"].'.jpg" alt="Profil">'
+                         ?>
+
+
+                         <!-- Afficher le login du membre connecté -->
+                         <h2><?php echo $_SESSION["login"] ?></h2>
+                     </div>
+                     <div class="stats cf">
+                        <a href="#" class="stat">
+                            <!-- Afficher nombre de tweets du membre connecté -->
+                            <?php foreach ($tweetCount as $value)
                             {
-                                echo $value->login . "<br/>";
-                                echo "A publie " . $value->content . "<br/>";
-                                echo "le " . $value->created . "<br/>";
+                                echo "<strong>" . $value->tweets . "</strong>";
                             }
                             ?>
-                            <!-- Afficher le nom prenom et texte du tweet avec max 30 caractères et des "..." après -->
-                            <span></span>
-                        </div>
+                            tweets
+                        </a>
+                        <a href="#" id="Ajax-ReadFollower" class="stat cf">
+
+                            <!-- Afficher nombre de follow du membre connecté -->
+                            <?php
+                            foreach ($Mefollower as $value)
+                            {
+                                echo "<strong>" . $value->nbrFollow . "</strong>";
+                            }
+                            ?>
+                            follower
+                        </a>
+                        <a href="#" id="Ajax-ReadFollow" class="stat">
+                            <!-- Afficher nombre de followers du membre connecté -->
+                            <?php
+                            foreach ($CountMefollow as $value)
+                            {
+                                echo "<strong>" . $value->nbrFollow . "</strong>";
+                            }
+                            ?>
+                            follow
+                        </a>
                     </div>
+                    <ul class="menu cf">
+                        <li><a href="#" id="Ajax-tweet" class="ico-compose">Compose</a></li>
+                        <li><a href="#" class="ico-mentions">Mentions</a></li>
+                        <li><a href="app/profile/V_profile.php" class="ico-profile">Profil</a></li>
+                        <li><a href="app/profile/V_settings.php" class="ico-settings">Settings</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="right">
-                <div class="tweet" id="Ajax-Rsearch">
-
-
-
-                    <!-- AJOUT TWEET MERCREDI -->
-
-
-                    <!-- //////////////////////////////////////// -->
-                    <div class="contenu">
-                    <?php 
-                        require("../tweets/V_tweet.php");
-                    ?>
+            <div class="actualite">
+                <!-- Afficher les actualités récentes des gens Follows par le membre connecté -->
+                <div class="infos">
+                    <div class="twitter-widget1">
+                        <div class="stats cf actu">
+                            <span>Actualités récentes</span>
+                        </div>
+                        <?php
+                        foreach ($timeLine as $key => $value)
+                        {
+                            echo $value->login . "<br/>";
+                            echo "A publie " . $value->content . "<br/>";
+                            echo "le " . $value->created . "<br/>";
+                        }
+                        ?>
+                        <!-- Afficher le nom prenom et texte du tweet avec max 30 caractères et des "..." après -->
+                        <span></span>
                     </div>
-                   <!-- TIME LINE -->
-
-
-
                 </div>
             </div>
         </div>
-    </div>
+        <div class="right">
+            <div class="tweet" id="Ajax-Rsearch">
 
+                <div class="contenu">
+                    <?php 
+                    /*
+                    * Liste des tweeets
+                    */
+                    require("../tweets/V_tweet.php");
+                    ?>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

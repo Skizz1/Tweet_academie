@@ -6,7 +6,6 @@ require('M_profile.php');
 
 class ProfileController
 {
-
     /**
      * Désactive un compte
      * @param int $id l'ID de l'utilisateur
@@ -81,4 +80,5 @@ class ProfileController
         $instance->update($id, ['theme' => $newTheme]);
     }
 }
+
 $data = new ProfileController();

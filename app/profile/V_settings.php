@@ -89,5 +89,12 @@ if(!empty($_POST['desactive'])){
     <input type="submit" name="desactive" id="desactive" value="Envoyer" class="btn btn-info pull-right" onclick="return confirm('Voulez vous vraiment désactiver votre compte ?');">
 </form>
 
+<h2 id="desactive">Image profile</h2>
+<form method="post" action="C_picture.php" enctype="multipart/form-data">
+    <input type="file" name="picture">
+    <input type="submit">
+</form>
+
+
 </body>
 </html>
