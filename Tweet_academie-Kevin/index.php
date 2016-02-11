@@ -1,7 +1,27 @@
-<?php include('header.php'); ?>
+<?php
+	ini_set('dislay_error','on');
+	error_reporting(E_ALL);
 
+	require_once('header.php');
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tweet@cademie</title>
+    <link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/home.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="public/java/JQuery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/java/java.js"></script>
+    <!-- DATAPICKER -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
 <div id="slide2">
-	<div class=".slide_inside">
+	<div class="slide_inside">
 		<div id="clouds">
 			<span class="titre-tweet">Tweet@cademie</span>
 			<span class="contour">Tweet@cademie</span>	
@@ -64,7 +84,7 @@
 						<div class="form-group1">
 							<div class="input-group">
 								<input type="text" class="form-control text-center datepicker" id="inputAniv"  name="anniv" placeholder="Date de naissance" required>
-								<span id="" class="input-group-addon info"><span id="" class="glyphicon glyphicon-user"></span></span>
+								<span class="input-group-addon info"><span class="glyphicon glyphicon-user"></span></span>
 							</div>
 						</div>
 						<div class="form-group">
@@ -94,15 +114,15 @@
 						</div>
 						<div class="form-group">
 							<div class="input-group">
-								<input type="text" class="form-control text-center" id="inputCity" name="city" placeholder="Ville" required>
-								<span id="imgCity" class="input-group-addon info"><span id="cityRegister" class="glyphicon glyphicon-user"></span></span>
+								<input type="text" class="form-control text-center inputCity" name="city" placeholder="Ville" required>
+								<span class="input-group-addon info imgCity"><span id="cityRegister" class="glyphicon glyphicon-user"></span></span>
 							</div>
 						</div>
 						<div class="form-group1">
 							<div class="input-group">
-								<span id="imgCity" class="addon">Sexe</span>
-								<input type="radio" class="form-control sexeh" id="inputCity" name="sexe" placeholder="H" value="homme" required><span class="radio homme">Homme</span>
-								<input type="radio" class="form-control sexe" id="inputCity" name="sexe" placeholder="F" value="femme" required><span class="radio femme">Femme</span>
+								<span class="addon imgCity">Sexe</span>
+								<input type="radio" class="form-control sexeh inputCity" name="sexe" value="homme" required><span class="radio homme">Homme</span>
+								<input type="radio" class="form-control sexe inputCity" name="sexe" value="femme" required><span class="radio femme">Femme</span>
 							</div>
 						</div>
 						<input type="submit" name="submit"  id="registerSubmit" value="inscription" class="btn btn-info">

@@ -1,7 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="822efe30-f319-44b8-9e42-3ca9f7379ed7" name="Default" comment="" />
+    <list default="true" id="822efe30-f319-44b8-9e42-3ca9f7379ed7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/Tweet_academie.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/follow/M_follow.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/follow/V_follow.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/home/V_home.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/onlineUser/C_disconect.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/onlineUser/connected.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/onlineUser/sessionInit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/register/C_register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/register/M_register.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/singin/C_singIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/singin/M_singIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/timeLine/M_timeLine.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/app/timeLine/V_timeLine.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/common-database.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/gitinfo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/images/image-slider-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/images/index.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/images/twitter-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/css/bootstrap.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/java/JQuery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/java/java.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/css/materialize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/css/materialize.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/Material-Design-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/Material-Design-Icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/Material-Design-Icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/Material-Design-Icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/material-design-icons/Material-Design-Icons.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/font/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/js/materialize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/public/materialize/js/materialize.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/M_Model.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/M_Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/database.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follow.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follow.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/search/M_search.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/search/M_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/search/V_search.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/search/V_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/common-database.sql" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/common-database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js" />
+    </list>
     <ignored path="Tweet_academie.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -16,27 +112,81 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Tweet_academie" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="V_home.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.375">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.5147059">
+              <caret line="61" column="44" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connected.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/connected.php">
+      <file leaf-file-name="V_settings.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_settings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2867647">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="26" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V_profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V_follower.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="M_tweets.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+              <folding>
+                <marker date="1454956923341" expanded="true" signature="327:360" placeholder="DELETE FROM " />
+                <marker date="1454956923341" expanded="true" signature="327:365" placeholder="DELETE FROM " />
+                <marker date="1454956923341" expanded="true" signature="327:370" placeholder="DELETE FROM " />
+                <marker date="1454956923341" expanded="true" signature="631:663" placeholder="SELECT COUNT... $" />
+                <marker date="1454956923341" expanded="true" signature="631:677" placeholder="SELECT COUNT... " />
+                <marker date="1454956923341" expanded="true" signature="631:694" placeholder="SELECT COUNT... $" />
+                <marker date="1454956923341" expanded="true" signature="631:699" placeholder="SELECT COUNT... $" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="M_follow.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+              <folding>
+                <marker date="1454960377509" expanded="true" signature="228:385" placeholder="SELECT *,cou... tp_follow" />
+                <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
+                <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
+                <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,13 +199,31 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/register/M_register.php" />
-        <option value="$PROJECT_DIR$/app/database.php" />
-        <option value="$PROJECT_DIR$/app/register/C_register.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/connected.php" />
+        <option value="$PROJECT_DIR$/app/database.php" />
+        <option value="$PROJECT_DIR$/app/profile/ProfileModel.php" />
+        <option value="$PROJECT_DIR$/app/Database.php" />
+        <option value="$PROJECT_DIR$/app/register/C_register.php" />
+        <option value="$PROJECT_DIR$/app/register/M_register.php" />
+        <option value="$PROJECT_DIR$/app/model/model.php" />
+        <option value="$PROJECT_DIR$/app/tweets/C_tweets.php" />
+        <option value="$PROJECT_DIR$/app/register/C_Register.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/profile/C_profile.php" />
+        <option value="$PROJECT_DIR$/app/model/M_Model.php" />
+        <option value="$PROJECT_DIR$/app/tweets/M_tweets.php" />
+        <option value="$PROJECT_DIR$/app/profile/M_profile.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/database.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/M_Model.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php" />
+        <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php" />
       </list>
     </option>
   </component>
@@ -63,6 +231,9 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -96,6 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -113,10 +285,115 @@
               <option name="myItemId" value="Tweet_academie" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie-Lucas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -125,6 +402,16 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets" />
+      <recent name="$PROJECT_DIR$/Tweet_academie-Kevin/app" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/tweets" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -142,6 +429,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -152,6 +444,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="822efe30-f319-44b8-9e42-3ca9f7379ed7" name="Default" comment="" />
@@ -169,10 +464,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -185,6 +480,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -195,34 +498,314 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/footer.php">
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3333333">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2867647">
-          <caret line="13" column="68" selection-start-line="13" selection-start-column="68" selection-end-line="13" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.375">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <marker date="1454956923341" expanded="true" signature="327:360" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:365" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:370" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="631:663" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:677" placeholder="SELECT COUNT... " />
+            <marker date="1454956923341" expanded="true" signature="631:694" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:699" placeholder="SELECT COUNT... $" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <marker date="1454960377509" expanded="true" signature="228:385" placeholder="SELECT *,cou... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connected.php">
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2867647">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <marker date="1454956923341" expanded="true" signature="327:360" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:365" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:370" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="631:663" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:677" placeholder="SELECT COUNT... " />
+            <marker date="1454956923341" expanded="true" signature="631:694" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:699" placeholder="SELECT COUNT... $" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <marker date="1454960377509" expanded="true" signature="228:385" placeholder="SELECT *,cou... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/message/C_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/C_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/C_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/search/V_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/C_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0882353">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="262" column="18" selection-start-line="262" selection-start-column="18" selection-end-line="262" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11029412">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/message/C_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/register/C_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2720588">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7777778">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/timeLine/V_timeLine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/timeLine/M_timeLine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/singin/M_singIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/register/M_register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/search/M_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/M_Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13235295">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/M_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24264705">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <marker date="1454960377509" expanded="true" signature="228:385" placeholder="SELECT *,cou... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
+            <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding>
+            <marker date="1454956923341" expanded="true" signature="327:360" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:365" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="327:370" placeholder="DELETE FROM " />
+            <marker date="1454956923341" expanded="true" signature="631:663" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:677" placeholder="SELECT COUNT... " />
+            <marker date="1454956923341" expanded="true" signature="631:694" placeholder="SELECT COUNT... $" />
+            <marker date="1454956923341" expanded="true" signature="631:699" placeholder="SELECT COUNT... $" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5147059">
+          <caret line="61" column="44" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="44" />
           <folding />
         </state>
       </provider>
