@@ -28,15 +28,7 @@ $(document).ready(function()
 	$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
 
 
-	function writeTweet()
-	{
-		$(document).on("click","#Ajax-tweet",function()
-		{
-			$(".Ajax-postTweet").show();
-		})
 
-	}
-	writeTweet()
 
 	$('#registerSubmit').prop('disabled', true);
 
@@ -311,10 +303,30 @@ else
 		{
 			event.preventDefault()
 			search = $("#Ajax-valSearch").val();
+			////////////// JEUDI //////////////////////
+			console.log(search)
+			/*
+			* Si le champ de recherche est vide, reaffiche la liste de tweet
+			*/
+			if (search == "")
+			{
+				$.ajax({
+					url : 'app/tweets/V_tweet.php',
+					success:function(data)
+					{
+						$("#Ajax-Rsearch").html(data)
+						$(".Ajax-postTweet").hide();
+						writeTweet()
+					}
+				});
+
+			};
+			/////////////////////////////////////////
 			$.post("app/search/V_search.php",{search:search},function(data)
 			{
 				$("#Ajax-Rsearch").html(data)
 			})
+
 		})
 	}
 
@@ -331,7 +343,6 @@ else
 				{
 					$("#Ajax-Rsearch").html(data)
 				}
-				
 			})
 		})
 	}
@@ -377,10 +388,17 @@ else
 	connex();
 
 /////////////// REDIGE UN TWEET MERCREDI ////////////////////////////
-
 /*
 * redige un tweet, form en hide() commande situe en haut
 */
+function writeTweet()
+{
+	$(document).on("click","#Ajax-tweet",function()
+	{
+		$(".Ajax-postTweet").show();
+	})
+}
+writeTweet()
 
 
 

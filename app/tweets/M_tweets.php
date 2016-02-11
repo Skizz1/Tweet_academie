@@ -38,7 +38,7 @@ class TweetsModel extends Model
     public function readTweet($id)
     {
 
-        $connexion = \App\Model\Database::get()->prepare("SELECT * from tp_follow  INNER JOIN tp_users on tp_users.id = tp_follow.follow_id INNER JOIN tp_tweets on  tp_users.id  =  tp_tweets.user_id  WHERE follower_id = '".$id."' GROUP BY tp_tweets.id");
+        $connexion = \App\Model\Database::get()->prepare("SELECT * from tp_follow  INNER JOIN tp_users on tp_users.id = tp_follow.follow_id INNER JOIN tp_tweets on  tp_users.id  =  tp_tweets.user_id  WHERE follower_id = '".$id."' OR follow_id = '".$id."' GROUP BY tp_tweets.id");
         $connexion->execute();  
        
         $data = $connexion->fetchAll();

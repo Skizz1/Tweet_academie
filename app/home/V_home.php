@@ -110,13 +110,6 @@ require_once("../tweets/M_tweets.php");
                     <!-- AJOUT TWEET MERCREDI -->
 
 
-                    <div class="Ajax-postTweet">
-                        <form id="Ajax-postTweet" method="POST" action="app/tweets/C_tweets.php">
-                            <textarea name='content' rows="4" cols="50" placeholder='redige ton tweet'></textarea><input type='submit'>
-                        </form>     
-                    </div>
-
-
                     <!-- //////////////////////////////////////// -->
                     <div class="contenu">
                     <?php 
