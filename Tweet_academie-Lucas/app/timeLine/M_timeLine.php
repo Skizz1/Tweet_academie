@@ -8,7 +8,7 @@ class timeLine
 	}
 	function viewTimeLine()
 	{
-		$connexion = \App\Model\Database::get()->prepare("SELECT * from tp_follow
+		/* $connexion = \App\Model\Database::get()->prepare("SELECT * from tp_follow
 			INNER JOIN tp_tweets
             on tp_tweets.user_id = tp_follow.follow_id
             INNER JOIN tp_users on tp_tweets.user_id = tp_users.id
@@ -16,7 +16,8 @@ class timeLine
 		$connexion->execute();	
 		$data = $connexion->fetchAll();
 		
-		return $data;	
+		return $data;
+		*/
 	}
 }
 

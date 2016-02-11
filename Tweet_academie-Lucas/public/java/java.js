@@ -1,5 +1,7 @@
 $(document).ready(function()
 {
+
+
 	var login,
 	regexLogin;
 	var pass;
@@ -25,6 +27,9 @@ $(document).ready(function()
 
 	$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
 
+
+
+
 	$('#registerSubmit').prop('disabled', true);
 
 	function redirectHome()
@@ -36,6 +41,10 @@ $(document).ready(function()
 			success:function(e)
 			{
 				$("body").html(e)
+				/*
+				* Permet de cache le texte area des tweets
+				*/
+				$(".Ajax-postTweet").hide();
 			}	
 		})
 	}
@@ -47,7 +56,7 @@ $(document).ready(function()
 				url : 'app/onlineUser/C_disconect.php',
 				success:function(data)
 				{
-					 window.location.replace("index.php")
+					window.location.replace("index.php")
 				}
 				
 			})
@@ -294,10 +303,30 @@ else
 		{
 			event.preventDefault()
 			search = $("#Ajax-valSearch").val();
+			////////////// JEUDI //////////////////////
+			console.log(search)
+			/*
+			* Si le champ de recherche est vide, reaffiche la liste de tweet
+			*/
+			if (search == "")
+			{
+				$.ajax({
+					url : 'app/tweets/V_tweet.php',
+					success:function(data)
+					{
+						$("#Ajax-Rsearch").html(data)
+						$(".Ajax-postTweet").hide();
+						writeTweet()
+					}
+				});
+
+			};
+			/////////////////////////////////////////
 			$.post("app/search/V_search.php",{search:search},function(data)
 			{
 				$("#Ajax-Rsearch").html(data)
 			})
+
 		})
 	}
 
@@ -314,7 +343,6 @@ else
 				{
 					$("#Ajax-Rsearch").html(data)
 				}
-				
 			})
 		})
 	}
@@ -337,5 +365,42 @@ else
 	}
 
 	ReadFollower()
+
+
+	$(".none2").hide();
+	$(".inscript-infos").hide();
+	function connex()
+	{
+		$(document).on("click","#Ajax-connexion",function(){
+			$(".compte-infos").hide();
+			$(".none2").show();
+			$("#formRegister").hide();
+			$(".inscript-infos").show();
+		})
+
+		$(document).on("click", "#inscription", function() {
+			$(".compte-infos").show();
+			$(".none2").hide();
+			$("#formRegister").show();
+			$(".inscript-infos").hide();
+		})
+	}
+	connex();
+
+/////////////// REDIGE UN TWEET MERCREDI ////////////////////////////
+/*
+* redige un tweet, form en hide() commande situe en haut
+*/
+function writeTweet()
+{
+	$(document).on("click","#Ajax-tweet",function()
+	{
+		$(".Ajax-postTweet").show();
+	})
+}
+writeTweet()
+
+
+
 
 });//READY

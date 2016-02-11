@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("M_message.php");
 class Cmessage
 {
@@ -7,29 +8,17 @@ class Cmessage
 	var $content;
 	function __construct()
 	{
-		$this->exp = "1";
-		$this->dest = "2";
-		$this->content = "SALUT JE SUIS UN TEST"; 
+		$this->exp = $_GET["idUser"];
+		$this->dest = $_SESSION["id"];
+		$this->content = $_POST["content"]; 
 	}
-	function sendMsg()
+		function sendMsg()
 	{
 		$SqlMessage = new SqlMessage;
 		$SqlMessage->SendMessage($this->content,$this->dest,$this->exp);
 	}
-	function ReadMessage()
-	{
-		$SqlMessage = new SqlMessage;
-		return $SqlMessage->ReadMessage("1","2");
-	}
 }
-
-
 $Cmessage = new Cmessage;
 $Cmessage->sendMsg();
-$readMsg = $Cmessage->ReadMessage();
-
-
-
-
 
 ?>

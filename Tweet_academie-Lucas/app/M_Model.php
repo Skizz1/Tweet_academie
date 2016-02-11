@@ -1,5 +1,6 @@
 <?php
 use App\Model\Database;
+require('database.php');
 
 class Model
 {
@@ -13,7 +14,6 @@ class Model
         $this->userId = $_SESSION["id"];
     }
 
-
     /**
      * Retourne une information
      * @param int $id ID
@@ -22,7 +22,7 @@ class Model
      */
     public function getField($id, $field)
     {
-        $sql = "SELECT {$field} from {$this->table} WHERE id = {$id}";
+        $sql = "SELECT {$field} FROM {$this->table} WHERE id = {$id}";
         $req = Database::get()->prepare($sql);
         $req->execute();
         $data = $req->fetch();
