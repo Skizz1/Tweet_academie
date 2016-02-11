@@ -1,6 +1,5 @@
 <?php
-
-require('../M_Model.php');
+require_once('../M_Model.php');
 
 class ProfileModel extends Model
 {
