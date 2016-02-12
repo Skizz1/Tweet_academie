@@ -23,7 +23,7 @@
 .cf:after { clear: both; }
 .twitter-widget { color: #4c4c4c; height: 249px;  width: 97.4%; 
     box-shadow: 1px 1px 16px rgba(0, 0, 0, .58); border-radius: 2px; }
-.header { background: url(http://cameronbaney.com/codepen/twitter-widget/bg-header.jpg) no-repeat; color: #fdfdfd; 
+.header { background: url(http://cameronbaney.com/codepen/twitter-widget/bg-header.jpg) no-repeat; background-size: cover; color: #fdfdfd; 
     font: 12px/17px 'HelveticaNeue-UltraLight', Helvetica, Arial, sans-serif; padding: 18px 28px 20px; border-radius: 2px 2px 0 0; }
 .avatar { border: 4px solid #29c6f5; border-top-width: 3px; float: left; margin-right: 16px; position: relative; 
     box-shadow: 0 1px 1px rgba(0, 0, 0, .6), 0 -1px 0 #9ce5fa; border-radius: 2px; max-width: 78px; max-height: 78px; }
@@ -103,6 +103,8 @@
   width: 37%; height: 52px; box-shadow: 4px 4px 0 0 #f7e7eb inset; }
 @keyframes leftright { 0% { margin-left: 0%; } 50% { margin-left: 40%; } 100% { margin-left: 0%; } }
 .deplace { z-index: 1; display: inline-block; width: 60%; height: 70px; animation: leftright 10s infinite; }
+#logOut { position: relative; left: 125%; bottom: 60px; font-family: 'bellotalight'; background-color: #20AAC5; border: 1px #20AAC5 solid; }
+#logOut:hover { background-color: #19849a; border: 1px #19849a solid; }
 
 /* ------------------------------------------------------------- TWEETS ---------------------------------------------------------------------- */
 

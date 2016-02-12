@@ -19,6 +19,9 @@ require_once("../tweets/M_tweets.php");
             <div class="form-group3">
                 <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
                 <span class="glyphicon glyphicon-search gly-search"></span>
+                <button type="button" id="logOut" class="btn btn-primary navbar-btn">
+                    <span class="glyphicon glyphicon-log-out deco"> Déconnexion</span>
+                </button>
             </div>
         </form>
     </div>
