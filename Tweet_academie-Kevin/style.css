@@ -82,16 +82,18 @@
     box-shadow: 1px 1px 16px rgba(0, 0, 0, .58); border-radius: 2px; }
 .actu { display: inline-block; width: 100%; padding-left: 5%; }
 .barre { display: inline-block; width: 60%; margin-left: 20%; margin-top: 40px; }
-.barre2 { display: inline-block; border-top: none; border-left: none; border-right: none; border-bottom: 1px black solid;
- padding: 8px; }
- .barre2:hover { border-bottom: 2px green solid; }
+.barre2 { display: inline-block; border-top: none; border-left: none; border-right: none; border-bottom: 1px #7bd7ea solid;
+ padding: 8px; color: white; font-size: 18px; }
+ .barre2:hover { border-bottom: 2px #115f6e solid; }
 .form-group3 { display: inline-block; width: 100%; }
-#Ajax-valSearch { display: inline-block; width: 100%; }
+#Ajax-valSearch { display: inline-block; width: 100%; background-color: transparent; }
+.gly-search { display: inline-block; height: 30px; position: relative; top: -33px; left: 95%; font-size: 18px; 
+  text-align: right; color: rgba(255, 255, 255, 0.5); }
 
 /* ----------------------------------------------------------- TIMELINE ---------------------------------------------------------------------- */
 
-.nav-tweet { position: fixed; width: 100%; height: 110px; background-color: red; margin-bottom: 40px; }
-.navbar-header { width: 20%; }
+.nav-tweet { position: fixed; width: 100%; height: 110px; background-color: #20AAC5; margin-bottom: 40px; }
+.navbar-header { width: 20%; position: relative; right: 13%; }
 .twitter { padding: 3px 15px; background-color: white; float: left; border-radius: 20px; margin-top: 50px; 
   width: 100%; height: 38px; box-shadow: 6px -4px 0 0 #f7e7eb inset; }
 .academie { position: relative; bottom: 60px; left: 14px; font-family: 'bellotalight'; font-size: 15px; font-weight: bold; }
@@ -100,7 +102,16 @@
 .nuage3 { position: relative; left: 51%; bottom: 35px; background-color: white; border-radius: 100%; 
   width: 37%; height: 52px; box-shadow: 4px 4px 0 0 #f7e7eb inset; }
 @keyframes leftright { 0% { margin-left: 0%; } 50% { margin-left: 40%; } 100% { margin-left: 0%; } }
-.deplace { z-index: 1; display: inline-block; width: 60%; height: 70px; animation: leftright 8s infinite; }
+.deplace { z-index: 1; display: inline-block; width: 60%; height: 70px; animation: leftright 10s infinite; }
+
+/* ------------------------------------------------------------- TWEETS ---------------------------------------------------------------------- */
+
+#Ajax-postTweet { display: inline-block; /*background-color: green;*/ width: 100%; height: 80px; margin-bottom: 25px; margin-top: 15px; border: none; }
+#Ajax-postTweet textarea { width: 100% !important; height: 48px !important; border-bottom: 1px solid #b2b2b2 !important; 
+  border: medium none; }
+.area { display: inline-block; width: 90%; height: 15px;  }
+.photo { display: inline-block; float: right; width: 10%; margin-top: 5px; margin-right: 4%; font-size: 16px; }
+.camera { padding-left: 12%; font-family: 'bellotalight'; font-size: 17px; }
 
 /* ----------------------------------------------------- MESSAGERIE INSTANTANEE -------------------------------------------------------------- */
 

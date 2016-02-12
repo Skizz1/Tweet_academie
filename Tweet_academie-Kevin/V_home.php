@@ -9,17 +9,18 @@ require_once("../tweets/M_tweets.php");
         <div class="container">
             <div class="navbar-header">
                 <div class="deplace">
-                   <div class="twitter"></div>
-                   <div class="nuage2"></div>
-                   <div class="nuage3"></div>
-                   <a class="academie" href="index.php">Tweet@cademie</a>
-               </div>
+                 <div class="twitter"></div>
+                 <div class="nuage2"></div>
+                 <div class="nuage3"></div>
+                 <a class="academie" href="index.php">Tweet@cademie</a>
+             </div>
+         </div>
+         <form class="navbar-form navbar-left barre" method="POST" action="app/search/V_search.php">
+            <div class="form-group3">
+                <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
+                <span class="glyphicon glyphicon-search gly-search"></span>
             </div>
-            <form class="navbar-form navbar-left barre" method="POST" action="app/search/V_search.php">
-                <div class="form-group3">
-                    <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
-                </div>
-            </form>
+        </form>
     </div>
 </nav>
 <div class="container1">
@@ -99,8 +100,12 @@ require_once("../tweets/M_tweets.php");
 
                 <div id="Ajax-postTweet">
                 	<form>
-                		<textarea></textarea>
-                	</form>	
+                		<textarea placeholder="Exprimez-vous" name="message"></textarea>
+                	</form>
+                    <div class="area">
+                        <span class="glyphicon glyphicon-share-alt photo"><span class="camera">Tweeter</span></span>
+                        <span class="glyphicon glyphicon-camera photo"><span class="camera">Photo</span></span>
+                    </div>
                 </div>
                 <img class="avatar-tweet" src="public/css/images/index.png" alt="zozio" />
                 <div class="contenu">

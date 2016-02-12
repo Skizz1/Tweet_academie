@@ -221,16 +221,16 @@ else
 	*/
 	if (regexCity === true) 
 	{
-		$("#imgCity").removeClass();
-		$("#imgCity").addClass('input-group-addon success');
+		$(".imgCity").removeClass();
+		$(".imgCity").addClass('input-group-addon success');
 		$("#cityRegister").removeClass();
 		$("#cityRegister").addClass('glyphicon glyphicon-ok');
 		VCity = true;
 	}
 	else
 	{
-		$("#imgCity").removeClass();
-		$("#imgCity").addClass('input-group-addon danger');
+		$(".imgCity").removeClass();
+		$(".imgCity").addClass('input-group-addon danger');
 		$("#cityRegister").addClass('glyphicon glyphicon-remove');
 		VCity = false;
 	}
