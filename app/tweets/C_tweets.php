@@ -7,7 +7,7 @@ class TweetsController
 	{
 		$date = date('Y-m-d');
 	$TweetsModel = new TweetsModel;
-	$TweetsModel->create(["content"=>$content,"user_id"=>$_SESSION["id"],"created"=>$date]);
+	$TweetsModel->create(["content"=>$content,"user_id"=>$_SESSION["id"],"tweet_date"=>$date]);
 	}
 }
 echo "eeee";

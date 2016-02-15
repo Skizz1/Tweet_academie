@@ -18,7 +18,6 @@ class sessionInit
 		{
 			$_SESSION["login"]; 
 			$_SESSION["id"]; 
-			include("connected.php");
 		}
 	}
 }

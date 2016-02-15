@@ -26,7 +26,9 @@ class Model
         $req = Database::get()->prepare($sql);
         $req->execute();
         $data = $req->fetch();
-        return $data;
+        foreach($data as $key => $value){
+            return $value;
+        }
     }
 
     /**

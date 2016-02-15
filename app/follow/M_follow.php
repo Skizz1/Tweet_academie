@@ -1,7 +1,7 @@
 <?php
-session_start();
-require_once('../database.php');
 
+require_once('../database.php');
+session_start();
 class Cfollow
 {
 	var $id;
@@ -10,26 +10,13 @@ class Cfollow
 	{
 		$this->id = $_SESSION["id"];
 	}
-
-	function Mefollower()
+		function Mefollower()
 	{
 		$connexion = \App\Model\Database::get()->prepare("
 			SELECT *,count(follow_id) AS nbrFollow
 			FROM `tp_follow` INNER JOIN tp_users
 			ON tp_follow.follower_id = tp_users.id
 			WHERE follow_id = '".$this->id."'");
-		$connexion->execute();
-		$data = $connexion->fetchAll();
-		return $data;
-	}
-
-	function CountMefollow()
-	{
-		$connexion = \App\Model\Database::get()->prepare("
-			SELECT COUNT(follower_id) AS nbrFollow
-			FROM tp_follow
-			WHERE follower_id ='".$this->id."'
-            ");
 		$connexion->execute();
 		$data = $connexion->fetchAll();
 		return $data;
@@ -62,6 +49,6 @@ class Cfollow
 
 $Cfollow = new Cfollow;
 $Mefollower = $Cfollow->Mefollower();
-$CountMefollow = $Cfollow->CountMefollow();
+// $CountMefollow = $Cfollow->CountMefollow();
 
 ?>

@@ -4,21 +4,19 @@ class Mpicture
 	function Upload($picture,$type)
 	{
 		session_start();
-		move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".".$type);
+		// move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".".$type);
+		move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".png");
+
 	}
-	function LookPicture()
+	function LookPicture($user)
 	{
-		if(file_exists("../../public/css/images/users/".$_SESSION["id"].".png"))
+		if(file_exists("../../public/css/images/users/".$user.".png"))
 		{
-			echo '<img class="avatar" src="public/css/images/users/'.$_SESSION["id"].'.png" alt="Profil">';
-		}
-		else if(file_exists("../../public/css/images/users/".$_SESSION["id"].".jpg") )
-		{
-			echo '<img class="avatar" src="public/css/images/users/'.$_SESSION["id"].'.jpg" alt="Profil">';
+			return  $user;
 		}
 		else
 		{
-			echo '<img class="avatar" src="public/css/images/users/AVATAR.png" alt="Profil">';
+			return 'AVATAR';
 		}
 	}
 }

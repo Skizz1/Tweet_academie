@@ -10,3 +10,4 @@ class ProfileModel extends Model
     }
 
 }
+$profile = new ProfileModel();

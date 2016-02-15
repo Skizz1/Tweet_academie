@@ -1,6 +1,6 @@
 <?php
 require_once("../onlineUser/sessionInit.php");
-require_once("../follow/M_follow.php");
+require_once("../follow/M_count.php");
 require_once("../timeLine/M_timeLine.php");
 require_once("../tweets/M_tweets.php");
 
