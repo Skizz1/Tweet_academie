@@ -1,7 +1,5 @@
 $(document).ready(function()
 {
-
-
 	var login,
 	regexLogin;
 	var pass;
@@ -26,9 +24,6 @@ $(document).ready(function()
 	var birthday;	
 
 	$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
-
-
-
 
 	$('#registerSubmit').prop('disabled', true);
 
@@ -366,7 +361,6 @@ else
 
 	ReadFollower()
 
-
 	$(".none2").hide();
 	$(".inscript-infos").hide();
 	function connex()
@@ -387,7 +381,7 @@ else
 	}
 	connex();
 
-/////////////// REDIGE UN TWEET MERCREDI ////////////////////////////
+
 /*
 * redige un tweet, form en hide() commande situe en haut
 */

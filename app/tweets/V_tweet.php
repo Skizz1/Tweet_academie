@@ -16,8 +16,6 @@ foreach ($readTweet as $key => $value)
 	<!-- Afficher la photo de profil du membre qui a posté le tweet -->
  	<img class="avatar-tweet" src="public/css/images/users/'. $Mpicture->LookPicture($value->follow_id).'.png"/>
 
-
-
 	<!-- Afficher son login/prénom nom -->
 	<h4>'.$value->login.'</h4><span class="compte-admin">✔</span>
 
