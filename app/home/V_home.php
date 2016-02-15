@@ -6,26 +6,27 @@ require_once("../tweets/M_tweets.php");
 
 ?>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="nav-tweet">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Twitter</a>
+                <div class="deplace">
+                 <div class="twitter"></div>
+                 <div class="nuage2"></div>
+                 <div class="nuage3"></div>
+                 <a class="academie" href="index.php">Tweet@cademie</a>
+             </div>
+         </div>
+         <form class="navbar-form navbar-left barre" method="POST" action="app/search/V_search.php">
+            <div class="form-group3">
+                <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
+                <span class="glyphicon glyphicon-search gly-search"></span>
+                <button type="button" id="logOut" class="btn btn-primary navbar-btn">
+                    <span class="glyphicon glyphicon-log-out deco"> Déconnexion</span>
+                </button>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-
-                <form class="navbar-form navbar-left" method="POST" action="app/search/V_search.php">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="Ajax-valSearch" name="search" placeholder="Rechercher">
-                    </div>
-                    <input type="submit" id="Ajax-search" class="btn btn-primary"><span class="glyphicon glyphicon-search"/></span>
-                </form>
-                <li>
-                    <a href="app/message/V_boxMail.php">MAIL</a>
-                    <button type="button" id="logOut" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span></button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        </form>
+    </div>
+</nav>
     <div class="container1">
         <div class="accueil">
             <div class="left">

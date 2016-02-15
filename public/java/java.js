@@ -389,7 +389,7 @@ function writeTweet()
 {
 	$(document).on("click","#Ajax-tweet",function()
 	{
-		$(".Ajax-postTweet").show();
+		$(".Ajax-postTweet").hide();
 	})
 }
 writeTweet()

@@ -6,10 +6,10 @@ class TweetsController
 	function createTweet($content)
 	{
 		$date = date('Y-m-d');
-	$TweetsModel = new TweetsModel;
-	$TweetsModel->create(["content"=>$content,"user_id"=>$_SESSION["id"],"tweet_date"=>$date]);
+		$TweetsModel = new TweetsModel;
+		$TweetsModel->create(["content"=>$content,"user_id"=>$_SESSION["id"],"tweet_date"=>$date]);
 	}
 }
-echo "eeee";
+echo "message envoye";
 $TweetsController = new TweetsController;
 $TweetsController->createTweet($_POST["content"]);
