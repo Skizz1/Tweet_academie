@@ -19,13 +19,14 @@ switch ($search["type"])
 	{
 		echo $search[$i]->login;
 
-		if ($Cfollow->removeFollow($_SESSION["id"],$search[$i]->id))
+		if ($Cfollow->verifFollow($_SESSION["id"],$search[$i]->id))
 		{
-			echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>Ne plus suivre</a>"."</br>";
+
+			echo " <a href='app/follow/C_unFollow.php?follow=".$search[$i]->id."'>Ne plus suivre</a>"."</br>";
 		}
 		else
 		{
-		echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>suivre</a>"."</br>";	
+			echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>suivre</a>"."</br>";	
 		}
 		echo " <a href='app/message/V_message.php?idUser=".$search[$i]->id."'>message</a>"."</br>";
 	}
@@ -39,9 +40,6 @@ switch ($search["type"])
 		echo " <a href='app/message/V_message.php?idUser=".$search[$i]->id."'>message</a>"."</br>";
 	}
 	break;
-
-
-
 }
 
 ?>

@@ -46,11 +46,22 @@ class Cfollow
 	}
 
 	/*
-	* supression de followe
+	* deja follow
 	*/
-	function removeFollow($id,$follow)
+	function verifFollow($id,$follow)
 	{
 		$connexion = \App\Model\Database::get()->prepare("SELECT * FROM tp_follow WHERE follower_id = '".$id."' AND follow_id = '".$follow."'");
+		$connexion->execute();
+		$data = $connexion->fetchAll();
+		var_dump($data);
+		return $data;
+	}
+	/*
+	*	Remove le follower
+	*/
+	function deleteFollower($id)
+	{
+		$connexion = \App\Model\Database::get()->prepare("");
 		$connexion->execute();
 		$data = $connexion->fetchAll();
 		return $data;
