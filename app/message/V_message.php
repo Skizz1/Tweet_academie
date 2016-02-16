@@ -1,4 +1,6 @@
 <?php
+session_start();
+echo "zz";
 echo $dest = $_GET["idUser"];
 
 echo'

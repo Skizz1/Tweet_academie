@@ -79,6 +79,24 @@ class ProfileController
         $instance = new ProfileModel();
         $instance->update($id, ['theme' => $newTheme]);
     }
+
+    public function changeProfile($id){
+        if(!empty($_POST))
+        {
+            $instance = new ProfileModel();
+            $instance->update($id, [
+                'first_name' => $_POST['first_name'],
+                'last_name' => $_POST['last_name'],
+                'cpostal' => $_POST['cpostal'],
+                'adress' => $_POST['adress'],
+                'departement' => $_POST['departement'],
+                'region' => $_POST['region'],
+                'city' => $_POST['city'],
+                'country' => $_POST['country'],
+                'birthday' => $_POST['birthday']
+            ]);
+        }
+    }
 }
 
 $data = new ProfileController();

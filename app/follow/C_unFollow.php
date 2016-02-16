@@ -1,4 +1,5 @@
 <?php
+require_once("M_follow.php");
 class C_unFollow
 {
 	function unFollow($follow)
@@ -11,13 +12,10 @@ class C_unFollow
 		return false;
 	}
 	$Cfollow = new Cfollow;
-	$Cfollow->removeFollow($follow);
+	$Cfollow->deleteFollower($follow);
 	return  $follow;
 	}
 }
-
 $C_unFollow = new C_unFollow;
-$C_unFollow->unFollow($_GET["idFollow"]);
-
-
+$C_unFollow->unFollow($_GET["follow"]);
 ?>

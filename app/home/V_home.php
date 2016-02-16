@@ -10,13 +10,13 @@ require_once("../tweets/M_tweets.php");
         <div class="container">
             <div class="navbar-header">
                 <div class="deplace">
-                 <div class="twitter"></div>
-                 <div class="nuage2"></div>
-                 <div class="nuage3"></div>
-                 <a class="academie" href="index.php">Tweet@cademie</a>
-             </div>
-         </div>
-         <form class="navbar-form navbar-left barre" method="POST" action="app/search/V_search.php">
+                   <div class="twitter"></div>
+                   <div class="nuage2"></div>
+                   <div class="nuage3"></div>
+                   <a class="academie" href="index.php">Tweet@cademie</a>
+               </div>
+           </div>
+           <form class="navbar-form navbar-left barre" method="POST" action="app/search/V_search.php">
             <div class="form-group3">
                 <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
                 <span class="glyphicon glyphicon-search gly-search"></span>
@@ -27,22 +27,20 @@ require_once("../tweets/M_tweets.php");
         </form>
     </div>
 </nav>
-    <div class="container1">
-        <div class="accueil">
-            <div class="left">
-                <div class="infos">
-                    <div class="twitter-widget">
-                        <div class="header cf">
-                            <!-- Afficher la photo de profil du membre connecté -->
-                            <?php 
-                            require("../profile/V_picture.php");
-                         // echo'
-                         // <img class="avatar" src="public/css/images/users/'.$_SESSION["id"].'.jpg" alt="Profil">'
-                         ?>
-                         <!-- Afficher le login du membre connecté -->
-                         <h2><?php echo $_SESSION["login"] ?></h2>
-                     </div>
-                     <div class="stats cf">
+<div class="container1">
+    <div class="accueil">
+        <div class="left">
+            <div class="infos">
+                <div class="twitter-widget">
+                    <div class="header cf">
+                        <!-- Afficher la photo de profil du membre connecté -->
+                        <?php 
+                        require("../profile/V_picture.php");
+                        ?>
+                        <!-- Afficher le login du membre connecté -->
+                        <h2><?php echo $_SESSION["login"] ?></h2>
+                    </div>
+                    <div class="stats cf">
                         <a href="#" class="stat">
                             <!-- Afficher nombre de tweets du membre connecté -->
                             <?php foreach ($tweetCount as $value)
@@ -76,7 +74,8 @@ require_once("../tweets/M_tweets.php");
                     </div>
                     <ul class="menu cf">
                         <li><a href="#" id="Ajax-tweet" class="ico-compose">Compose</a></li>
-                        <li><a href="#" class="ico-mentions">Mentions</a></li>
+                        <!-- Lien mail -->
+                        <li><a href="app/message/V_boxMail.php" class="ico-mentions">Mentions</a></li>
                         <li><a href="app/profile/V_profile.php" class="ico-profile">Profil</a></li>
                         <li><a href="app/profile/V_settings.php" class="ico-settings">Settings</a></li>
                     </ul>
@@ -104,10 +103,20 @@ require_once("../tweets/M_tweets.php");
             </div>
         </div>
         <div class="right">
+
+            <div id="Ajax-postTweet">
+                <form id="Ajax-postTweet" method="POST" action="app/tweets/C_tweets.php">
+                    <textarea placeholder="Exprimez-vous" name="content"></textarea>
+                    <div class="area">
+                        <span class="glyphicon glyphicon-share-alt photo"><span class="camera">Tweeter</span></span><input type="submit">
+                        <span class="glyphicon glyphicon-camera photo"><span class="camera">Photo</span></span>
+                    </div>
+                </form>
+            </div>
             <div class="tweet" id="Ajax-Rsearch">
-  
-        <!-- TIME LINE AJAX  -->
- <div class="tweet" id="Ajax-TimeLine"></div>
+              
+                <!-- TIME LINE AJAX  -->
+                <div class="tweet" id="Ajax-TimeLine"></div>
 
             </div>
         </div>

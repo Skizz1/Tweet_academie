@@ -26,8 +26,6 @@ $(document).ready(function()
 	$('.datepicker').datepicker({ dateFormat: 'yy-mm-dd'});
 
 	$('#registerSubmit').prop('disabled', true);
-
-
 	function redirectHome()
 	{
 		console.log("home")
@@ -41,7 +39,7 @@ $(document).ready(function()
 				* Permet de cache le texte area des tweets
 				*/
 				$("#Ajax-TimeLine").show();
-				$(".Ajax-postTweet").hide();
+				$(".Ajax-postTweet").show();
 			}	
 		})
 	}
@@ -60,7 +58,6 @@ $(document).ready(function()
 		})
 	}
 	logOut()
-
 	$(document).on('keyup', '#formRegister input', function()
 	{
 			//Verification login
@@ -87,7 +84,6 @@ $(document).ready(function()
 			regexCity = /^[a-zA-Z]+$/.test(city);
 
 			birthday = $("#inputAniv").val();
-
 /*
 *login
 */
@@ -256,7 +252,6 @@ else
 		{
 			if (data == "true")
 			{
-				console.log(data);
 				$("#registerInfo").append("Votre compte a bien été crée FELICITATION");
 				// direHome();
 
@@ -265,7 +260,6 @@ else
 			{
 				$("#registerInfo").append("Le nom de compte ou le mail existe deja");
 			}  
-			console.log(data);
 		});
 	});
 
@@ -300,8 +294,11 @@ else
 		{
 			event.preventDefault()
 			search = $("#Ajax-valSearch").val();
-			////////////// JEUDI //////////////////////
-			console.log(search)
+
+			$.post("app/search/V_search.php",{search:search},function(data)
+			{
+				$("#Ajax-Rsearch").html(data)
+			})
 			/*
 			* Si le champ de recherche est vide, reaffiche la liste de tweet
 			*/
@@ -314,21 +311,14 @@ else
 						$("#Ajax-Rsearch").html(data)
 						$(".Ajax-postTweet").hide();
 						writeTweet()
+						redirectHome()
 					}
 				});
 
 			};
-			/////////////////////////////////////////
-			$.post("app/search/V_search.php",{search:search},function(data)
-			{
-				$("#Ajax-Rsearch").html(data)
-			})
-
 		})
 	}
-
 	Rsearch()
-
 	function ReadFollow()
 	{
 		$(document).on("click","#Ajax-ReadFollow",function(event)
@@ -344,7 +334,6 @@ else
 			})
 		})
 	}
-
 	ReadFollow()
 	function ReadFollower()
 	{
@@ -356,15 +345,13 @@ else
 				success:function(data)
 				{
 					$("#Ajax-TimeLine").hide();
-					 $("#Ajax-Rsearch").html(data)
+					$("#Ajax-Rsearch").html(data)
 				}
 				
 			})
 		})
 	}
-
 	ReadFollower()
-
 	$(".none2").hide();
 	$(".inscript-infos").hide();
 	function connex()
@@ -384,8 +371,6 @@ else
 		})
 	}
 	connex();
-
-
 /*
 * redige un tweet, form en hide() commande situe en haut
 */
@@ -397,26 +382,21 @@ function writeTweet()
 	})
 }
 writeTweet()
-
 /*
 *  Timeline
 */
-
 function Timeline()
 {
-
 	setInterval(function(){ 
-			$.ajax({
-				url : 'app/tweets/V_tweet.php',
-				success:function(data)
-				{
-					console.log("TimeLine")
-					$("#Ajax-TimeLine").html(data)
-				}
-			})
-}, 3000);
+		$.ajax({
+			url : 'app/tweets/V_tweet.php',
+			success:function(data)
+			{
+				console.log("TimeLine")
+				$("#Ajax-TimeLine").html(data)
+			}
+		})
+	}, 3000);
 }
- Timeline()
-
-
+Timeline()
 });//READY

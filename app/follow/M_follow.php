@@ -53,7 +53,6 @@ class Cfollow
 		$connexion = \App\Model\Database::get()->prepare("SELECT * FROM tp_follow WHERE follower_id = '".$id."' AND follow_id = '".$follow."'");
 		$connexion->execute();
 		$data = $connexion->fetchAll();
-		var_dump($data);
 		return $data;
 	}
 	/*
@@ -61,10 +60,9 @@ class Cfollow
 	*/
 	function deleteFollower($id)
 	{
-		$connexion = \App\Model\Database::get()->prepare("");
+		$connexion = \App\Model\Database::get()->prepare("DELETE FROM tp_follow 
+			WHERE follow_id = '".$id."' AND follower_id = '".$_SESSION["id"]."'");
 		$connexion->execute();
-		$data = $connexion->fetchAll();
-		return $data;
 	}
 }
 

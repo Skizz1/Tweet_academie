@@ -19,15 +19,12 @@ class CsingIn
 		$user = $userExiste -> User($this->login,$this->passH);
 		if ($user != NULL)
 		{
-
-foreach ( $user as $key => $val )
- {
-	$idUser = $val->id;
-}
-
+			foreach ( $user as $key => $val )
+			{
+				$idUser = $val->id;
+			}
 			$_SESSION["login"] = $this->login;
 			$_SESSION["id"] = $idUser;
-	
 			echo "true"; //AJAX;
 		}
 		else
