@@ -1,7 +1,9 @@
 <?php
 include("C_search.php");
+include("../follow/M_follow.php");
 
-// var_dump($search);
+$Cfollow = new Cfollow;
+
 switch ($search["type"])
 {
 	case '#':
@@ -16,12 +18,20 @@ switch ($search["type"])
 	for($i = 0;$i < count($search) -1; $i++) 
 	{
 		echo $search[$i]->login;
-		echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>suivre</a>"."</br>";
+
+		if ($Cfollow->removeFollow($_SESSION["id"],$search[$i]->id))
+		{
+			echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>Ne plus suivre</a>"."</br>";
+		}
+		else
+		{
+		echo " <a href='app/follow/C_follow.php?follow=".$search[$i]->id."'>suivre</a>"."</br>";	
+		}
 		echo " <a href='app/message/V_message.php?idUser=".$search[$i]->id."'>message</a>"."</br>";
 	}
 	break;
 	case '*':
-		for($i = 0;$i < count($search) -1; $i++) 
+	for($i = 0;$i < count($search) -1; $i++) 
 	{
 		echo $search[$i]->login;
 		echo $search[$i]->content;

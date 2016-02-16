@@ -34,15 +34,11 @@ require_once("../tweets/M_tweets.php");
                     <div class="twitter-widget">
                         <div class="header cf">
                             <!-- Afficher la photo de profil du membre connecté -->
-
-
                             <?php 
                             require("../profile/V_picture.php");
                          // echo'
                          // <img class="avatar" src="public/css/images/users/'.$_SESSION["id"].'.jpg" alt="Profil">'
                          ?>
-
-
                          <!-- Afficher le login du membre connecté -->
                          <h2><?php echo $_SESSION["login"] ?></h2>
                      </div>
@@ -109,16 +105,9 @@ require_once("../tweets/M_tweets.php");
         </div>
         <div class="right">
             <div class="tweet" id="Ajax-Rsearch">
-
-                <div class="contenu">
-                    <?php 
-                    /*
-                    * Liste des tweeets
-                    */
-                    require("../tweets/V_tweet.php");
-                    ?>
-                </div>
-
+  
+        <!-- TIME LINE AJAX  -->
+ <div class="tweet" id="Ajax-TimeLine"></div>
 
             </div>
         </div>

@@ -27,6 +27,7 @@ $(document).ready(function()
 
 	$('#registerSubmit').prop('disabled', true);
 
+
 	function redirectHome()
 	{
 		console.log("home")
@@ -39,6 +40,7 @@ $(document).ready(function()
 				/*
 				* Permet de cache le texte area des tweets
 				*/
+				$("#Ajax-TimeLine").show();
 				$(".Ajax-postTweet").hide();
 			}	
 		})
@@ -336,6 +338,7 @@ else
 				url : 'app/follow/V_follow.php',
 				success:function(data)
 				{
+					$("#Ajax-TimeLine").hide();
 					$("#Ajax-Rsearch").html(data)
 				}
 			})
@@ -352,7 +355,8 @@ else
 				url : 'app/follow/V_follower.php',
 				success:function(data)
 				{
-					$("#Ajax-Rsearch").html(data)
+					$("#Ajax-TimeLine").hide();
+					 $("#Ajax-Rsearch").html(data)
 				}
 				
 			})
@@ -394,7 +398,25 @@ function writeTweet()
 }
 writeTweet()
 
+/*
+*  Timeline
+*/
 
+function Timeline()
+{
+
+	setInterval(function(){ 
+			$.ajax({
+				url : 'app/tweets/V_tweet.php',
+				success:function(data)
+				{
+					console.log("TimeLine")
+					$("#Ajax-TimeLine").html(data)
+				}
+			})
+}, 3000);
+}
+ Timeline()
 
 
 });//READY

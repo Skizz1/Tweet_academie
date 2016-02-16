@@ -2,7 +2,6 @@
 require_once("M_follow.php");
 class Rfollow
 {
-
 /*
 * RAJOUTE UNE PERSONNE A SUIVRE
 */
@@ -12,12 +11,13 @@ class Rfollow
 		{
 			return false;
 		}
-		echo $follow;
 		$Cfollow = new Cfollow;
 		$Cfollow->addFollowSQL($follow);
+		return  $follow;
 	}
 }
 
 $Rfollow = new Rfollow();
 $Rfollow->addFollow($_GET["follow"]);
+
 ?>

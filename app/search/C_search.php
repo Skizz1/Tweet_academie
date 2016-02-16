@@ -9,7 +9,6 @@ class Csearch
 	}
 	function search($info)
 	{ 
-
 		$M_search = new M_search;
 		$long = strlen($info);
 		$type =  substr($info, 0,1);
@@ -29,6 +28,8 @@ class Csearch
 			return $M_search->allSearch(addslashes( $info ) );
 		}
 	}
+
+	
 }
 $Csearch = new Csearch;
 $search = $Csearch->search($_POST["search"]);

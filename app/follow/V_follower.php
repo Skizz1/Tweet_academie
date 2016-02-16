@@ -1,6 +1,8 @@
 <?php
 include("M_follow.php");
-// $Mefollower = $Cfollow->Mefollow();
+$Cfollow = new Cfollow;
+$Mefollower = $Cfollow->Mefollower();
+
 
 foreach ($Mefollower as $key => $value) 
 {

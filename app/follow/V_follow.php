@@ -1,5 +1,6 @@
 <?php
 include("M_follow.php");
+$Cfollow = new Cfollow; 
 $Mefollow = $Cfollow->Mefollow();
 
 

@@ -1,5 +1,4 @@
 <?php
-
 require_once('../database.php');
 session_start();
 class Cfollow
@@ -10,7 +9,7 @@ class Cfollow
 	{
 		$this->id = $_SESSION["id"];
 	}
-		function Mefollower()
+	function Mefollower()
 	{
 		$connexion = \App\Model\Database::get()->prepare("
 			SELECT *,count(follow_id) AS nbrFollow
@@ -26,10 +25,10 @@ class Cfollow
 	{
 		$connexion = \App\Model\Database::get()->prepare("
 			SELECT *
-            FROM tp_follow
-            INNER JOIN tp_users ON tp_follow.follow_id = tp_users.id
-            WHERE follower_id = '".$this->id."'
-            ");
+			FROM tp_follow
+			INNER JOIN tp_users ON tp_follow.follow_id = tp_users.id
+			WHERE follower_id = '".$this->id."'
+			");
 		$connexion->execute();
 		$data = $connexion->fetchAll();
 		return $data;
@@ -45,10 +44,17 @@ class Cfollow
 			VALUES ('".$follow."','".$_SESSION["id"]."') ");
 		$connexion->execute();
 	}
-}
 
-$Cfollow = new Cfollow;
-$Mefollower = $Cfollow->Mefollower();
-// $CountMefollow = $Cfollow->CountMefollow();
+	/*
+	* supression de followe
+	*/
+	function removeFollow($id,$follow)
+	{
+		$connexion = \App\Model\Database::get()->prepare("SELECT * FROM tp_follow WHERE follower_id = '".$id."' AND follow_id = '".$follow."'");
+		$connexion->execute();
+		$data = $connexion->fetchAll();
+		return $data;
+	}
+}
 
 ?>
