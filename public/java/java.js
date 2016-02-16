@@ -399,4 +399,17 @@ function Timeline()
 	}, 3000);
 }
 Timeline()
+
+/*
+* Repondre a un tweet
+*/
+function responceTweet()
+{
+	$(document).on("click","#Ajax-responceTweet",function()
+	{
+		alert("coco")
+		$(this).html("<textearea></textearea>")
+	})
+}
+responceTweet()
 });//READY

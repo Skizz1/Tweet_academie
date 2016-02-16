@@ -10,7 +10,6 @@ class TweetsModel extends Model
         parent::__construct();
         $this->table = 'tp_tweets';
     }
-
     /**
      * Supprime un tweet
      * @param int $id ID

@@ -2,7 +2,6 @@
 require_once("M_tweets.php");
 class urlUser
 {
-
 	function C_urlUser($contenu)
 	{
 		$exp = explode(" ", $contenu);
@@ -10,7 +9,6 @@ class urlUser
 		for ($i=0; $i < count($exp); $i++)
 		{ 
 			$sub = substr($exp[$i], 0,1);
-
 			if ($sub == "@")
 			{
 				$nameUser = substr($exp[$i], 1,strlen($exp[$i]));
@@ -28,7 +26,5 @@ class urlUser
 		}
 		return $tweet;
 	} 
-
 }
-
 ?>

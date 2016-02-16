@@ -5,7 +5,6 @@ require_once("../profile/M_picture.php");
 $readTweet = $tweets->readTweet($_SESSION["id"]);
 $Mpicture  = new Mpicture;
 $urlUser = new urlUser;
-
 ?>
 
 <?php
@@ -23,7 +22,7 @@ foreach ($readTweet as $key => $value)
 	<span class="content">'.$urlUser->C_urlUser($value->content).'</span>
 	<span class="glyphicon glyphicon-heart heart"></span>
 	<span class="glyphicon glyphicon-retweet retweet"></span>
-	<span class="glyphicon glyphicon-share-alt share-alt"></span>
+	<span id=Ajax-responceTweet class="glyphicon glyphicon-share-alt share-alt"></span>
 	<hr/>';
 
 }
