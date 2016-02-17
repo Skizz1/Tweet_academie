@@ -3,7 +3,7 @@ namespace App\Model;
 
 class Database
 {
-    private static $socket;
+    private static $socket = 'sauvan_k';
     private static $db;
     private static $dbuser = 'root';
     private static $dbname = 'common-database';

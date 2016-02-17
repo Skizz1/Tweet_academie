@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 require("M_picture.php");
 class Picture
 {
@@ -12,6 +13,7 @@ function __construct()
 }
 public function picture()
 {
+
 
 	if ($this->type["mime"] == "image/png" || $this->type["mime"] == "image/jpeg")
 	{

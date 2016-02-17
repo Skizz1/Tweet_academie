@@ -1,12 +1,11 @@
 <?php
+error_reporting(E_ALL);
 class Mpicture
 {
 	function Upload($picture,$type)
 	{
 		session_start();
-		// move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".".$type);
-		move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".png");
-
+move_uploaded_file($picture,"../../public/css/images/users/".$_SESSION["id"].".png");
 	}
 	function LookPicture($user)
 	{
