@@ -38,8 +38,47 @@ $(document).ready(function()
 				/*
 				* Permet de cache le texte area des tweets
 				*/
-				$("#Ajax-TimeLine").show();
-				$(".Ajax-postTweet").show();
+				function messagerie() {
+					$(".Ajax-postTweet").hide();
+					$('.view-message').hide();
+					$(document).on("click", ".chat", function() {
+						if ($('.view-message').is(':hidden')) {
+							$(this).css({ "left": '75.6%', "animation": 'bulle 0.5s linear' });
+							$('.view-message').show().css({ "position": 'fixed', "left": '80.8%', "animation": 'surf 0.5s linear' });
+						} else { 
+							$(this).css({ "left": '93%' });
+							$('.view-message').hide().css({ "left": '100%' });
+						};
+					});
+				};
+				messagerie();
+
+
+				$('.dialogue').css({ "display": 'none' });
+
+				/*
+				* permet l'affiche de la mail box
+				* home/home.php
+				* methode java
+				*/
+				$(document).on("click", ".envelope", function() 
+				{
+					$('.dialogue').css({ "display": 'block' });
+				});
+
+				$(document).on("click", ".off", function() {
+					if ($('.popup-messages').is(':visible')) { 
+						$('.dialogue').css({ "position": 'fixed', "top": '915px' });
+						$('.popup-messages').css({ "position": 'fixed', "display": 'none' });
+						$('.popup-messages-footer').css({ "position": 'fixed', "display": 'none' });
+					} 
+					else
+					 {
+						$('.dialogue').css({ "position": 'fixed', "top": '540px' });
+						$('.popup-messages').css({ "display": 'block', "width": '22%' });
+						$('.popup-messages-footer').css({ "display": 'block', "width": '22%' });
+					}
+				});
 			}	
 		})
 	}
@@ -400,16 +439,6 @@ function Timeline()
 }
 Timeline()
 
-/*
-* Repondre a un tweet
-*/
-// function responceTweet()
-// {
-// 	$(document).on("click","#Ajax-responce")
-// 	{
-// 		alert("ddd")
-// 		$(this).append("sfddd")
-// 	}
-// }
-// responceTweet()
+
+
 });//READY

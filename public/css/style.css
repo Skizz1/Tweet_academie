@@ -90,7 +90,7 @@ body
  .barre2:hover { border-bottom: 2px #115f6e solid; }
 .form-group3 { display: inline-block; width: 100%; }
 #Ajax-valSearch { display: inline-block; width: 100%; background-color: transparent; }
-.gly-search { display: inline-block; height: 30px; position: relative; top: -33px; left: 95%; font-size: 18px; 
+.gly-search { display: inline-block; height: 30px; position: relative; top: -46px; left: 95%; font-size: 18px; 
   text-align: right; color: rgba(255, 255, 255, 0.5); }
 
 /* ----------------------------------------------------------- TIMELINE ---------------------------------------------------------------------- */
@@ -106,7 +106,7 @@ body
   width: 37%; height: 52px; box-shadow: 4px 4px 0 0 #f7e7eb inset; }
 @keyframes leftright { 0% { margin-left: 0%; } 50% { margin-left: 40%; } 100% { margin-left: 0%; } }
 .deplace { z-index: 1; display: inline-block; width: 60%; height: 70px; animation: leftright 10s infinite; }
-#logOut { position: relative; left: 125%; bottom: 60px; font-family: 'bellotalight'; background-color: #20AAC5; border: 1px #20AAC5 solid; }
+#logOut { position: relative; left: 90%; bottom: 60px; font-family: 'bellotalight'; background-color: #20AAC5; border: 1px #20AAC5 solid; }
 #logOut:hover { background-color: #19849a; border: 1px #19849a solid; }
 
 /* ------------------------------------------------------------- TWEETS ---------------------------------------------------------------------- */
@@ -128,16 +128,16 @@ body
 .round.hollow a:hover { border: 2px solid #000; border-radius: 35px; color: red; color: #000; font-size: 23px; padding: 10px 21px;
   text-decoration: none; }
 .popup-box-on { display: block !important; }
-.popup-box .popup-head { background-color: #20aac5; clear: both; color: #7b7b7b; display: inline-table; font-size: 21px; padding: 7px 10px;
+.popup-box .popup-head { background-color: #20aac5; clear: both; color: #7b7b7b; display: inline-table; font-size: 16px; padding: 7px 10px;
   width: 100%; font-family: Oswald; }
 .bg_none i { border: 1px solid #ff6701; border-radius: 25px; color: #ff6701; font-size: 17px; height: 33px; line-height: 30px;
   width: 33px; }
 .bg_none:hover i { border: 1px solid #000; border-radius: 25px; color: #000; font-size: 17px; height: 33px; line-height: 30px; width: 33px; }
-.bg_none { background: rgba(0, 0, 0, 0) none repeat scroll 0 0; border: medium none; }
+.bg_none { background: rgba(0, 0, 0, 0) none repeat scroll 0 0; border: medium none; margin-top: 17px; }
 .popup-box .popup-head .popup-head-right { margin: 11px 7px 0; }
 .popup-head-left img { border: 1px solid #7b7b7b; border-radius: 50%; width: 44px; }
 .popup-messages-footer > textarea { border-bottom: 1px solid #b2b2b2 !important; height: 54px !important; margin: 7px; padding: 5px !important;
-  border: medium none; width: 95% !important; }
+  border: medium none; width: 83% !important; }
 .popup-messages-footer { background: #fff none repeat scroll 0 0; bottom: 0; width: 100%; }
 .popup-messages-footer .btn-footer { overflow: hidden; padding: 2px 5px 10px 6px; width: 100%; }
 .simple_round { background: #d1d1d1 none repeat scroll 0 0; border-radius: 50%; color: #4b4b4b !important; height: 21px; padding: 0 0 0 1px;
@@ -179,12 +179,34 @@ body
 
 /* ------------------------------------------------------------ SETTINGS --------------------------------------------------------------------- */
 
-.settings { display: inline-block; width: 100%; position: relative; top: 180px; padding: 20px; }
-#login a, #mail a, #pass a, #desactive a, #image a { width: 100%; padding-bottom: 20px; padding-top: 20px; border-bottom: 1px #bfbfbf solid; 
-  margin-bottom: 20px; font-size: 18px; display: inline-block; text-decoration: none; 
-  color: rgba(37, 116, 106, 0.5); }
-#login a:hover, #mail a:hover, #pass a:hover, #desactive a:hover, #image a:hover { background-color: rgba(32, 170, 197, 0.4); color: white; }
-#login a:focus, #mail a:focus, #pass a:focus, #desactive a:focus, #image a:focus { background-color: rgba(32, 170, 197, 0.8); color: white; }
-.input-group3 { display: inline-block; width: 20%; margin-left: 8%; }
+.settings { display: inline-block; width: 100%; position: relative; top: 200px; padding: 20px; }
+#login, #mail, #pass, #desactive, #image { cursor: pointer; width: 97%; margin-left: 3%; padding-bottom: 20px; padding-top: 20px; 
+  font-size: 18px; display: inline-block; text-decoration: none; 
+  color: rgba(37, 116, 106, 0.5); font-size: 18px; border-bottom: 1px #bfbfbf solid; padding-left: 30px; }
+#login:hover, #mail:hover, #pass:hover, #desactive:hover, #image:hover { background-color: rgba(32, 170, 197, 0.4); color: white; }
+.input-group3 { display: inline-block; width: 100%; /*float: left;*/ }
+.input-group3 > input { width: 30%; margin-left: 4%; float: left; }
+.loginRegister, .mailRegister, .passRegister { position: relative; top: 7px; width: 10px; height: 34px; background-color: rgba(62, 198, 170, 0.5); 
+  padding: 8px 12px; border-radius: 3px; }
+.input-relative { display: inline-block; position: relative; left: 250px; bottom: 59px; }
+#registerSubmit2 { padding: 6px 12px; background-color: #20AAC5; position: relative; top: -60px; }
+#formDesactive span { display: inline-block; width: 80%; margin-left: 10%; margin-right: 10%; color: #ff3333; text-align: center; }
+.form-group6 { display: inline-block; width: 60%; margin-left: 20%; margin-top: 15px;  }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------- IMPLEMENTATION CSS MESSAGERIE ---------------------------------------------------------- */
+@keyframes surf { 0% { left: 100%; } 100% { left: 80.8%; } }
+@keyframes bulle { 0% { left: 93%; } 100% { left: 75.6%; } }
+
+.chat { cursor: pointer; position: fixed; left: 93%; top: 150px; display: inline-block; padding: 16px 28px; font-size: 26px; 
+  background-color: rgba(53, 206, 147, 0.5); color: white; text-align: center; border-radius: 100%; }
+.view-message { position: relative; left: 85.6%; top: 110px; width: 20%; height: 870px; border-left: 1px #20AAC5 solid; 
+  border-bottom: 1px #20AAC5 solid; background-color: white; }
+.user-chat { display: inline-block; width: 100%; float: right; height: 800px; }
+.infos-chat { display: inline-block; width: 100%; height: 50px; background-color: #333333; border-bottom: 1px #737373 solid; }
+.img-chat { max-width: 49px; max-height: 49px; float: left; }
+.name-chat { display: inline-block; width: 65%; margin-left: 3.84%; padding: 13.5px; float: left; font-size: 16px; color: white; }
+.envelope { background-color: #41C3B2; padding: 17.5px; left: 5px; top: -0.5px; text-align: center; color: white; }
+.dialogue { position: fixed; width: 22%; position: relative; left: 58%; top: 540px; }
+.popup-box { position: fixed; }
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------ */
