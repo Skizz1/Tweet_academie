@@ -1,5 +1,4 @@
 <?php
-echo "tg strubi";
 require_once("M_tweets.php");
 require_once("../profile/M_picture.php");
 $readTweet = $tweets->readTweet($_SESSION["id"]);
@@ -16,12 +15,7 @@ $Mpicture  = new Mpicture;
 		</div>
 		</form>
 	</div>
-
-
 <?php
-
-
-
 foreach ($readTweet as $key => $value)
 {
 	echo '	
@@ -40,7 +34,4 @@ foreach ($readTweet as $key => $value)
 	<hr/>';
 
 }
-
-
-
 ?> 
