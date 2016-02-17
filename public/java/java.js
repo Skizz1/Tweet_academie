@@ -403,13 +403,13 @@ Timeline()
 /*
 * Repondre a un tweet
 */
-function responceTweet()
-{
-	$(document).on("click","#Ajax-responceTweet",function()
-	{
-		alert("coco")
-		$(this).html("<textearea></textearea>")
-	})
-}
-responceTweet()
+// function responceTweet()
+// {
+// 	$(document).on("click","#Ajax-responce")
+// 	{
+// 		alert("ddd")
+// 		$(this).append("sfddd")
+// 	}
+// }
+// responceTweet()
 });//READY
