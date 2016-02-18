@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="822efe30-f319-44b8-9e42-3ca9f7379ed7" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/Tweet_academie-Kevin/.idea/.name" afterPath="" />
@@ -97,6 +98,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/common-database.sql" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/common-database.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js" afterPath="$PROJECT_DIR$/Tweet_academie-Lucas/public/java/java.js" />
+=======
+    <list default="true" id="586eee99-bed5-4fdf-8acb-3efd1a9f7e44" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tweets/C_tweets.php" afterPath="$PROJECT_DIR$/app/tweets/C_tweets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tweets/V_tweet.php" afterPath="$PROJECT_DIR$/app/tweets/V_tweet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/java/konami.js" afterPath="$PROJECT_DIR$/public/java/konami.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read me" afterPath="$PROJECT_DIR$/read me" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
     </list>
     <ignored path="Tweet_academie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,53 +120,88 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
   <component name="FavoritesManager">
     <favorites_list name="Tweet_academie" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="V_home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5147059">
               <caret line="61" column="44" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="44" />
+=======
+      <file leaf-file-name="read me" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read me">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="22" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="V_settings.php" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_settings.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/profile/V_settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.888889">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="V_profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+=======
+      <file leaf-file-name="konami.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/java/konami.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3217569">
+              <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="V_follower.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="C_tweets.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tweets/C_tweets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7777778">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="M_tweets.php" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -171,11 +214,22 @@
                 <marker date="1454956923341" expanded="true" signature="631:677" placeholder="SELECT COUNT... " />
                 <marker date="1454956923341" expanded="true" signature="631:694" placeholder="SELECT COUNT... $" />
                 <marker date="1454956923341" expanded="true" signature="631:699" placeholder="SELECT COUNT... $" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/tweets/M_tweets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.2222223">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <marker date="1455532605000" expanded="true" signature="344:382" placeholder="DELETE FROM " />
+                <marker date="1455532605000" expanded="true" signature="653:716" placeholder="SELECT COUNT... $" />
+                <marker date="1455532605000" expanded="true" signature="925:1143" placeholder="SELECT * fro... tp_follow" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="M_follow.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -186,6 +240,27 @@
                 <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
                 <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
                 <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+=======
+      <file leaf-file-name="M_retweet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/tweets/M_retweet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="M_Model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/M_Model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1455532605000" expanded="true" signature="445:492" placeholder="SELECT ${{$f... " />
+                <marker date="1455532605000" expanded="true" signature="1108:1155" placeholder="UPDATE ${{$t... " />
+                <marker date="1455532605000" expanded="true" signature="1727:1784" placeholder="INSERT INTO $... " />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               </folding>
             </state>
           </provider>
@@ -199,6 +274,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/connected.php" />
@@ -224,6 +300,15 @@
         <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/M_follow.php" />
         <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_profile.php" />
         <option value="$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php" />
+=======
+        <option value="$PROJECT_DIR$/public/css/images/nuage.svg" />
+        <option value="$PROJECT_DIR$/app/tweets/V_tweet.php" />
+        <option value="$PROJECT_DIR$/app/tweets/M_tweets.php" />
+        <option value="$PROJECT_DIR$/app/tweets/M_retweet.php" />
+        <option value="$PROJECT_DIR$/app/tweets/C_tweets.php" />
+        <option value="$PROJECT_DIR$/read me" />
+        <option value="$PROJECT_DIR$/public/java/konami.js" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
       </list>
     </option>
   </component>
@@ -267,7 +352,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+      <pane id="Scope" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,10 +374,13 @@
               <option name="myItemId" value="Tweet_academie" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="Tweet_academie-Lucas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -300,10 +392,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Tweet_academie-Lucas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -318,10 +413,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Tweet_academie-Lucas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -340,10 +438,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Tweet_academie-Lucas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -358,7 +459,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Tweet_academie-Lucas" />
+=======
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tweets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tweet_academie" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -380,10 +499,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="Tweet_academie-Lucas" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+=======
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -394,6 +516,7 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
     </panes>
   </component>
@@ -412,6 +535,16 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/tweets" />
     </key>
+=======
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Bureau" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -449,10 +582,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="822efe30-f319-44b8-9e42-3ca9f7379ed7" name="Default" comment="" />
       <created>1454589614707</created>
       <option name="number" value="Default" />
       <updated>1454589614707</updated>
+=======
+      <changelist id="586eee99-bed5-4fdf-8acb-3efd1a9f7e44" name="Default" comment="" />
+      <created>1455636893522</created>
+      <option name="number" value="Default" />
+      <updated>1455636893522</updated>
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
     </task>
     <servers />
   </component>
@@ -464,10 +604,17 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959569" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -492,6 +639,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+<<<<<<< HEAD
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
@@ -502,18 +650,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/read me">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="22" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/tweets/C_@tweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -544,6 +710,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
+=======
+    <entry file="file://$PROJECT_DIR$/public/java/konami.js">
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -551,14 +720,22 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/follow/V_follower.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/css/images/nuage.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -584,10 +761,29 @@
             <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
             <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
             <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+=======
+    <entry file="file://$PROJECT_DIR$/app/tweets/C_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tweets/M_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455532605000" expanded="true" signature="344:382" placeholder="DELETE FROM " />
+            <marker date="1455532605000" expanded="true" signature="653:716" placeholder="SELECT COUNT... $" />
+            <marker date="1455532605000" expanded="true" signature="925:1143" placeholder="SELECT * fro... tp_follow" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/C_tweets.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -758,10 +954,93 @@
             <marker date="1454960377509" expanded="true" signature="553:647" placeholder="SELECT count... tp_follow" />
             <marker date="1454960377509" expanded="true" signature="823:975" placeholder="SELECT * fro... tp_follow" />
             <marker date="1454960377509" expanded="true" signature="1214:1307" placeholder="INSERT INTO tp_follow... " />
+=======
+    <entry file="file://$PROJECT_DIR$/app/tweets/V_tweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read me">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read me">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/profile/V_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.888889">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/images/nuage.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22058824">
+          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tweets/C_@tweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.4444447">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tweets/V_tweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022058824">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/V_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/profile/V_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.382353">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tweets/M_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2222223">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1455532605000" expanded="true" signature="344:382" placeholder="DELETE FROM " />
+            <marker date="1455532605000" expanded="true" signature="653:716" placeholder="SELECT COUNT... $" />
+            <marker date="1455532605000" expanded="true" signature="925:1143" placeholder="SELECT * fro... tp_follow" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/tweets/M_tweets.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -782,10 +1061,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/tweets/C_tweets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7777778">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/read me">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="22" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/profile/V_settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -798,14 +1092,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/M_Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455532605000" expanded="true" signature="445:492" placeholder="SELECT ${{$f... " />
+            <marker date="1455532605000" expanded="true" signature="1108:1155" placeholder="UPDATE ${{$t... " />
+            <marker date="1455532605000" expanded="true" signature="1727:1784" placeholder="INSERT INTO $... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tweets/M_retweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Tweet_academie-Lucas/app/home/V_home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5147059">
           <caret line="61" column="44" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="44" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/java/konami.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3217569">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+>>>>>>> 756abcef47d9911838ae6351f16d142e93fe8283
           <folding />
         </state>
       </provider>
