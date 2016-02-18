@@ -52,18 +52,36 @@ $(document).ready(function()
 
 					});
 
-					$(document).on("click","#Ajax-BoxMail",function()
-					{
-						user = $(this).data("user");
-						console.log(user)
-						$.post( "app/message/V_boxChat.php", {user:user},function( data )
-						{
-							console.log($(".dialogue").html(data))
-						});
-					})
 
 				};
+
 				messagerie();
+
+				$(document).on("click","#Ajax-BoxMail",function()
+				{
+					user = $(this).data("user");
+					
+						/////////////////////////////
+						setInterval(function()
+						{
+							$.post("app/message/V_boxChat.php", {user:user},function( data )
+							{
+								$(".dialogue").html(data)
+							});
+
+						}, 10000);
+
+						/////////////////////////////
+						$.post( "app/message/V_boxChat.php", {user:user},function( data )
+						{
+							console.log(data)
+							console.log($(".dialogue").html(data))
+						});
+					});
+
+
+
+
 
 
 				$('.dialogue').css({ "display": 'none' });
@@ -461,11 +479,11 @@ function chatBox()
 		e.preventDefault();
 		text = $("#status_message").val();
 		id = $("#Ajax-envoie").data('id');
-			$.get("app/message/C_message.php", {idUser:id,content:text},function( data )
-			{
-				console.log(data)
-				$("#status_message").val('');
-			});
+		$.get("app/message/C_message.php", {idUser:id,content:text},function( data )
+		{
+			console.log(data)
+			$("#status_message").val('');
+		});
 	})
 }
 chatBox()

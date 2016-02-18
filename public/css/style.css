@@ -191,7 +191,10 @@ body
 .input-relative { display: inline-block; position: relative; left: 250px; bottom: 59px; }
 #registerSubmit2 { padding: 6px 12px; background-color: #20AAC5; position: relative; top: -60px; }
 #formDesactive span { display: inline-block; width: 80%; margin-left: 10%; margin-right: 10%; color: #ff3333; text-align: center; }
-.form-group6 { display: inline-block; width: 60%; margin-left: 20%; margin-top: 15px;  }
+.form-group6 { display: inline-block; width: 60%; margin-left: 20%; margin-top: 15px; }
+.params { display: inline-block; width: 70%; margin-left: 28%; }
+.parametre { display: inline-block; width: 22%; padding: 6px 12px; background-color: rgb(53, 206, 147); margin-left: 5%; margin-bottom: 30px; 
+  text-align: center; color: white; }
 
 /* ------------------------------------------------- IMPLEMENTATION CSS MESSAGERIE ---------------------------------------------------------- */
 @keyframes surf { 0% { left: 100%; } 100% { left: 80.8%; } }
@@ -206,7 +209,7 @@ body
 .img-chat { max-width: 49px; max-height: 49px; float: left; }
 .name-chat { display: inline-block; width: 65%; margin-left: 3.84%; padding: 13.5px; float: left; font-size: 16px; color: white; }
 .envelope { background-color: #41C3B2; padding: 17.5px; left: 5px; top: -0.5px; text-align: center; color: white; }
-.dialogue { position: fixed; width: 22%; position: relative; left: 58%; top: 540px; }
+.dialogue { position: fixed; width: 22%; position: relative; left: 58%; top: 490px; }
 .popup-box { position: fixed; }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------ */

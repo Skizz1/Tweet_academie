@@ -1,6 +1,4 @@
 <?php
-// session_start();
-echo "zz";
 echo $dest = $_GET["idUser"];
 
 echo'
@@ -9,4 +7,4 @@ echo'
 <input type="text"name="idUser" value="'.$dest.'">
 	<input type="submit">
 </form>';
-// ?>
+ ?>

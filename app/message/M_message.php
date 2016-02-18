@@ -11,7 +11,5 @@ class SqlMessage
 		$connexion->execute();	
 	}
 }
-// session_start();
-// require('../database.php');
 
 ?>
