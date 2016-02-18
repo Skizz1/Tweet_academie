@@ -1,4 +1,4 @@
-<?php
+    <?php
 require_once("../onlineUser/sessionInit.php");
 require_once("../follow/M_count.php");
 require_once("../timeLine/M_timeLine.php");
@@ -114,11 +114,39 @@ require_once("../tweets/M_tweets.php");
                 </form>
             </div>
             <div class="tweet" id="Ajax-Rsearch">
-              
+
                 <!-- TIME LINE AJAX  -->
                 <div class="tweet" id="Ajax-TimeLine"></div>
 
             </div>
         </div>
+
+        <!-- MESSAGERIE///////////////////////////////////////////////////////// -->
+        <div class="chat">+</div>
+        <!-- LISTE DES MESSAGES -->
+        <div class="view-message">
+            <div class="user-chat">
+                <?php
+                /*
+                * apelle de la function de listing des mails
+                */
+                require_once("../message/V_boxMail.php");
+                ?>
+            </div>
+            <div class="new-message">
+
+            </div>
+        </div>
+        <!-- FIN BOITE DE DIALOGUE -->
+        <div class="dialogue"></div>
+                    </div>
+                </div>
+                <div class="popup-messages-footer">
+                    <textarea id="status_message" placeholder="Ecrivez votre message..." rows="10" cols="40" name="message"></textarea>
+                    <button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- FIN MESSAGEIRE -->
     </div>
 </div>

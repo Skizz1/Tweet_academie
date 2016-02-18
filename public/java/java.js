@@ -38,28 +38,79 @@ $(document).ready(function()
 				/*
 				* Permet de cache le texte area des tweets
 				*/
-				$("#Ajax-TimeLine").show();
-				$(".Ajax-postTweet").show();
+				function messagerie() {
+					$(".Ajax-postTweet").hide();
+					$('.view-message').hide();
+					$(document).on("click", ".chat", function() {
+						if ($('.view-message').is(':hidden')) {
+							$(this).css({ "left": '75.6%', "animation": 'bulle 0.5s linear' });
+							$('.view-message').show().css({ "position": 'fixed', "left": '80.8%', "animation": 'surf 0.5s linear' });
+						} else { 
+							$(this).css({ "left": '93%' });
+							$('.view-message').hide().css({ "left": '100%' });
+						};
+
+						});
+
+						$(document).on("click","#Ajax-BoxMail",function()
+						{
+							user = $(this).data("user");
+							console.log(user)
+							$.post( "app/message/V_boxChat.php", {user:user},function( data )
+							{
+								console.log($(".dialogue").html(data))
+							});
+						})
+
+					};
+					messagerie();
+
+
+					$('.dialogue').css({ "display": 'none' });
+
+				/*
+				* permet l'affiche de la mail box
+				* home/home.php
+				* methode java
+				*/
+				$(document).on("click", ".envelope", function() 
+				{
+					$('.dialogue').css({ "display": 'block' });
+				});
+
+				$(document).on("click", ".off", function() {
+					if ($('.popup-messages').is(':visible')) { 
+						$('.dialogue').css({ "position": 'fixed', "top": '915px' });
+						$('.popup-messages').css({ "position": 'fixed', "display": 'none' });
+						$('.popup-messages-footer').css({ "position": 'fixed', "display": 'none' });
+					} 
+					else
+					{
+						$('.dialogue').css({ "position": 'fixed', "top": '540px' });
+						$('.popup-messages').css({ "display": 'block', "width": '22%' });
+						$('.popup-messages-footer').css({ "display": 'block', "width": '22%' });
+					}
+				});
 			}	
 		})
-	}
-	function logOut()
+}
+function logOut()
+{
+	$(document).on("click","#logOut",function()
 	{
-		$(document).on("click","#logOut",function()
-		{
-			$.ajax({
-				url : 'app/onlineUser/C_disconect.php',
-				success:function(data)
-				{
-					window.location.replace("index.php")
-				}
-				
-			})
+		$.ajax({
+			url : 'app/onlineUser/C_disconect.php',
+			success:function(data)
+			{
+				window.location.replace("index.php")
+			}
+
 		})
-	}
-	logOut()
-	$(document).on('keyup', '#formRegister input', function()
-	{
+	})
+}
+logOut()
+$(document).on('keyup', '#formRegister input', function()
+{
 			//Verification login
 			login = $(".JS_inputLogin").val();
 			regexLogin = /^[a-zA-Z]+$/.test(login);
@@ -400,16 +451,6 @@ function Timeline()
 }
 Timeline()
 
-/*
-* Repondre a un tweet
-*/
-function responceTweet()
-{
-	$(document).on("click","#Ajax-responceTweet",function()
-	{
-		alert("coco")
-		$(this).html("<textearea></textearea>")
-	})
-}
-responceTweet()
+
+
 });//READY
