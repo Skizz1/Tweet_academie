@@ -49,33 +49,24 @@ $(document).ready(function()
 							$(this).css({ "left": '93%' });
 							$('.view-message').hide().css({ "left": '100%' });
 						};
-<<<<<<< HEAD
 
-						});
-
-						$(document).on("click","#Ajax-BoxMail",function()
-						{
-							user = $(this).data("user");
-							console.log(user)
-							$.post( "app/message/V_boxChat.php", {user:user},function( data )
-							{
-								console.log($(".dialogue").html(data))
-							});
-						})
-
-					};
-					messagerie();
-
-
-					$('.dialogue').css({ "display": 'none' });
-=======
 					});
+
+					$(document).on("click","#Ajax-BoxMail",function()
+					{
+						user = $(this).data("user");
+						console.log(user)
+						$.post( "app/message/V_boxChat.php", {user:user},function( data )
+						{
+							console.log($(".dialogue").html(data))
+						});
+					})
+
 				};
 				messagerie();
 
 
 				$('.dialogue').css({ "display": 'none' });
->>>>>>> e81ca97c7697244b0d6a382a3fd6394294d2bf85
 
 				/*
 				* permet l'affiche de la mail box
@@ -94,11 +85,7 @@ $(document).ready(function()
 						$('.popup-messages-footer').css({ "position": 'fixed', "display": 'none' });
 					} 
 					else
-<<<<<<< HEAD
 					{
-=======
-					 {
->>>>>>> e81ca97c7697244b0d6a382a3fd6394294d2bf85
 						$('.dialogue').css({ "position": 'fixed', "top": '540px' });
 						$('.popup-messages').css({ "display": 'block', "width": '22%' });
 						$('.popup-messages-footer').css({ "display": 'block', "width": '22%' });
@@ -463,6 +450,27 @@ function Timeline()
 	}, 3000);
 }
 Timeline()
+
+/*
+* Envoi de message chat box
+*/
+function chatBox()
+{
+	$(document).on('click','#Ajax-envoie',function(e)
+	{
+		e.preventDefault();
+		text = $("#status_message").val();
+		id = $("#Ajax-envoie").data('id');
+			$.get("app/message/C_message.php", {idUser:id,content:text},function( data )
+			{
+				console.log(data)
+				$("#status_message").val('');
+			});
+	})
+}
+chatBox()
+
+
 
 
 

@@ -28,9 +28,10 @@ $msg = $MboxMail->boxMail($id);
                     <span class="direct-chat-name pull-left">Osahan</span>
                 </div>      
                 <?php
-
+$dest = "";
                 foreach ($msg as $key => $value)
                 {
+                    $dest = $value->destinataire_id;
                     ?>
                     <img alt="message user image" src="public/css/images/users/<?php  echo $value->expediteur_id ?>.png" class="direct-chat-img">
                     
@@ -43,8 +44,12 @@ $msg = $MboxMail->boxMail($id);
                     </div>
                     <?php
                 }
+                // echo $dest;
                 ?>
                 <div class="popup-messages-footer">
+
+                    <form method="POST" action="#">
                     <textarea id="status_message" placeholder="Ecrivez votre message..." rows="10" cols="40" name="message"></textarea>
-                    <button class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+                    <button id='Ajax-envoie' data-id='<?php echo $dest ?>' class="bg_none pull-right"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+                    </form>
                 </div>

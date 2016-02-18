@@ -138,41 +138,7 @@ require_once("../tweets/M_tweets.php");
             </div>
         </div>
         <!-- FIN BOITE DE DIALOGUE -->
-<<<<<<< HEAD
         <div class="dialogue"></div>
-=======
-        <div class="dialogue">
-            <div class="popup-box chat-popup" id="qnimate">
-                <div class="popup-head">
-                    <div class="popup-head-left pull-left">
-                        <img class="miniature" src="public/css/images/index.png" alt="iamgurdeeposahan">
-                        <span class="user">Loïc De Stefano</span>
-                    </div>
-                    <div class="popup-head-right pull-right">
-                        <button data-widget="remove" id="removeClass" class="chat-header-button pull-right off" type="button">
-                            <i class="glyphicon glyphicon-off"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="popup-messages">
-                    <div class="direct-chat-messages">
-                        <div class="chat-box-single-line">
-                            <abbr class="timestamp">11 Février 2016</abbr>
-                        </div>
-                        <div class="direct-chat-msg doted-border">
-                            <div class="direct-chat-info clearfix">
-                                <span class="direct-chat-name pull-left">Osahan</span>
-                            </div>
-                                <?php 
-                                /*
-                                * affichage des messages (facon chat)
-                                * methode : php java
-                                */
-                                 require_once("../message/V_chatPrivate.php");  
-
-                                 ?>
-                        </div>
->>>>>>> e81ca97c7697244b0d6a382a3fd6394294d2bf85
                     </div>
                 </div>
                 <div class="popup-messages-footer">

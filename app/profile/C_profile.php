@@ -31,7 +31,7 @@ class ProfileController
             $instance->update($id, ['password' => hash("ripemd160", "si tu aimes la wac tape dans tes mains" . $field1)]);
         } else
         {
-            echo "passError"; //AJAX
+            echo "passError"; //AJA
         }
     }
 

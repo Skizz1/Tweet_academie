@@ -1,10 +1,6 @@
 <?php
 // session_start();
-<<<<<<< HEAD
 require_once('../database.php');
-=======
-// require('../database.php');
->>>>>>> e81ca97c7697244b0d6a382a3fd6394294d2bf85
 class MboxMail
 {
 	function ReadMessage()

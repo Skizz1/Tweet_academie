@@ -10,14 +10,14 @@ class Cmessage
 	{
 		$this->exp = $_GET["idUser"];
 		$this->dest = $_SESSION["id"];
-		$this->content = $_POST["content"]; 
+		$this->content = $_GET["content"]; 
 	}
 		function sendMsg()
 	{
 		$SqlMessage = new SqlMessage;
 		$SqlMessage->SendMessage($this->content,$this->dest,$this->exp);
 	}
-}
+}	
 $Cmessage = new Cmessage;
 $Cmessage->sendMsg();
 
