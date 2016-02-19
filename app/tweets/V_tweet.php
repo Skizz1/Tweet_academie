@@ -6,26 +6,25 @@ $readTweet = $tweets->readTweet($_SESSION["id"]);
 $Mpicture  = new Mpicture;
 $urlUser = new urlUser;
 
-?>
-
-<?php
 foreach ($readTweet as $key => $value)
 {
-	echo '	
+    echo '
 	<!-- Afficher la photo de profil du membre qui a posté le tweet -->
-	<img class="avatar-tweet" src="public/css/images/users/'. $Mpicture->LookPicture($value->follow_id).'.png"/>
+	<img class="avatar-tweet" src="public/css/images/users/' . $Mpicture->LookPicture($value->follow_id) . '.png"/>
 
 	<!-- Afficher son login/prénom nom -->
-	<h4>'.$value->login.'</h4><span class="compte-admin">✔</span>
+	<h4>' . $value->login . '</h4><span class="compte-admin">✔</span>
 
 	<p>10h</p>
 
-	<span class="content">'.$urlUser->C_urlUser($value->content).'</span>
+	<span class="content">' . $urlUser->C_urlUser($value->content) . '</span>
+
 	<span class="glyphicon glyphicon-heart heart"></span>
-	<span class="glyphicon glyphicon-retweet retweet"></span>
+	<span class="glyphicon glyphicon-retweet retweet" data-id="' . $value->id . '"></span>
 	<span class="glyphicon glyphicon-share-alt share-alt"></span>
 	<hr/>';
 
 }
 
-?> 
+?>
+

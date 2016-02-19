@@ -12,6 +12,8 @@
     <script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="public/java/java.js"></script>
     <script type="text/javascript" src="public/java/konami.js"></script>
+    <script type="text/javascript" src="public/java/userTweets.js"></script>
+    <script type="text/javascript" src="public/java/retweet.js"></script>
     <link rel="icon" type="image/png" href="public/css/images/favicon.png" />
     <!-- DATAPICKER -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">

@@ -41,7 +41,7 @@
                             <h2><?php echo $_SESSION["login"] ?></h2>
                         </div>
                         <div class="stats cf">
-                            <a href="#" class="stat">
+                              <a href="#" class="stat" id="Ajax-tweetCount">
                                 <!-- Afficher nombre de tweets du membre connecté -->
                                 <?php foreach ($tweetCount as $value)
                                 {
@@ -120,8 +120,6 @@
 
                 </div>
             </div>
-
-            <!-- MESSAGERIE///////////////////////////////////////////////////////// -->
             <div class="chat">+</div>
             <!-- LISTE DES MESSAGES -->
             <div class="view-message">
@@ -134,9 +132,8 @@
                 ?>
             </div>
             <div class="new-message"></div>
-        </div>
-        <!-- FIN BOITE DE DIALOGUE -->
+        </div>  
         <div class="dialogue"></div>
-        <!-- FIN MESSAGEIRE -->
+
     </div>
 </div>

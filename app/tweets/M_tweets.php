@@ -52,6 +52,26 @@ class TweetsModel extends Model
         $data = $connexion->fetchAll();
         return $data;   
     }
+
+    
+    /**
+     * Retourne tous les champs
+     * @param int $id ID
+     * @return mixed
+     */
+    public function getUserTweets($id)
+    {
+        $sql = "SELECT *, tp_tweets.id AS tweetId
+                FROM {$this->table}
+                LEFT JOIN tp_users
+                ON tp_users.id = {$this->table}.user_id
+                WHERE {$this->table}.user_id = {$id}";
+        $req = Database::get()->prepare($sql);
+        $req->execute();
+        $data = $req->fetchAll();
+        return $data;
+    }
+
 }
 $tweets = new TweetsModel();
 $tweetCount = $tweets->tweetCount($tweets->userId);

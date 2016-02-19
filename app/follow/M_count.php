@@ -1,5 +1,6 @@
 <?php
 require_once('../database.php');
+session_start();
 class Mcount
 {
 
@@ -11,8 +12,7 @@ class Mcount
 
 	function CountMefollow()
 	{
-		$connexion = \App\Model\Database::get()->prepare("
-			SELECT COUNT(follower_id) AS nbrFollow
+		$connexion = \App\Model\Database::get()->prepare("SELECT COUNT(follower_id) AS nbrFollow
 			FROM tp_follow
 			WHERE follower_id ='".$this->id."'
 			");
@@ -24,8 +24,8 @@ class Mcount
 
 	function Mefollower()
 	{
-		$connexion = \App\Model\Database::get()->prepare("
-			SELECT *,count(follow_id) AS nbrFollow
+
+		$connexion = \App\Model\Database::get()->prepare("SELECT *,count(follow_id) AS nbrFollow
 			FROM `tp_follow` INNER JOIN tp_users
 			ON tp_follow.follower_id = tp_users.id
 			WHERE follow_id = '".$this->id."'");
