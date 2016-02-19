@@ -180,10 +180,12 @@ body
 /* ------------------------------------------------------------ SETTINGS --------------------------------------------------------------------- */
 
 .settings { display: inline-block; width: 100%; position: relative; top: 200px; padding: 20px; }
-#login, #mail, #pass, #desactive, #image { cursor: pointer; width: 97%; margin-left: 3%; padding-bottom: 20px; padding-top: 20px; 
-  font-size: 18px; display: inline-block; text-decoration: none; 
-  color: rgba(37, 116, 106, 0.5); font-size: 18px; border-bottom: 1px #bfbfbf solid; padding-left: 30px; }
-#login:hover, #mail:hover, #pass:hover, #desactive:hover, #image:hover { background-color: rgba(32, 170, 197, 0.4); color: white; }
+#login, #mail, #pass, #desactive, #image, #nom, #prenom, #postal, #adress, #department, #region, #city, #country, #anniv { cursor: pointer; width: 97%; 
+  margin-left: 3%; padding-bottom: 20px; padding-top: 20px; font-size: 18px; display: inline-block; text-decoration: none; color: rgba(37, 116, 106, 0.5); 
+  font-size: 18px; border-bottom: 1px #bfbfbf solid; padding-left: 30px; }
+#login:hover, #mail:hover, #pass:hover, #desactive:hover, #image:hover, 
+    #nom:hover, #prenom:hover, #postal:hover, #adress:hover, #department:hover,
+    #region:hover, #city:hover, #country:hover, #anniv:hover { background-color: rgba(32, 170, 197, 0.4); color: white; }
 .input-group3 { display: inline-block; width: 100%; /*float: left;*/ }
 .input-group3 > input { width: 30%; margin-left: 4%; float: left; }
 .loginRegister, .mailRegister, .passRegister { position: relative; top: 7px; width: 10px; height: 34px; background-color: rgba(62, 198, 170, 0.5); 
@@ -192,8 +194,9 @@ body
 #registerSubmit2 { padding: 6px 12px; background-color: #20AAC5; position: relative; top: -60px; }
 #formDesactive span { display: inline-block; width: 80%; margin-left: 10%; margin-right: 10%; color: #ff3333; text-align: center; }
 .form-group6 { display: inline-block; width: 60%; margin-left: 20%; margin-top: 15px; }
-.params { display: inline-block; width: 70%; margin-left: 28%; }
-.parametre { display: inline-block; width: 22%; padding: 6px 12px; background-color: rgb(53, 206, 147); margin-left: 5%; margin-bottom: 30px; 
+.param-profil { margin-top: 60px; }
+.params { display: inline-block; width: 100%; }
+.parametre { display: inline-block; width: 22%; padding: 6px 12px; background-color: rgb(53, 206, 147); margin-bottom: 30px; 
   text-align: center; color: white; }
 
 /* ------------------------------------------------- IMPLEMENTATION CSS MESSAGERIE ---------------------------------------------------------- */
