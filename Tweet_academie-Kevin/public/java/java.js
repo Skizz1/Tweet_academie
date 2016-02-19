@@ -484,16 +484,33 @@ chatBox();
 * localisation : home/V_home.php
 *
 */
+$(document).on('keyup',"#contentTweet",function()
+{
+	console.log(va = $("#contentTweet").val());
+	if (va.length < 140) 
+	{
+		$("#Ajax-post").prop('disabled', false);
+	}
+	else
+	{
+		$("#Ajax-post").prop('disabled', true);
+	}
+})
+
+
+
 $(document).on("click","#Ajax-post",function(e)
 {
 	e.preventDefault();
 	console.log(content = $("#contentTweet").val());
-	$.post("app/tweets/C_tweets.php",{content:contentTweet},function(data)
+	$.post("app/tweets/C_tweets.php",{content:content},function(data)
 	{
-		console.log(data)
+		$("#contentTweet").val('');
 	})
 
-
 })
+
+
+
 
 });//READY
