@@ -28,13 +28,12 @@ $(document).ready(function()
 	$('#registerSubmit').prop('disabled', true);
 	function redirectHome()
 	{
-		console.log("home")
 		$.ajax
 		({
 			url:"app/home/V_home.php",
 			success:function(e)
 			{
-				$("body").html(e)
+				$("body").html(e);
 				/*
 				* Permet de cache le texte area des tweets
 				*/
@@ -48,12 +47,12 @@ $(document).ready(function()
 						} else { 
 							$(this).css({ "left": '93%' });
 							$('.view-message').hide().css({ "left": '100%' });
-						};
+						}
 
 					});
 
 
-				};
+				}
 
 				messagerie();
 
@@ -66,7 +65,7 @@ $(document).ready(function()
 						{
 							$.post("app/message/V_boxChat.php", {user:user},function( data )
 							{
-								$(".dialogue").html(data)
+								$(".dialogue").html(data);
 							});
 
 						}, 10000);
@@ -74,8 +73,7 @@ $(document).ready(function()
 						/////////////////////////////
 						$.post( "app/message/V_boxChat.php", {user:user},function( data )
 						{
-							console.log(data)
-							console.log($(".dialogue").html(data))
+					$(".dialogue").html(data);
 						});
 					});
 
@@ -110,7 +108,7 @@ $(document).ready(function()
 					}
 				});
 			}	
-		})
+		});
 }
 function logOut()
 {
@@ -120,13 +118,13 @@ function logOut()
 			url : 'app/onlineUser/C_disconect.php',
 			success:function(data)
 			{
-				window.location.replace("index.php")
+				window.location.replace("index.php");
 			}
 
-		})
-	})
+		});
+	});
 }
-logOut()
+logOut();
 $(document).on('keyup', '#formRegister input', function()
 {
 			//Verification login
@@ -345,14 +343,14 @@ else
 				{
 					$("#registerInfo").html("CONNEXION");
 					redirectHome();
-				};
+				}
 				if (data == "false") 
 				{
 					$("#registerInfo").html("MAUVAIS PASSWORD");
-				};
+				}
 				console.log(data);
-			})
-		})
+			});
+		});
 	}
 
 	signIn();
@@ -361,66 +359,66 @@ else
 	{
 		$(document).on("keyup","#Ajax-valSearch",function(event)
 		{
-			event.preventDefault()
+			event.preventDefault();
 			search = $("#Ajax-valSearch").val();
 
 			$.post("app/search/V_search.php",{search:search},function(data)
 			{
-				$("#Ajax-Rsearch").html(data)
-			})
+				$("#Ajax-Rsearch").html(data);
+			});
 			/*
 			* Si le champ de recherche est vide, reaffiche la liste de tweet
 			*/
-			if (search == "")
+			if (search === "")
 			{
 				$.ajax({
 					url : 'app/tweets/V_tweet.php',
 					success:function(data)
 					{
-						$("#Ajax-Rsearch").html(data)
+						$("#Ajax-Rsearch").html(data);
 						$(".Ajax-postTweet").hide();
-						writeTweet()
-						redirectHome()
+						writeTweet();
+						redirectHome();
 					}
 				});
 
-			};
-		})
+			}
+		});
 	}
-	Rsearch()
+	Rsearch();
 	function ReadFollow()
 	{
 		$(document).on("click","#Ajax-ReadFollow",function(event)
 		{
-			event.preventDefault()
+			event.preventDefault();
 			$.ajax({
 				url : 'app/follow/V_follow.php',
 				success:function(data)
 				{
 					$("#Ajax-TimeLine").hide();
-					$("#Ajax-Rsearch").html(data)
+					$("#Ajax-Rsearch").html(data);
 				}
-			})
-		})
+			});
+		});
 	}
-	ReadFollow()
+	ReadFollow();
 	function ReadFollower()
 	{
 		$(document).on("click","#Ajax-ReadFollower",function(event)
 		{
-			event.preventDefault()
+			event.preventDefault();
 			$.ajax({
 				url : 'app/follow/V_follower.php',
 				success:function(data)
 				{
 					$("#Ajax-TimeLine").hide();
-					$("#Ajax-Rsearch").html(data)
+					$("#Ajax-Rsearch").html(data);
 				}
 				
-			})
-		})
+			});
+		});
 	}
-	ReadFollower()
+  ReadFollower();
 	$(".none2").hide();
 	$(".inscript-infos").hide();
 	function connex()
@@ -430,14 +428,14 @@ else
 			$(".none2").show();
 			$("#formRegister").hide();
 			$(".inscript-infos").show();
-		})
+		});
 
 		$(document).on("click", "#inscription", function() {
 			$(".compte-infos").show();
 			$(".none2").hide();
 			$("#formRegister").show();
 			$(".inscript-infos").hide();
-		})
+		});
 	}
 	connex();
 /*
@@ -448,9 +446,9 @@ function writeTweet()
 	$(document).on("click","#Ajax-tweet",function()
 	{
 		$(".Ajax-postTweet").hide();
-	})
+	});
 }
-writeTweet()
+writeTweet();
 /*
 *  Timeline
 */
@@ -461,13 +459,12 @@ function Timeline()
 			url : 'app/tweets/V_tweet.php',
 			success:function(data)
 			{
-				console.log("TimeLine")
-				$("#Ajax-TimeLine").html(data)
+				$("#Ajax-TimeLine").html(data);
 			}
-		})
+		});
 	}, 3000);
 }
-Timeline()
+Timeline();
 
 /*
 * Envoi de message chat box
@@ -481,15 +478,10 @@ function chatBox()
 		id = $("#Ajax-envoie").data('id');
 		$.get("app/message/C_message.php", {idUser:id,content:text},function( data )
 		{
-			console.log(data)
 			$("#status_message").val('');
 		});
-	})
+	});
 }
-chatBox()
-
-
-
-
+chatBox();
 
 });//READY

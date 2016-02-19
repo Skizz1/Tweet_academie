@@ -3,7 +3,6 @@
     require_once("../follow/M_count.php");
     require_once("../timeLine/M_timeLine.php");
     require_once("../tweets/M_tweets.php");
-
     ?>
     <body>
         <nav class="nav-tweet">
@@ -117,7 +116,6 @@
 
                     <!-- TIME LINE AJAX  -->
                     <div class="tweet" id="Ajax-TimeLine"></div>
-
                 </div>
             </div>
             <div class="chat">+</div>
@@ -134,6 +132,5 @@
             <div class="new-message"></div>
         </div>  
         <div class="dialogue"></div>
-
     </div>
 </div>
