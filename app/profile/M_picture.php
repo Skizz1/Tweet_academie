@@ -1,10 +1,11 @@
 <?php
 error_reporting(E_ALL);
+
 require_once('M_profile.php');
 
 class Mpicture
 {
-    function Upload($picture, $type)
+    function Upload($picture)
     {
         session_start();
         move_uploaded_file($picture, "../../public/css/images/users/" . $_SESSION["id"] . ".png");
@@ -25,5 +26,4 @@ class Mpicture
         }
     }
 }
-
 ?>

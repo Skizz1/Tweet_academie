@@ -1,9 +1,7 @@
 <?php
-
 use App\Model\Database;
 require_once('../M_Model.php');
-
-class ReTweetsModel extends Model
+class reTweetsModel extends Model
 {
     public function __construct()
     {
@@ -11,7 +9,7 @@ class ReTweetsModel extends Model
         $this->table = 'tp_retweets';
     }
 
-    public function getRetweets($id)
+        public function getRetweets($id)
     {
         $sql = "SELECT *, (SELECT login FROM tp_users WHERE id = {$id}) AS tweeterLogin
                 FROM {$this->table}

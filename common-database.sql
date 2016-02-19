@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.9
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Feb 08, 2016 at 07:58 PM
--- Server version: 10.0.22-MariaDB
--- PHP Version: 5.6.1
+-- Host: localhost
+-- Generation Time: Feb 19, 2016 at 12:29 PM
+-- Server version: 5.5.47-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `common-database`
@@ -27,11 +27,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `tp_favoris` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned NOT NULL,
   `tweet_id` int(11) unsigned NOT NULL,
-  `date_like` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `fav_date` datetime NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`user_id`),
+  KEY `tweet_id` (`tweet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -40,21 +44,22 @@ CREATE TABLE IF NOT EXISTS `tp_favoris` (
 --
 
 CREATE TABLE IF NOT EXISTS `tp_follow` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `follow_id` int(11) unsigned NOT NULL,
   `follower_id` int(11) unsigned NOT NULL,
-  `date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+  `follow_date` datetime DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `follow_id` (`follow_id`),
+  KEY `follower_id` (`follower_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `tp_follow`
 --
 
-INSERT INTO `tp_follow` (`id`, `follow_id`, `follower_id`, `date`) VALUES
-(10, 1, 2, '0000-00-00 00:00:00'),
-(11, 14, 2, '0000-00-00 00:00:00'),
-(12, 2, 14, '0000-00-00 00:00:00'),
-(13, 14, 2, '0000-00-00 00:00:00');
+INSERT INTO `tp_follow` (`id`, `follow_id`, `follower_id`, `follow_date`, `active`) VALUES
+(1, 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -63,39 +68,19 @@ INSERT INTO `tp_follow` (`id`, `follow_id`, `follower_id`, `date`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tp_messages` (
-  `id` int(11) unsigned NOT NULL,
-  `content` varchar(255) NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
   `destinataire_id` int(11) unsigned NOT NULL,
   `expediteur_id` int(11) unsigned NOT NULL,
-  `destinataire_del` tinyint(1) unsigned NOT NULL,
-  `expediteur_del` tinyint(1) unsigned NOT NULL,
-  `view` tinyint(1) unsigned NOT NULL,
-  `date` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tp_messages`
---
-
-INSERT INTO `tp_messages` (`id`, `content`, `destinataire_id`, `expediteur_id`, `destinataire_del`, `expediteur_del`, `view`, `date`) VALUES
-(1, 'yoplair', 1, 2, 0, 0, 0, '2016-02-11 00:00:00'),
-(2, 'ttt', 3, 2, 0, 0, 0, '2016-02-05 00:00:00'),
-(3, '3dfsfdsf', 3, 1, 0, 0, 0, '2016-02-24 00:00:00'),
-(4, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(5, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(6, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(7, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(8, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(9, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '0000-00-00 00:00:00'),
-(10, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:16:50'),
-(11, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:22:34'),
-(12, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 15:56:11'),
-(13, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:30:39'),
-(14, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:15'),
-(15, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:16'),
-(16, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:16'),
-(17, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:31:26'),
-(18, 'SALUT JE SUIS UN TEST', 2, 1, 0, 0, 0, '2016-02-05 16:35:51');
+  `destinataire_del` tinyint(1) unsigned DEFAULT NULL,
+  `expediteur_del` tinyint(1) unsigned DEFAULT NULL,
+  `view` tinyint(1) unsigned DEFAULT NULL,
+  `view_date` datetime DEFAULT NULL,
+  `message_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `destinataire_id` (`destinataire_id`),
+  KEY `expediteur_id` (`expediteur_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -104,11 +89,15 @@ INSERT INTO `tp_messages` (`id`, `content`, `destinataire_id`, `expediteur_id`, 
 --
 
 CREATE TABLE IF NOT EXISTS `tp_pictures` (
-  `id` int(10) unsigned NOT NULL,
-  `user_id` int(10) unsigned NOT NULL,
-  `tweet_id` int(10) unsigned NOT NULL,
-  `picture` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `tweet_id` int(11) unsigned NOT NULL,
+  `picture_url` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `picture_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tweet_id` (`tweet_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -117,9 +106,10 @@ CREATE TABLE IF NOT EXISTS `tp_pictures` (
 --
 
 CREATE TABLE IF NOT EXISTS `tp_preference` (
-  `id` int(11) unsigned NOT NULL,
-  `theme` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `theme` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -128,12 +118,39 @@ CREATE TABLE IF NOT EXISTS `tp_preference` (
 --
 
 CREATE TABLE IF NOT EXISTS `tp_replys` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned NOT NULL,
   `tweet_id` int(11) unsigned NOT NULL,
   `content` text NOT NULL,
-  `date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `reply_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `tweet_id` (`tweet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tp_retweets`
+--
+
+CREATE TABLE IF NOT EXISTS `tp_retweets` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `tweet_id` int(11) unsigned NOT NULL,
+  `content` varchar(140) CHARACTER SET utf8 NOT NULL,
+  `date_retweet` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `tweet_id` (`tweet_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tp_retweets`
+--
+
+INSERT INTO `tp_retweets` (`id`, `user_id`, `tweet_id`, `content`, `date_retweet`) VALUES
+(1, 1, 1, '#root @emmaWatson salut', '2016-02-19 10:41:02');
 
 -- --------------------------------------------------------
 
@@ -142,20 +159,29 @@ CREATE TABLE IF NOT EXISTS `tp_replys` (
 --
 
 CREATE TABLE IF NOT EXISTS `tp_tweets` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `content` varchar(140) NOT NULL,
   `user_id` int(11) unsigned NOT NULL,
-  `created` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `tweet_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`user_id`),
+  KEY `id_tweet` (`id`),
+  KEY `id_user_2` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `tp_tweets`
 --
 
-INSERT INTO `tp_tweets` (`id`, `content`, `user_id`, `created`) VALUES
-(1, '#noob blablabla', 1, '2016-02-03'),
-(2, 'je suis #gros laure', 14, '2016-02-03'),
-(3, 'JE SUIS #stubi  NUMERO 2', 2, '2016-02-10');
+INSERT INTO `tp_tweets` (`id`, `content`, `user_id`, `tweet_date`) VALUES
+(1, '#root @emmaWatson salut', 1, '2016-02-19 10:31:35'),
+(2, 'zeezr', 1, '2016-02-19 11:29:22'),
+(3, '', 1, '2016-02-19 12:11:10'),
+(4, '', 1, '2016-02-19 12:12:29'),
+(5, '', 1, '2016-02-19 12:12:52'),
+(6, '', 1, '2016-02-19 12:13:41'),
+(7, '', 1, '2016-02-19 12:14:21'),
+(8, '', 1, '2016-02-19 12:24:17');
 
 -- --------------------------------------------------------
 
@@ -164,38 +190,39 @@ INSERT INTO `tp_tweets` (`id`, `content`, `user_id`, `created`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tp_users` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `login` varchar(255) NOT NULL,
-  `mail` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `theme` int(11) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `country` varchar(255) NOT NULL,
-  `connect` tinyint(1) NOT NULL,
-  `active` tinyint(1) NOT NULL,
-  `birthday` date NOT NULL,
-  `register` datetime NOT NULL,
-  `last_connection` datetime NOT NULL,
-  `sexe` enum('m','f') NOT NULL,
-  `cover` varchar(255) NOT NULL,
-  `avatar` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+  `token` varchar(255) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `cpostal` int(6) DEFAULT NULL,
+  `adress` varchar(255) DEFAULT NULL,
+  `departement` varchar(255) DEFAULT NULL,
+  `region` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `connect` tinyint(1) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `register_date` datetime DEFAULT NULL,
+  `last_connection` datetime DEFAULT NULL,
+  `sexe` enum('m','f') DEFAULT NULL,
+  `cover` varchar(255) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `login` (`login`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `tp_users`
 --
 
-INSERT INTO `tp_users` (`id`, `login`, `mail`, `password`, `token`, `first_name`, `last_name`, `theme`, `city`, `country`, `connect`, `active`, `birthday`, `register`, `last_connection`, `sexe`, `cover`, `avatar`) VALUES
-(1, 'root', 'root@root.fr', 'bebc21dc09d37290a4a10df56550dbaa6beb7aec', '', 'root', 'root', 0, 'lyon', 'france', 0, 0, '2016-02-10', '2016-02-05 00:00:00', '0000-00-00 00:00:00', 'f', '', ''),
-(2, 'rootroot', 'aaAZ@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'zzzz', 'vxcvxvcvsdfzzzzza', 0, 'lyoncvcxvcv', '', 0, 0, '2016-02-16', '2016-02-04 13:52:29', '0000-00-00 00:00:00', 'm', '', ''),
-(14, 'laure', 'aaa@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'laure', 'dupont', 0, 'lyon', '', 0, 0, '0000-00-00', '2016-02-04 19:10:34', '0000-00-00 00:00:00', 'm', '', ''),
-(15, 'test', 'ggg@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'ee', 'zz', 0, 'dfdf', '', 0, 0, '2016-02-19', '2016-02-04 19:32:34', '0000-00-00 00:00:00', 'm', '', ''),
-(16, 'testtest', 'ccvxcv@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'fsfsdf', 'xfsdf', 0, 'fsdfsdf', '', 0, 0, '0000-00-00', '2016-02-06 15:09:53', '0000-00-00 00:00:00', 'm', '', ''),
-(17, 'seb', 'aaaaaaaaaaaaaaaaaaaaaaa@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'sb', 'seb', 0, 'lton', '', 0, 0, '1900-02-24', '2016-02-08 11:08:10', '0000-00-00 00:00:00', 'm', '', ''),
-(18, 'laura', 'aaaakfsdf@live.fr', '10205cee1cc602bef5549969f503a53789def31a', '', 'temrtoieptyrio', 'izeroizerzm', 0, 'smdfoidsf', '', 0, 0, '0000-00-00', '2016-02-08 13:45:53', '0000-00-00 00:00:00', 'm', '', '');
+INSERT INTO `tp_users` (`id`, `login`, `email`, `password`, `token`, `first_name`, `last_name`, `cpostal`, `adress`, `departement`, `region`, `city`, `country`, `connect`, `active`, `birthday`, `register_date`, `last_connection`, `sexe`, `cover`, `avatar`) VALUES
+(1, 'emmaWatson', 'zzz@live.fr', '10205cee1cc602bef5549969f503a53789def31a', NULL, 'watson', 'emazaaz', NULL, NULL, NULL, NULL, 'lyon', NULL, NULL, NULL, '2016-02-24', '2016-02-19 10:27:24', NULL, NULL, NULL, '1'),
+(2, 'qsdf', 'cccxvcv@live.fr', '10205cee1cc602bef5549969f503a53789def31a', NULL, 'zzz', 'eteee', NULL, NULL, NULL, NULL, 'cxcvxvxc', NULL, NULL, NULL, '2016-02-24', '2016-02-19 12:25:55', NULL, NULL, NULL, 'AVATAR');
 
 -- --------------------------------------------------------
 
@@ -204,133 +231,67 @@ INSERT INTO `tp_users` (`id`, `login`, `mail`, `password`, `token`, `first_name`
 --
 
 CREATE TABLE IF NOT EXISTS `tp_user_preference` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `preference_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `preference_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_preference` (`preference_id`),
+  KEY `id_user` (`user_id`),
+  KEY `id_preference_2` (`preference_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Indexes for dumped tables
+-- Constraints for dumped tables
 --
 
 --
--- Indexes for table `tp_favoris`
+-- Constraints for table `tp_favoris`
 --
 ALTER TABLE `tp_favoris`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`user_id`);
+  ADD CONSTRAINT `tp_favoris_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_favoris_ibfk_2` FOREIGN KEY (`tweet_id`) REFERENCES `tp_tweets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_follow`
+-- Constraints for table `tp_follow`
 --
 ALTER TABLE `tp_follow`
-  ADD PRIMARY KEY (`id`);
+  ADD CONSTRAINT `tp_follow_ibfk_1` FOREIGN KEY (`follow_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_follow_ibfk_2` FOREIGN KEY (`follower_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_messages`
+-- Constraints for table `tp_messages`
 --
 ALTER TABLE `tp_messages`
-  ADD PRIMARY KEY (`id`);
+  ADD CONSTRAINT `tp_messages_ibfk_1` FOREIGN KEY (`destinataire_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_messages_ibfk_2` FOREIGN KEY (`expediteur_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_pictures`
+-- Constraints for table `tp_pictures`
 --
 ALTER TABLE `tp_pictures`
-  ADD PRIMARY KEY (`id`);
+  ADD CONSTRAINT `tp_pictures_ibfk_1` FOREIGN KEY (`tweet_id`) REFERENCES `tp_tweets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_pictures_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_preference`
---
-ALTER TABLE `tp_preference`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_preference` (`id`);
-
---
--- Indexes for table `tp_replys`
+-- Constraints for table `tp_replys`
 --
 ALTER TABLE `tp_replys`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_reply` (`id`),
-  ADD KEY `id__user` (`user_id`),
-  ADD KEY `id_tweet` (`tweet_id`),
-  ADD KEY `id_reply_2` (`id`),
-  ADD KEY `id__user_2` (`user_id`),
-  ADD KEY `id_tweet_2` (`tweet_id`);
+  ADD CONSTRAINT `tp_replys_ibfk_1` FOREIGN KEY (`tweet_id`) REFERENCES `tp_tweets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_tweets`
+-- Constraints for table `tp_retweets`
 --
-ALTER TABLE `tp_tweets`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`user_id`),
-  ADD KEY `id_tweet` (`id`),
-  ADD KEY `id_user_2` (`user_id`);
+ALTER TABLE `tp_retweets`
+  ADD CONSTRAINT `tp_retweets_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_retweets_ibfk_2` FOREIGN KEY (`tweet_id`) REFERENCES `tp_tweets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Indexes for table `tp_users`
---
-ALTER TABLE `tp_users`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id`);
-
---
--- Indexes for table `tp_user_preference`
+-- Constraints for table `tp_user_preference`
 --
 ALTER TABLE `tp_user_preference`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_preference` (`preference_id`),
-  ADD KEY `id_user` (`user_id`),
-  ADD KEY `id_preference_2` (`preference_id`);
+  ADD CONSTRAINT `tp_user_preference_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tp_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tp_user_preference_ibfk_2` FOREIGN KEY (`preference_id`) REFERENCES `tp_preference` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `tp_favoris`
---
-ALTER TABLE `tp_favoris`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tp_follow`
---
-ALTER TABLE `tp_follow`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `tp_messages`
---
-ALTER TABLE `tp_messages`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT for table `tp_pictures`
---
-ALTER TABLE `tp_pictures`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tp_preference`
---
-ALTER TABLE `tp_preference`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tp_replys`
---
-ALTER TABLE `tp_replys`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tp_tweets`
---
-ALTER TABLE `tp_tweets`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tp_users`
---
-ALTER TABLE `tp_users`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT for table `tp_user_preference`
---
-ALTER TABLE `tp_user_preference`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

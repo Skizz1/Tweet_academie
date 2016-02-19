@@ -1,103 +1,77 @@
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+ini_set('display_errors', 1);
 
 session_start();
-require_once('C_profile.php');
+$id = $_GET['id'];
 require_once('M_profile.php');
-include('../../header.php');
-
 ?>
-    <form id="formFirstName" method="post" action="?">
-        <h2 class="changeTitle"><a href="#">Changer de Nom</a></h2>
-        <div class="form-group">
-            <label for="InputName">Nom</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="first_name" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'first_name'); ?>" required>
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tweet@cademie | <?= $profile->getField($id, 'login') ?></title>
+        <script src="../../public/java/JQuery.js"></script>
+        <script src="../../public/java/settings.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../public/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="../../public/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../public/java/userTweetsProfile.js"></script>
+    </head>
+<body>
+<nav class="nav-tweet">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="deplace">
+                <div class="twitter"></div>
+                <div class="nuage2"></div>
+                <div class="nuage3"></div>
+                <a class="academie" href="../../index.php">Tweet@cademie</a>
             </div>
         </div>
+        <form class="navbar-form navbar-left barre" method="POST" action="../search/V_search.php">
+            <div class="form-group3">
+                <input type="text" class="barre2" id="Ajax-valSearch" name="search" placeholder="Rechercher">
+                <span class="glyphicon glyphicon-search gly-search"></span>
+                <button type="button" id="logOut" class="btn btn-primary navbar-btn">
+                    <span class="glyphicon glyphicon-log-out deco"> Déconnexion</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</nav>
 
-        <h2 class="changeTitle"><a href="#">Changer de Prénom</a></h2>
-        <div class="form-group">
-            <label for="InputName">Prénom</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="last_name" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'last_name'); ?>" required>
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
+<div class="container">
+    <div class="me-profil">
+        <div class="perso">
+            <div class="profil-img-perso">
+
+                <!-- Afficher l'image de profil soit de celui qui est connecté si c'est son profil, sinon l'image profil de celui a qui appartient le profil -->
+                <img class="img-perso" src="../../public/css/images/users/<?= $profile->getField($id, 'avatar') ?>.png" alt="img-profil"/>
+
+            </div>
+            <div class="infos-perso">
+                <div class="dashboard">
+                    <?php if ($_SESSION['id'] !== $_GET['id'])
+                    {
+                        echo '<a href="../message/V_message.php?idUser=' . $id . '" id="mess" class="btn btn-info pull-right">Message</a>
+                                  <a href="../follow/C_follow.php?follow=' . $id . '" id="foll" class="btn btn-info">Follow</a>';
+                    }
+                    ?>
+                    <div class="dashboard">
+                        <span><?= $profile->getField($id, 'login') ?></span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <h2 class="changeTitle"><a href="#">Changer de Code Postal</a></h2>
-        <div class="form-group">
-            <label for="InputName">Code postal :</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="cpostal" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'cpostal'); ?>" required>
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
+        <div class="preference">
+            <div class="Ajax-userTweetsProfile" data-id="<?= $id ?>"></div>
         </div>
-
-        <h2 class="changeTitle"><a href="#">Changer d'Adresse</a></h2>
-        <div class="form-group">
-            <label for="InputName">Adresse</label>
-            <div class="input-group">
-                <textarea name="adress"><?= $profile->getField($_SESSION['id'], 'adress'); ?></textarea>
-            </div>
-        </div>
-
-        <h2 class="changeTitle"><a href="#">Changer de Département</a></h2>
-        <div class="form-group">
-            <label for="InputName">Département</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="departement" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'departement'); ?>">
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
-        </div>
-
-        <h2 class="changeTitle"><a href="#">Changer de Région</a></h2>
-        <div class="form-group">
-            <label for="InputName">Région</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="region" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'region'); ?>">
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
-        </div>
-
-        <h2 class="changeTitle"><a href="#">Changer de Ville</a></h2>
-        <div class="form-group">
-            <label for="InputName">Ville</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="city" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'city'); ?>">
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
-        </div>
-
-        <h2 class="changeTitle"><a href="#">Changer de Pays</a></h2>
-        <div class="form-group">
-            <label for="InputName">Pays</label>
-            <div class="input-group">
-                <input type="text" class="text-center form-control text-center JS_inputLogin" name="country" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'country'); ?>">
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
-        </div>
-
-        <h2 class="changeTitle"><a href="#">Anniversaire</a></h2>
-        <div class="form-group">
-            <label for="InputName">Date</label>
-            <div class="input-group">
-                <input type="date" class="text-center form-control text-center JS_inputLogin" name="birthday" id="InputName" value="<?= $profile->getField($_SESSION['id'], 'birthday'); ?>" required>
-                <span id="LoginRegister" class="input-group-addon info"><span class="glyphicon glyphicon-user" id="imageLogin"></span></span>
-            </div>
-        </div>
-        <input type="submit" name="submit" id="registerSubmit" value="Envoyer" class="btn btn-info pull-right">
-    </form>
-
-    <!-- Lien vers JS -->
-    <script src="../../public/java/JQuery.js"></script>
-    <script src="../../public/java/java.js"></script>
-    <script src="../../public/java/profile.js"></script>
+    </div>
+</div>
 <?php
+require_once('../../footer.php');
 
-$data->changeProfile($_SESSION['id']);
 
-include('../../footer.php');
-?>
+

@@ -1,6 +1,5 @@
 <?php
 use App\Model\Database;
-
 session_start();
 include('../M_Model.php');
 
@@ -11,7 +10,6 @@ class TweetsModel extends Model
         parent::__construct();
         $this->table = 'tp_tweets';
     }
-
     /**
      * Supprime un tweet
      * @param int $id ID
@@ -40,27 +38,29 @@ class TweetsModel extends Model
     {
 
         $connexion = Database::get()->prepare("
-                SELECT * FROM tp_follow
-                INNER JOIN tp_users on tp_users.id = tp_follow.follow_id
-                INNER JOIN tp_tweets on  tp_users.id  =  tp_tweets.user_id
-                WHERE follower_id = '" . $id . "' OR follow_id = '" . $id . "'
-                GROUP BY tp_tweets.id
-                ORDER BY tp_tweets.tweet_date DESC");
-        $connexion->execute();
+            SELECT * FROM tp_follow
+            INNER JOIN tp_users
+            ON tp_users.id = tp_follow.follow_id
+            INNER JOIN tp_tweets ON tp_users.id = tp_tweets.user_id
+            WHERE follower_id = '".$id."' OR follow_id = '".$id."'
+            GROUP BY tp_tweets.id
+            ORDER BY tp_tweets.id DESC");
+        $connexion->execute();  
 
         $data = $connexion->fetchAll();
-        return $data;
+        return $data;   
     }
 
     public function UserExiste($login)
     {
         $connexion = Database::get()->prepare("
-                SELECT * from tp_users
-                WHERE login = '" . $login . "' ");
-        $connexion->execute();
+            SELECT * FROM tp_users
+            WHERE login = '".$login."' ");
+        $connexion->execute();  
         $data = $connexion->fetchAll();
-        return $data;
+        return $data;   
     }
+
 
     /**
      * Retourne tous les champs
@@ -73,22 +73,15 @@ class TweetsModel extends Model
                 FROM {$this->table}
                 LEFT JOIN tp_users
                 ON tp_users.id = {$this->table}.user_id
-                WHERE {$this->table}.user_id = {$id}";
+                WHERE {$this->table}.user_id = {$id}
+                ORDER BY {$this->table}.id DESC";
         $req = Database::get()->prepare($sql);
         $req->execute();
         $data = $req->fetchAll();
         return $data;
     }
 
-    public function getRetweets($id = false)
-    {
-        $sql = "SELECT *, tp_tweets.id AS tweetId
-                FROM {$this->table}
-                LEFT JOIN tp_users
-                ON tp_users.id = {$this->table}.user_id
-                WHERE {$this->table}.user_id = {$id}";
-    }
 }
-
-$tweets     = new TweetsModel();
+$tweets = new TweetsModel();
 $tweetCount = $tweets->tweetCount($tweets->userId);
+

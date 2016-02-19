@@ -1,11 +1,10 @@
 <?php
-session_start();
-echo "zz";
 echo $dest = $_GET["idUser"];
 
 echo'
-<form method="POST" action="C_message.php?idUser='.$dest.'">
+<form method="GET" action="C_message.php">
 <textarea name="content" ></textarea>
+<input type="text"name="idUser" value="'.$dest.'">
 	<input type="submit">
 </form>';
-?>
+ ?>

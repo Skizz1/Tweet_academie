@@ -1,5 +1,6 @@
 <?php
-session_start();
+// ini_set("display_errors",0);error_reporting(0);
+
 
 class sessionInit
 {
@@ -16,6 +17,7 @@ class sessionInit
 		}
 		else
 		{
+			session_start();
 			$_SESSION["login"]; 
 			$_SESSION["id"]; 
 		}

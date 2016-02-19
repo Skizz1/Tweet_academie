@@ -1,6 +1,5 @@
 <?php
 require_once('../M_Model.php');
-use App\Model\Database;
 
 class ProfileModel extends Model
 {

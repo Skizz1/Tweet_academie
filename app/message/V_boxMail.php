@@ -1,16 +1,28 @@
 <?php
 include("M_boxMail.php");
+
 $MboxMail = new MboxMail;
 $readMsg = $MboxMail->ReadMessage();
-echo "Boit mail";
-;
-echo $_SESSION["id"];
-echo $_SESSION["login"];
 
+$Mpicture = new  Mpicture;
+
+/*
+* affichage des images dans la box mail
+* implemente dans home/V_home.php
+* methode : require_once
+*/
 foreach ($readMsg  as $key => $value) 
 {
-	echo $value->content;
-	echo $value->login;
-}
 
+	$idExp = $value->expediteur_id;
+	$img =  $Mpicture->LookPicture($idExp);
+	?>
+	<div class="infos-chat">
+		<img class="img-chat" src="public/css/images/users/<?php echo$img ?>.png" alt="img" /> 
+		<span class="name-chat"><?php echo $value->login; ?></span>
+		<span data-user='<?php echo $idExp ?>' id='Ajax-BoxMail' class="glyphicon glyphicon-envelope envelope"></span>
+	</div> 
+
+	<?php
+}
 ?>
