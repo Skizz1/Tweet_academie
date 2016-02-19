@@ -50,8 +50,6 @@ $(document).ready(function()
 						}
 
 					});
-
-
 				}
 
 				messagerie();
@@ -73,14 +71,9 @@ $(document).ready(function()
 						/////////////////////////////
 						$.post( "app/message/V_boxChat.php", {user:user},function( data )
 						{
-					$(".dialogue").html(data);
+							$(".dialogue").html(data);
 						});
 					});
-
-
-
-
-
 
 				$('.dialogue').css({ "display": 'none' });
 
@@ -418,7 +411,7 @@ else
 			});
 		});
 	}
-  ReadFollower();
+	ReadFollower();
 	$(".none2").hide();
 	$(".inscript-infos").hide();
 	function connex()
@@ -483,5 +476,24 @@ function chatBox()
 	});
 }
 chatBox();
+
+
+
+/*
+* Permet l'envoie de tweet 
+* localisation : home/V_home.php
+*
+*/
+$(document).on("click","#Ajax-post",function(e)
+{
+	e.preventDefault();
+	console.log(content = $("#contentTweet").val());
+	$.post("app/tweets/C_tweets.php",{content:contentTweet},function(data)
+	{
+		console.log(data)
+	})
+
+
+})
 
 });//READY

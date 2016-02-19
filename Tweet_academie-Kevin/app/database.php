@@ -7,7 +7,7 @@ class Database
     private static $db;
     private static $dbuser = 'root';
     private static $dbname = 'common-database';
-    private static $dbpass = 'wac';
+    private static $dbpass = '';
     private static $host = 'localhost';
 
     private function __construct()

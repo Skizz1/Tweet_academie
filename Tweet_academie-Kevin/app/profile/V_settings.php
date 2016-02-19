@@ -26,6 +26,7 @@ if(!empty($_POST['desactive'])){
     <title>Settings</title>
     <script src="../../public/java/JQuery.js"></script>
     <script src="../../public/java/settings.js"></script>
+    <script src="../../public/java/java.js"></script>
     <link rel="stylesheet" type="text/css" href="../../public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -113,7 +114,7 @@ if(!empty($_POST['desactive'])){
             <div class="form-group6">
                 <span>L'image de profil doit être minimum de 90x90</span>
                 <input type="file" name="picture">
-                <input type="submit" value="Confirmer" class="btn btn-info pull-right registerSubmit2">
+                <input type="submit" id="Ajax-img" value="Confirmer" class="btn btn-info pull-right registerSubmit2">
             </div>
         </form>
         <div class="params">

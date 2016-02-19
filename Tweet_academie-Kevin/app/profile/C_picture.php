@@ -23,6 +23,7 @@ public function picture()
 		$type = substr($this->type["mime"], -3);
 		$Mpicture = new Mpicture;
 		$upload = $Mpicture->Upload($_FILES['picture']['tmp_name'],$type);
+
 		echo "le telechargemnt est bon";
 	}
 

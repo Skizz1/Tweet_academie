@@ -105,9 +105,9 @@
 
                 <div id="Ajax-postTweet">
                     <form id="Ajax-postTweet" method="POST" action="app/tweets/C_tweets.php">
-                        <textarea placeholder="Exprimez-vous" name="content"></textarea>
+                        <textarea id="contentTweet" placeholder="Exprimez-vous" name="content"></textarea>
                         <div class="area">
-                            <span class="glyphicon glyphicon-share-alt photo"><span class="camera">Tweeter</span></span><input type="submit">
+                            <span class="glyphicon glyphicon-share-alt photo"><span class="camera">Tweeter</span></span><input id="Ajax-post" type="submit">
                             <span class="glyphicon glyphicon-camera photo"><span class="camera">Photo</span></span>
                         </div>
                     </form>
