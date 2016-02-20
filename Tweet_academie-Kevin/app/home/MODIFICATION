@@ -1,6 +1,0 @@
-MODIFICATION 
-
-java function,
-V_home : id Ajax-post,#contentTweet L108
-
-M_tweets.php readTweet();
