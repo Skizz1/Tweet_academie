@@ -6,9 +6,9 @@ require_once("M_tweets.php");
 require_once("M_retweet.php");
 require_once("../profile/M_picture.php");
 
-$avatar = new Mpicture();
+$avatar        = new Mpicture();
 $modelRetweets = new ReTweetsModel();
-$retweets = $modelRetweets->getRetweets($_POST['id']);
+$retweets      = $modelRetweets->getRetweets($_POST['id']);
 
 $userAvatar = $avatar->LookPicture($_POST['id']);
 

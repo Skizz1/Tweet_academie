@@ -20,9 +20,12 @@ class Database
         {
             try
             {
-                if (!is_null(self::$socket)) {
+                if (!is_null(self::$socket))
+                {
                     $dsn = 'mysql:unix_socket=/home/' . self::$socket . '/.mysql/mysql.sock;host=' . self::$host . ';port=3306;dbname=' . self::$dbname;
-                } else {
+                }
+                else
+                {
                     $dsn = 'mysql:host=' . self::$host . ';port=3306;dbname=' . self::$dbname;
                 }
 

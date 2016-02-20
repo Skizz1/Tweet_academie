@@ -9,9 +9,10 @@ class reTweetsModel extends Model
         $this->table = 'tp_retweets';
     }
 
-        public function getRetweets($id)
+    public function getRetweets($id)
     {
-        $sql = "SELECT *, (SELECT login FROM tp_users WHERE id = {$id}) AS tweeterLogin
+        $sql = "SELECT *, (SELECT login FROM tp_users WHERE id = {$id}) AS tweeterLogin,
+                          (SELECT id FROM tp_users WHERE id = {$id}) AS tweeterID
                 FROM {$this->table}
                 INNER JOIN tp_tweets
                 ON {$this->table}.tweet_id = tp_tweets.id

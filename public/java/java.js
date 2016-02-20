@@ -56,7 +56,6 @@ $(document).ready(function () {
                 $(document).on("click", "#Ajax-BoxMail", function () {
                     user = $(this).data("user");
 
-                    /////////////////////////////
                     setInterval(function () {
                         $.post("app/message/V_boxChat.php", {user: user}, function (data) {
                             $(".dialogue").html(data);
@@ -64,7 +63,6 @@ $(document).ready(function () {
 
                     }, 10000);
 
-                    /////////////////////////////
                     $.post("app/message/V_boxChat.php", {user: user}, function (data) {
                         $(".dialogue").html(data);
                     });
@@ -310,7 +308,6 @@ $(document).ready(function () {
                 if (data == "false") {
                     $("#registerInfo").html("MAUVAIS PASSWORD");
                 }
-                console.log(data);
             });
         });
     }
@@ -435,14 +432,36 @@ $(document).ready(function () {
     chatBox();
 
     /*
-     * Permet l'envoie de tweet
+     * Permet l'envoi de tweet
      * localisation : home/V_home.php
      */
     $(document).on("click", "#Ajax-post", function (e) {
         e.preventDefault();
-        console.log(content = $("#contentTweet").val());
+        content = $("#contentTweet").val();
         $.post("app/tweets/C_tweets.php", {content: content}, function (data) {
-            console.log(data);
+        })
+
+    })
+
+    /*
+     * Permet l'envoie de tweet
+     * localisation : home/V_home.php
+     */
+    $(document).on('keyup', "#contentTweet", function () {
+        va = $("#contentTweet").val();
+        if (va.length < 140) {
+            $("#Ajax-post").prop('disabled', false);
+        }
+        else {
+            $("#Ajax-post").prop('disabled', true);
+        }
+    })
+
+    $(document).on("click", "#Ajax-post", function (e) {
+        e.preventDefault();
+        content = $("#contentTweet").val();
+        $.post("app/tweets/C_tweets.php", {content: content}, function (data) {
+            $("#contentTweet").val('');
         })
 
     })

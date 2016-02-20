@@ -10,7 +10,9 @@ foreach ($readTweet as $key => $value)
     if ($value->user_id === $_SESSION['id'])
     {
         $retweet = '<span class="glyphicon glyphicon-share-alt share-alt"></span>';
-    } else {
+    }
+    else
+    {
         $retweet = '<span class="glyphicon glyphicon-retweet retweet" data-id="' . $value->id . '"></span>
 	                <span class="glyphicon glyphicon-share-alt share-alt"></span>';
     }

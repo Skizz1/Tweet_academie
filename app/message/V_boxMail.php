@@ -18,9 +18,9 @@ foreach ($readMsg  as $key => $value)
 	$img =  $Mpicture->LookPicture($idExp);
 	?>
 	<div class="infos-chat">
-		<img class="img-chat" src="public/css/images/users/<?php echo$img ?>.png" alt="img" /> 
-		<span class="name-chat"><?php echo $value->login; ?></span>
-		<span data-user='<?php echo $idExp ?>' id='Ajax-BoxMail' class="glyphicon glyphicon-envelope envelope"></span>
+		<img class="img-chat" src="public/css/images/users/<?= $img ?>.png" alt="img" />
+		<span class="name-chat"><?= $value->login; ?></span>
+		<span data-user='<?= $idExp ?>' id='Ajax-BoxMail' class="glyphicon glyphicon-envelope envelope"></span>
 	</div> 
 
 	<?php
