@@ -54,7 +54,7 @@ $msg = $MboxMail->boxMail($id);
 
         </div>
     </div>
-
+<!-- envoie msg -->
     <div class="popup-messages-footer">      
              <form method="POST" action="#">
                 <textarea id="status_message" placeholder="Ecrivez votre message..." rows="10" cols="40" name="message"></textarea>
