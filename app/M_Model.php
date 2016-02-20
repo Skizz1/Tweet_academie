@@ -1,6 +1,7 @@
 <?php
 use App\Model\Database;
 require_once("database.php");
+require_once('session_start.php');
 class Model
 {
     /**
@@ -21,7 +22,7 @@ class Model
      */
     public function getField($id, $field)
     {
-        $sql = "SELECT {$field} FROM {$this->table} WHERE id = {$id}";
+        $sql = "SELECT {$field} from {$this->table} WHERE id = {$id}";
         $req = Database::get()->prepare($sql);
         $req->execute();
         $data = $req->fetch();

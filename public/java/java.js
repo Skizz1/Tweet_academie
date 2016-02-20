@@ -301,6 +301,7 @@ $(document).ready(function () {
         $(document).on('click', '#loginIndex', function (event) {
             event.preventDefault();
             $.post("app/singin/C_singIn.php", {login: $(".login_control").val(), pass: $("#singInPass").val()}, function (data) {
+
                 if (data == "true") {
                     $("#registerInfo").html("CONNEXION");
                     redirectHome();
@@ -466,4 +467,27 @@ $(document).ready(function () {
 
     })
 
+    $(document).on('click','#Ajax-tweet', function(e){
+        e.preventDefault();
+        if($('#contentTweet, #Ajax-post').is(":visible")){
+            $('#contentTweet, #Ajax-post').hide();
+        } else {
+            $('#contentTweet, #Ajax-post').show();
+        }
+    });
+
+    $(document).on('click','.follow', function(e){
+        e.preventDefault();
+        ur = $(this).attr("href")
+        $.post(ur,{},function(e){
+        })
+    })
+
+
+    $(document).on('click','.unfollow', function(e){
+        e.preventDefault();
+        ur = $(this).attr("href")
+        $.post(ur,{},function(e){
+        })
+    })
 });//READY

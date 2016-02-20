@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once('../session_start.php');
 require_once('C_profile.php');
 if (!empty($_POST['login']) && !empty($_POST['loginConfirm']))
 {

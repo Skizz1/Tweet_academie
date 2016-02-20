@@ -1,6 +1,5 @@
 <?php
 use App\Model\Database;
-session_start();
 include('../M_Model.php');
 
 class TweetsModel extends Model
@@ -83,5 +82,3 @@ class TweetsModel extends Model
 
 }
 $tweets = new TweetsModel();
-$tweetCount = $tweets->tweetCount($tweets->userId);
-

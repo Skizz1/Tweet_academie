@@ -1,8 +1,12 @@
     <?php
+    ini_set('display_errors', 'on');
+    error_reporting(E_ALL);
     require_once("../onlineUser/sessionInit.php");
     require_once("../follow/M_count.php");
     require_once("../timeLine/M_timeLine.php");
     require_once("../tweets/M_tweets.php");
+    $tweetCount = $tweets->tweetCount($_SESSION['id']);
+
     ?>
     <body>
         <nav class="nav-tweet">
@@ -42,7 +46,8 @@
                         <div class="stats cf">
                               <a href="#" class="stat" id="Ajax-tweetCount">
                                 <!-- Afficher nombre de tweets du membre connecté -->
-                                <?php foreach ($tweetCount as $value)
+
+                                  <?php foreach ($tweetCount as $value)
                                 {
                                     echo "<strong>" . $value->tweets . "</strong>";
                                 }
@@ -74,44 +79,18 @@
                         <ul class="menu cf">
                             <li><a href="#" id="Ajax-tweet" class="ico-compose">Compose</a></li>
                             <!-- Lien mail -->
-                            <li><a href="app/message/V_boxMail.php" class="ico-mentions">Mentions</a></li>
-                            <li><a href="app/profile/V_profile.php" class="ico-profile">Profil</a></li>
                             <li><a href="app/profile/V_settings.php" class="ico-settings">Settings</a></li>
                         </ul>
                     </div>
-                </div>
-                <div class="actualite">
-                    <!-- Afficher les actualités récentes des gens Follows par le membre connecté -->
-                    <div class="infos">
-                        <div class="twitter-widget1">
-                            <div class="stats cf actu">
-                                <span>Actualités récentes</span>
-                            </div>
-                            <?php
-                            foreach ($timeLine as $key => $value)
-                            {
-                                echo $value->login . "<br/>";
-                                echo "A publie " . $value->content . "<br/>";
-                                echo "le " . $value->created . "<br/>";
-                            }
-                            ?>
-                            <!-- Afficher le nom prenom et texte du tweet avec max 30 caractères et des "..." après -->
-                            <span></span>
-                        </div>
+                    <div id="Ajax-postTweet">
+                        <form id="Ajax-postTweet" method="POST" action="app/tweets/C_tweets.php">
+                            <textarea id="contentTweet" placeholder="Exprimez-vous" name="content"></textarea>
+                            <input id="Ajax-post" type="submit">
+                        </form>
                     </div>
                 </div>
             </div>
             <div class="right">
-
-                <div id="Ajax-postTweet">
-                    <form id="Ajax-postTweet" method="POST" action="app/tweets/C_tweets.php">
-                        <textarea id="contentTweet" placeholder="Exprimez-vous" name="content"></textarea>
-                        <div class="area">
-                            <span class="glyphicon glyphicon-share-alt photo"><span class="camera">Tweeter</span></span><input id="Ajax-post" type="submit">
-                            <span class="glyphicon glyphicon-camera photo"><span class="camera">Photo</span></span>
-                        </div>
-                    </form>
-                </div>
                 <div class="tweet" id="Ajax-Rsearch">
 
                     <!-- TIME LINE AJAX  -->

@@ -1,6 +1,6 @@
 <?php
 require_once('../database.php');
-session_start();
+require_once('../session_start.php');
 class Cfollow
 {
 	var $id;

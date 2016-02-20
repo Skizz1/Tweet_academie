@@ -18,7 +18,7 @@ foreach ($readTweet as $key => $value)
     }
     echo '
 	<img class="avatar-tweet" src="public/css/images/users/' . $Mpicture->LookPicture($value->follow_id) . '.png"/>
-	<h4>' . $value->login . '</h4>
+	<h4><a href="app/profile/V_profile.php?id=' . $value->user_id . '">' . $value->login . '</a></h4>
 	<p>' . $urlUser->C_urlUser($value->content) . '</p>
 	<p class="content">Tweeté le : ' . $value->tweet_date . '</p>' . $retweet . '<hr/>';
 }

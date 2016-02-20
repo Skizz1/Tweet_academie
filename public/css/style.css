@@ -112,11 +112,20 @@ body
 /* ------------------------------------------------------------- TWEETS ---------------------------------------------------------------------- */
 
 .Ajax-postTweet { display:block; width: 100%; height: 80px; margin-bottom: 25px; margin-top: 15px; border: none; }
-.Ajax-postTweet textarea { width: 100% !important; height: 48px !important; border-bottom: 1px solid #b2b2b2 !important; 
+.Ajax-postTweet textarea { width: 100% !important; height: 48px !important; border-bottom: 1px solid #b2b2b2 !important;
   border: medium none; }
 .area { display: block; width: 90%; height: 15px;  }
 .photo { display: inline-block; float: right; width: 10%; margin-top: 5px; margin-right: 4%; font-size: 16px; }
 .camera { padding-left: 12%; font-family: 'bellotalight'; font-size: 17px; }
+#contentTweet {
+    width: 100%;
+    height: 100px;
+    margin: 40px 0 0 0;
+    display: none;
+}
+#Ajax-post{
+    display: none;
+}
 
 /* ----------------------------------------------------- MESSAGERIE INSTANTANEE -------------------------------------------------------------- */
 

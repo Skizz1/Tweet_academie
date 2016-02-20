@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 require_once('M_profile.php');
 
@@ -7,7 +8,7 @@ class Mpicture
 {
     function Upload($picture)
     {
-        session_start();
+        require_once('../session_start.php');
         move_uploaded_file($picture, "../../public/css/images/users/" . $_SESSION["id"] . ".png");
     }
 

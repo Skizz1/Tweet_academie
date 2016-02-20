@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once('../session_start.php');
 include("M_singIn.php");
 class CsingIn
 {
@@ -17,6 +17,7 @@ class CsingIn
 	{
 		$userExiste = new userExiste;
 		$user = $userExiste -> User($this->login,$this->passH);
+
 		if ($user != NULL)
 		{
 			foreach ( $user as $key => $val )
