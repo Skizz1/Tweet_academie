@@ -483,7 +483,6 @@ $(document).ready(function () {
         })
     })
 
-
     $(document).on('click','.unfollow', function(e){
         e.preventDefault();
         ur = $(this).attr("href")
